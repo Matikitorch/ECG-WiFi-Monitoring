@@ -1,0 +1,1964 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>7d3d2e03-5156-42ab-af38-2cc6c0479ef7</ProjectGuid>
+    <avrdevice>ATSAMD21G18A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>StaticLibrary</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>lib$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <Name>ArduinoCore</Name>
+    <ArduinoIdeDir>C:\Program Files (x86)\Arduino</ArduinoIdeDir>
+    <ArduinoProjectType>Core</ArduinoProjectType>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <AssemblyName>ArduinoCore</AssemblyName>
+    <RootNamespace>ArduinoCore</RootNamespace>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.42.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800038920</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x10010305</avrdeviceexpectedsignature>
+    <avrtoolinterface>
+    </avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800038920</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=48000000L</Value>
+            <Value>ARDUINO=10805</Value>
+            <Value>ARDUINO_SAMD_MKRWIFI1010</Value>
+            <Value>ARDUINO_ARCH_SAMD</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x8054</Value>
+            <Value>USB_PRODUCT="\"Arduino MKR WiFi 1010\""</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+            <Value>USBCON</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>..\include\core</Value>
+            <Value>..\include\core\avr</Value>
+            <Value>..\include\core\USB</Value>
+            <Value>..\include\variants</Value>
+            <Value>..\include\core\samd21</Value>
+            <Value>..\include\core\samd21\include</Value>
+            <Value>..\include\core\samd21\include\component</Value>
+            <Value>..\include\core\samd21\include\instance</Value>
+            <Value>..\include\core\samd21\include\pio</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</armgcc.compiler.optimization.OtherFlags>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcc.compiler.optimization.EnableLongCalls>False</armgcc.compiler.optimization.EnableLongCalls>
+        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+        <armgcc.compiler.warnings.InhibitAllWarnings>True</armgcc.compiler.warnings.InhibitAllWarnings>
+        <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu11 --param max-inline-insns-single=500 -nostdlib</armgcc.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=48000000L</Value>
+            <Value>ARDUINO=10805</Value>
+            <Value>ARDUINO_SAMD_MKRWIFI1010</Value>
+            <Value>ARDUINO_ARCH_SAMD</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x8054</Value>
+            <Value>USB_PRODUCT="\"Arduino MKR WiFi 1010\""</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+            <Value>USBCON</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>..\include\core</Value>
+            <Value>..\include\core\avr</Value>
+            <Value>..\include\core\USB</Value>
+            <Value>..\include\variants</Value>
+            <Value>..\include\core\samd21</Value>
+            <Value>..\include\core\samd21\include</Value>
+            <Value>..\include\core\samd21\include\component</Value>
+            <Value>..\include\core\samd21\include\instance</Value>
+            <Value>..\include\core\samd21\include\pio</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</armgcccpp.compiler.optimization.OtherFlags>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcccpp.compiler.optimization.EnableLongCalls>False</armgcccpp.compiler.optimization.EnableLongCalls>
+        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+        <armgcccpp.compiler.warnings.InhibitAllWarnings>True</armgcccpp.compiler.warnings.InhibitAllWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11 --param max-inline-insns-single=500 -nostdlib</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.linker.general.UseNewlibNano>True</armgcccpp.linker.general.UseNewlibNano>
+        <armgcccpp.linker.general.AdditionalSpecs>Use syscall stubs (--specs=nosys.specs)</armgcccpp.linker.general.AdditionalSpecs>
+        <armgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.Libraries>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-Wl,--cref -Os -Wl,--check-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+          </ListValues>
+        </armgcccpp.assembler.general.IncludePaths>
+        <armgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.assembler.debugging.DebugLevel>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>False</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>False</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>False</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>False</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>False</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=48000000L</Value>
+            <Value>ARDUINO=10805</Value>
+            <Value>ARDUINO_SAMD_MKRWIFI1010</Value>
+            <Value>ARDUINO_ARCH_SAMD</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x8054</Value>
+            <Value>USB_PRODUCT="\"Arduino MKR WiFi 1010\""</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+            <Value>USBCON</Value>
+            <Value>USE_BQ24195L_PMIC</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>..\include\core</Value>
+            <Value>..\include\core\avr</Value>
+            <Value>..\include\core\USB</Value>
+            <Value>..\include\variants</Value>
+            <Value>..\include\core\samd21</Value>
+            <Value>..\include\core\samd21\include</Value>
+            <Value>..\include\core\samd21\include\component</Value>
+            <Value>..\include\core\samd21\include\instance</Value>
+            <Value>..\include\core\samd21\include\pio</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+            <Value>../SPI</Value>
+            <Value>../Ethernet</Value>
+            <Value>../Ethernet/SSLClient</Value>
+            <Value>../Ethernet/EthernetLarge</Value>
+            <Value>../WiFiNINA</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize debugging experience (-Og)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</armgcc.compiler.optimization.OtherFlags>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcc.compiler.optimization.EnableLongCalls>False</armgcc.compiler.optimization.EnableLongCalls>
+        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+        <armgcc.compiler.warnings.InhibitAllWarnings>True</armgcc.compiler.warnings.InhibitAllWarnings>
+        <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu11 --param max-inline-insns-single=500 -nostdlib</armgcc.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=48000000L</Value>
+            <Value>ARDUINO=10805</Value>
+            <Value>ARDUINO_SAMD_MKRWIFI1010</Value>
+            <Value>ARDUINO_ARCH_SAMD</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x8054</Value>
+            <Value>USB_PRODUCT="\"Arduino MKR WiFi 1010\""</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+            <Value>USBCON</Value>
+            <Value>USE_BQ24195L_PMIC</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>..\include\core</Value>
+            <Value>..\include\core\avr</Value>
+            <Value>..\include\core\USB</Value>
+            <Value>..\include\variants</Value>
+            <Value>..\include\core\samd21</Value>
+            <Value>..\include\core\samd21\include</Value>
+            <Value>..\include\core\samd21\include\component</Value>
+            <Value>..\include\core\samd21\include\instance</Value>
+            <Value>..\include\core\samd21\include\pio</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+            <Value>../SPI</Value>
+            <Value>../Ethernet</Value>
+            <Value>../Ethernet/SSLClient</Value>
+            <Value>../Ethernet/EthernetLarge</Value>
+            <Value>../WiFiNINA</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize debugging experience (-Og)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</armgcccpp.compiler.optimization.OtherFlags>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcccpp.compiler.optimization.EnableLongCalls>False</armgcccpp.compiler.optimization.EnableLongCalls>
+        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+        <armgcccpp.compiler.warnings.InhibitAllWarnings>True</armgcccpp.compiler.warnings.InhibitAllWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11 --param max-inline-insns-single=500 -nostdlib</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.linker.general.UseNewlibNano>True</armgcccpp.linker.general.UseNewlibNano>
+        <armgcccpp.linker.general.AdditionalSpecs>Use syscall stubs (--specs=nosys.specs)</armgcccpp.linker.general.AdditionalSpecs>
+        <armgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.Libraries>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.memorysettings.ExternalRAM />
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-Wl,--cref -Os -Wl,--check-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+          </ListValues>
+        </armgcccpp.assembler.general.IncludePaths>
+        <armgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.assembler.debugging.DebugLevel>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.395\samd21a\include</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+      </ArmGccCpp>
+    </ToolchainSettings>
+    <OutputFileName>libArduinoCore</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputType>StaticLibrary</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ethernet\EthernetLarge\Dhcp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\Dhcp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\Dns.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\Dns.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetClient.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetLarge.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetLarge.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetServer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetServer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetUdp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\EthernetUdp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\socket.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\utility\w5100.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\EthernetLarge\utility\w5100.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\aead\ccm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\aead\eax.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\aead\gcm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\ccopy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\dec16be.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\dec16le.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\dec32be.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\dec32le.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\dec64be.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\dec64le.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\enc16be.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\enc16le.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\enc32be.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\enc32le.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\enc64be.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\enc64le.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\pemdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\codec\pemenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_atr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_default_sign_asn1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_default_sign_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_default_vrfy_asn1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_default_vrfy_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i15_bits.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i15_sign_asn1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i15_sign_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i15_vrfy_asn1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i15_vrfy_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i31_bits.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i31_sign_asn1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i31_sign_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i31_vrfy_asn1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_i31_vrfy_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ecdsa_rta.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_all_m15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_all_m31.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_c25519_i15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_c25519_i31.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_c25519_m15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_c25519_m31.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_c25519_m62.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_c25519_m64.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_curve25519.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_default.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_keygen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_p256_m15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_p256_m31.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_p256_m62.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_p256_m64.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_prime_i15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_prime_i31.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_pubkey.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_secp256r1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_secp384r1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ec\ec_secp521r1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\dig_oid.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\dig_size.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\ghash_ctmul.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\ghash_ctmul32.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\ghash_ctmul64.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\ghash_pclmul.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\ghash_pwr8.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\md5.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\md5sha1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\mgf1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\multihash.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\sha1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\sha2big.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\hash\sha2small.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_add.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_bitlen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_decmod.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_decode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_decred.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_encode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_fmont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_iszero.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_moddiv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_modpow.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_modpow2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_montmul.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_mulacc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_muladd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_ninv15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_reduce.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_rshift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_sub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i15_tmont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_add.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_bitlen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_decmod.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_decode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_decred.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_encode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_fmont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_iszero.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_moddiv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_modpow.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_modpow2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_montmul.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_mulacc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_muladd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_ninv31.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_reduce.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_rshift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_sub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i31_tmont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_add.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_bitlen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_decmod.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_decode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_decred.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_div32.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_encode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_fmont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_iszero.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_modpow.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_montmul.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_mulacc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_muladd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_ninv32.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_reduce.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_sub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i32_tmont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\int\i62_modpow2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\kdf\hkdf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\kdf\shake.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\mac\hmac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\mac\hmac_ct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rand\aesctr_drbg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rand\hmac_drbg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rand\sysrng.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_keygen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_modulus.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_oaep_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_oaep_encrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_pkcs1_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_pkcs1_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_priv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_privexp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_pss_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_pss_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_pub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_default_pubexp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_keygen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_modulus.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_oaep_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_oaep_encrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_pkcs1_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_pkcs1_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_priv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_privexp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_pss_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_pss_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_pub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i15_pubexp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_keygen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_keygen_inner.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_modulus.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_oaep_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_oaep_encrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_pkcs1_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_pkcs1_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_priv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_privexp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_pss_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_pss_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_pub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i31_pubexp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_oaep_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_oaep_encrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_pkcs1_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_pkcs1_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_priv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_pss_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_pss_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i32_pub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_keygen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_oaep_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_oaep_encrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_pkcs1_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_pkcs1_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_priv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_pss_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_pss_vrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_i62_pub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_oaep_pad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_oaep_unpad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_pkcs1_sig_pad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_pkcs1_sig_unpad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_pss_sig_pad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_pss_sig_unpad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\rsa\rsa_ssl_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\settings.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\prf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\prf_md5sha1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\prf_sha256.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\prf_sha384.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_ccert_single_ec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_ccert_single_rsa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_client.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_client_default_rsapub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_client_full.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_aescbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_aesccm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_aesgcm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_chapol.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_descbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_ec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_ecdsa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_engine_default_rsavrfy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_hashes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_hs_client.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_hs_server.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_io.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_keyexport.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_lru.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_rec_cbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_rec_ccm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_rec_chapol.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_rec_gcm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_scert_single_ec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_scert_single_rsa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_full_ec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_full_rsa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_mine2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_mine2g.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_minf2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_minf2g.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_minr2g.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_minu2g.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_server_minv2g.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\ssl\time_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_big_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_big_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_big_ctr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_big_ctrcbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_big_dec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_big_enc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_common.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64_ctr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64_ctrcbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64_dec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct64_enc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct_ctr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct_ctrcbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct_dec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_ct_enc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_pwr8.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_pwr8_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_pwr8_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_pwr8_ctr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_pwr8_ctrcbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_small_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_small_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_small_ctr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_small_ctrcbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_small_dec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_small_enc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_x86ni.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_x86ni_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_x86ni_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_x86ni_ctr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\aes_x86ni_ctrcbc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\chacha20_ct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\chacha20_sse2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_ct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_ct_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_ct_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_support.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_tab.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_tab_cbcdec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\des_tab_cbcenc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\poly1305_ctmul.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\poly1305_ctmul32.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\poly1305_ctmulq.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\symchipher\poly1305_i15.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\asn1enc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\encode_ec_pk8der.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\encode_ec_rawder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\encode_rsa_pk8der.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\encode_rsa_rawder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\skey_decoder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\x509_decoder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\x509_knownkey.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\x509_minimal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bealssl\src\x509\x509_minimal_full.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_aead.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_block.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_ec.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_hash.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_hmac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_kdf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_pem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_prf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_rand.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_rsa.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_ssl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\bearssl_x509.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\ec_prime_fast_256.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\inner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\SSLClient.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\SSLClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\SSLClientParameters.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\SSLClientParameters.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\SSLSession.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\time_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ethernet\SSLClient\TLS12_only_profile.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\api\RingBuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\avr\dtostrf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\avr\interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\avr\io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\avr\pgmspace.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\binary.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\HardwareSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\IPAddress.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\itoa.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Printable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\pulse.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Reset.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\RingBuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\SafeRingBuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component-version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\ac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\dac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\dmac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\dsu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\eic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\evsys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\gclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\hmatrixb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\i2s.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\mtb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\nvmctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\pac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\pm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\sercom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\sysctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\tc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\tcc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\component\wdt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\ac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\dac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\dmac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\dsu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\eic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\evsys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\gclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\i2s.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\mtb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\nvmctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\pac0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\pac1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\pac2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\pm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sbmatrix.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sercom0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sercom1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sercom2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sercom3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sercom4.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sercom5.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\sysctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tc3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tc4.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tc5.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tc6.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tc7.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tcc0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tcc1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\tcc2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\instance\wdt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21e15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21e16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21e17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21e18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21g15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21g16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21g17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21g17au.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21g18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21g18au.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21j15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21j16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21j17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\pio\samd21j18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21e15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21e16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21e17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21e18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21g15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21g16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21g17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21g17au.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21g18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21g18au.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21j15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21j16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21j17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\samd21j18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\include\system_samd21.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\sam.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\samd21\samd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\SERCOM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Server.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Tone.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Udp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\PluggableUSB.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\samd21_host.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\SAMD21_USBDevice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\USBAPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\USBCore.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\USBDesc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USB\USB_host.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WCharacter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WInterrupts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring_analog.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring_constants.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring_digital.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring_shift.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WMath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WString.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WVariant.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\variants\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\variants\variant.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SPI\HardwareSPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SPI\SPI.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SPI\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\abi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\avr\dtostrf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\cortex_handlers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\delay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\hooks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\IPAddress.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\itoa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\new.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\PreprocessingAssembly\pulse_asm.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Print.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\pulse.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\pulse_asm.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Reset.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\SERCOM.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\startup.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Stream.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Tone.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Uart.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\USB\CDC.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\USB\PluggableUSB.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\USB\samd21_host.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\USB\USBCore.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\WInterrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_digital.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_private.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_shift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\WMath.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\WString.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\variants\variant.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\server_drv.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\server_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\spi_drv.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\spi_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\WiFiSocketBuffer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\WiFiSocketBuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\wifi_drv.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\wifi_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\wifi_spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\wl_definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\utility\wl_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiClient.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiNINA.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiServer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiServer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiSSLClient.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiSSLClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiStorage.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiStorage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiUdp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WiFiNINA\WiFiUdp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WIRE\HardwareI2C.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WIRE\MCP23017.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WIRE\MCP23017.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WIRE\Wire.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="WIRE\Wire.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ethernet\EthernetLarge" />
+    <Folder Include="Ethernet\EthernetLarge\utility" />
+    <Folder Include="Ethernet\SSLClient" />
+    <Folder Include="Ethernet\SSLClient\bealssl" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\aead" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\codec" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\ec" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\hash" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\int" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\kdf" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\mac" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\x509" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\symchipher" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\ssl" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\rsa" />
+    <Folder Include="Ethernet\SSLClient\bealssl\src\rand" />
+    <Folder Include="include\" />
+    <Folder Include="include\core\" />
+    <Folder Include="include\core\avr\" />
+    <Folder Include="include\core\api" />
+    <Folder Include="include\core\samd21\" />
+    <Folder Include="include\core\samd21\include\" />
+    <Folder Include="include\core\samd21\include\component\" />
+    <Folder Include="include\core\samd21\include\instance\" />
+    <Folder Include="include\core\samd21\include\pio\" />
+    <Folder Include="include\core\USB\" />
+    <Folder Include="include\variants" />
+    <Folder Include="Ethernet" />
+    <Folder Include="WiFiNINA" />
+    <Folder Include="WiFiNINA\utility" />
+    <Folder Include="WIRE" />
+    <Folder Include="SPI" />
+    <Folder Include="src\" />
+    <Folder Include="src\core\" />
+    <Folder Include="src\core\avr\" />
+    <Folder Include="src\core\PreprocessingAssembly\" />
+    <Folder Include="src\core\USB\" />
+    <Folder Include="src\variants\" />
+    <Folder Include="src\variants\openocd_scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ethernet\SSLClient\bealssl\src\codec\pemdec.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_hs_client.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_hs_common.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\ssl\ssl_hs_server.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\x509\asn1.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\x509\skey_decoder.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\x509\x509_decoder.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Ethernet\SSLClient\bealssl\src\x509\x509_minimal.t0">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\variants\openocd_scripts\arduino_zero.cfg">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
