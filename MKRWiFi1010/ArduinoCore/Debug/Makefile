@@ -4346,7 +4346,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP)
 	@echo Building target: $@
 	@echo Invoking: ARM/GNU Archiver : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-ar.exe$(QUOTE) -r  -o$(OUTPUT_FILE_PATH_AS_ARGS) @"C:\Users\jbeea\Documents\Atmel Studio\7.0\ECG-WiFi-Monitoring\MKRWiFi1010\ArduinoCore\Debug\ld_ar.mk"  $(USER_OBJS) $(LIBS) 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-ar.exe$(QUOTE) -r  -o$(OUTPUT_FILE_PATH_AS_ARGS) @"C:\Projects\Atmel Studio\ECG-WiFi-Monitoring\MKRWiFi1010\ArduinoCore\Debug\ld_ar.mk"  $(USER_OBJS) $(LIBS) 
 	@echo Finished building target: $@
 	
 	@echo $@:0:0: warning: Command Line Exceeds Limit $@
@@ -4359,5 +4359,5 @@ clean:
 	-$(RM) $(OBJS_AS_ARGS) $(EXECUTABLES)  
 	-$(RM) $(C_DEPS_AS_ARGS)   
 	rm -rf "libArduinoCore.elf" "libArduinoCore.a" "libArduinoCore.hex" "libArduinoCore.bin" "libArduinoCore.lss" "libArduinoCore.eep" "libArduinoCore.map" "libArduinoCore.srec"
-	rm -rf "C:\Users\jbeea\Documents\Atmel Studio\7.0\ECG-WiFi-Monitoring\MKRWiFi1010\ArduinoCore\Debug\ld_ar.mk"
+	rm -rf "C:\Projects\Atmel Studio\ECG-WiFi-Monitoring\MKRWiFi1010\ArduinoCore\Debug\ld_ar.mk"
 	

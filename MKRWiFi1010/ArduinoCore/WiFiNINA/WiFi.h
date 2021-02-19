@@ -274,6 +274,11 @@ public:
     int ping(IPAddress host, uint8_t ttl = 128);
 
     void setTimeout(unsigned long timeout);
+	
+	void LEDInit(void);
+	void LEDBlue(uint8_t output);
+	void LEDGreen(uint8_t output);
+	void LEDRed(uint8_t output);
 };
 
 extern WiFiClass WiFi;

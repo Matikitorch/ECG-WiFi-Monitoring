@@ -27,6 +27,10 @@ extern "C" {
   #include "utility/debug.h"
 }
 
+#define GREEN_LED_PIN		25
+#define RED_LED_PIN			26
+#define BLUE_LED_PIN		27
+
 WiFiClass::WiFiClass() : _timeout(50000)
 {
 }
@@ -382,4 +386,27 @@ void WiFiClass::setTimeout(unsigned long timeout)
 {
 	_timeout = timeout;
 }
+
+void WiFiClass::LEDInit(void)
+{
+	WiFiDrv::pinMode(GREEN_LED_PIN, OUTPUT);
+	WiFiDrv::pinMode(RED_LED_PIN, OUTPUT);
+	WiFiDrv::pinMode(BLUE_LED_PIN, OUTPUT);
+}
+
+void WiFiClass::LEDGreen(uint8_t output)
+{
+	WiFiDrv::digitalWrite(GREEN_LED_PIN, output);
+}
+
+void WiFiClass::LEDRed(uint8_t output)
+{
+	WiFiDrv::digitalWrite(RED_LED_PIN, output);
+}
+
+void WiFiClass::LEDBlue(uint8_t output)
+{
+	WiFiDrv::digitalWrite(BLUE_LED_PIN, output);
+}
+
 WiFiClass WiFi;
