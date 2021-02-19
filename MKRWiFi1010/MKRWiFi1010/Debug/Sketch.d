@@ -258,7 +258,8 @@ Sketch.d Sketch.o: .././Sketch.cpp .././Sketch.h \
  ..\include\libraries\FreeRTOS_SAMD21\src/portable.h \
  ..\include\libraries\FreeRTOS_SAMD21\src/error_hooks.h \
  ..\include\libraries\FreeRTOS_SAMD21\src/FreeRTOS.h \
- ..\include\libraries\FreeRTOS_SAMD21\src/runTimeStats_hooks.h
+ ..\include\libraries\FreeRTOS_SAMD21\src/runTimeStats_hooks.h \
+ ../include/libraries/ECG/hdr.h ../include/libraries/ECG/init.h
 
 .././Sketch.h:
 
@@ -797,3 +798,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ..\include\libraries\FreeRTOS_SAMD21\src/FreeRTOS.h:
 
 ..\include\libraries\FreeRTOS_SAMD21\src/runTimeStats_hooks.h:
+
+../include/libraries/ECG/hdr.h:
+
+../include/libraries/ECG/init.h:

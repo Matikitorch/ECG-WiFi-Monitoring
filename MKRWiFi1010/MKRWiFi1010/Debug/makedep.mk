@@ -6,6 +6,14 @@ BatteryCharger.cpp
 
 Ethernet.cpp
 
+include\libraries\ECG\adc.c
+
+include\libraries\ECG\comms.c
+
+include\libraries\ECG\init.cpp
+
+include\libraries\ECG\led.cpp
+
 Sketch.cpp
 
 src\libraries\FreeRTOS_SAMD21\examples\CompilerAndLinker_Test\GameData.cpp
