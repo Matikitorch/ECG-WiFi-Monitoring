@@ -104,8 +104,8 @@ led_state_t GetLEDState(led_mode_t mode)
 
 			case led_mode_normal:
 			state.RedBlinks     =    0;     state.GrnBlinks     =    1;
-			state.RedOnTime     =    0;     state.GrnOnTime     =  450;
-			state.RedOffTime    =    0;     state.GrnOffTime    =   50;
+			state.RedOnTime     =    0;     state.GrnOnTime     =  500;
+			state.RedOffTime    =    0;     state.GrnOffTime    =   00;
 			break;
 
 			case led_mode_faulted:
@@ -302,7 +302,7 @@ void task_LEDInitialize(void *pvParameters)
 		//led_mode(currentMode);	
 		
 		// Wait 5 seconds	
-		vTaskDelay(500);
+		vTaskDelay(5000);
 		
 		// Set the LED mode to connecting => Toggling between RED and GRN
 		//led_mode(led_mode_connecting);

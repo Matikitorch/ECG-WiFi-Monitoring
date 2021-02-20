@@ -32,10 +32,12 @@ void task_WiFiInitialize(void *pvParamters)
 	
 	for (;;)
 	{
-		if ( WiFi.RSSI() == 0 )
+		if ( ( WiFi.RSSI() == 0 ) && ( isConnected == true ) )
 		{
 			isConnected = false;
 			led_mode(led_mode_faulted);
+			vTaskDelay(50);
+			//TODO suspend the wifi communication task
 		}
 		else
 		{
@@ -44,6 +46,7 @@ void task_WiFiInitialize(void *pvParamters)
 		if ( !isConnected )
 		{
 			led_mode(led_mode_connecting);
+			vTaskDelay(1000); 
 			Serial.print("\r\nAttempting to connect to SSID: ");
 			Serial.print(ssid);
 			Serial.print(" Password ");
@@ -58,6 +61,8 @@ void task_WiFiInitialize(void *pvParamters)
 				Serial.println("Connected to wifi");
 				isConnected = true;
 				led_mode(led_mode_normal);  
+				vTaskDelay(50);
+				//TODO - start the Wifi Communication Task
 			}		
 		}
 		vTaskDelay(5000); //wait 5 seconds
