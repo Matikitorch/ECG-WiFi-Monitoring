@@ -409,4 +409,5 @@ void WiFiClass::LEDBlue(uint8_t output)
 	WiFiDrv::digitalWrite(BLUE_LED_PIN, output);
 }
 
+
 WiFiClass WiFi;

@@ -31,6 +31,7 @@
 
 #include "hdr.h"
 #include "init.h"
+#include "led.h"
 
 //**************************************************************************
 // global variables
@@ -190,7 +191,9 @@ void setup() {
 	delay(500);
 	
 	Serial.println(F("\r\n=============================================="));
-	Serial.println(F("    Test MKRWiFi1010 - Microchip Studio"));
+	Serial.println(F("    ECG Wifi Monitor"));
+	Serial.println(F("    Authors: Matias Blanc and Justin Bee"));
+	Serial.println(F("    Copyright: 2021"));
 	Serial.println(F("=============================================="));
 
 //SPI
@@ -225,6 +228,9 @@ void setup() {
 
 	// Start the RTOS, this function will never return and will schedule the tasks.
 	vTaskStartScheduler();
+	
+	//set the led to startup mode
+	led_mode(led_mode_starting);
 
 }
 
@@ -248,7 +254,7 @@ void loop() {
 
 	if (Serial.available() > 0) {
 		char c = Serial.read();
-		c = c & 0xDF;	// uppercase
+	/*	c = c & 0xDF;	// uppercase
 // If the character is a newline ("\n"), it is the last character in the incoming string. 
 // Print out the string to the Console, ask for more information, and clear the string.
 			if(c == 'E'){
@@ -278,7 +284,7 @@ void loop() {
 			if(c == 'T'){
 				ETH_test();				// Scanner WiFi
 				flg_menu = true;
-			}
+			} */
 	}
 
 // LED flash: 0.5 Sec ON - 0.5 Sec OFF	
@@ -294,7 +300,7 @@ void loop() {
 // If necessary show menu
 	if(flg_menu){
 		flg_menu = false;
-		showMenu();
+		//showMenu();
 	}
 }
 

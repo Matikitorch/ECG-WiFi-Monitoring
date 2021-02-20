@@ -17,7 +17,6 @@
 #include "arduino_secrets.h"			// Id and Passwords
 
 
-
 bool WNINA_setup(void);
 bool WNINA_connect(void);
 bool WNINA_scanner(void);

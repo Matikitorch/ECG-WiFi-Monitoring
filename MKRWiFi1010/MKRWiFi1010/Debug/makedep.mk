@@ -14,6 +14,8 @@ include\libraries\ECG\init.cpp
 
 include\libraries\ECG\led.cpp
 
+include\libraries\ECG\wifi_init.cpp
+
 Sketch.cpp
 
 src\libraries\FreeRTOS_SAMD21\examples\CompilerAndLinker_Test\GameData.cpp

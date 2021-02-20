@@ -13,6 +13,7 @@
 #include "comms.h"
 #include "led.h"
 #include "adc.h"
+#include "wifi_init.h"
 
 //*****************************************************************
 // Call to initialize
@@ -21,6 +22,7 @@ void task_Initialize( void *pvParameters )
 {
 	// Start all tasks
 	xTaskCreate(task_LEDInitialize,		"LED Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
+	xTaskCreate(task_WiFiInitialize,    "Wifi Init",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
 		
 	vTaskDelete( NULL );
 }

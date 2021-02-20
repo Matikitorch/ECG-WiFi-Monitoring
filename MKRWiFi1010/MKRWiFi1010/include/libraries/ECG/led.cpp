@@ -299,22 +299,22 @@ void task_LEDInitialize(void *pvParameters)
 	for(;;)
 	{
 		// Set the LED mode to starting => RED on for 100 ms and off for 900 ms
-		led_mode(led_mode_starting);	
+		//led_mode(currentMode);	
 		
 		// Wait 5 seconds	
-		vTaskDelay(5000);
+		vTaskDelay(500);
 		
 		// Set the LED mode to connecting => Toggling between RED and GRN
-		led_mode(led_mode_connecting);
+		//led_mode(led_mode_connecting);
 		
 		// Wait 5 seconds
-		vTaskDelay(5000);
+		//vTaskDelay(5000);
 		
 		// Set the LED mode to faulted as a temporary state for 5 seconds. The mode will go back to led_mode_connecting after the alloted time
-		led_modeTemp(led_mode_faulted, 5000);
+		//led_modeTemp(led_mode_faulted, 5000);
 		
 		// Wait 5 seconds
-		vTaskDelay(15000);
+		//vTaskDelay(15000);
 	}
 
 	vTaskDelete(NULL);

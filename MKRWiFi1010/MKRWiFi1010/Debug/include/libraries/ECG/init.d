@@ -185,7 +185,8 @@ include/libraries/ECG/init.d include/libraries/ECG/init.o: \
  ..\include\libraries\FreeRTOS_SAMD21\src/FreeRTOS.h \
  ..\include\libraries\FreeRTOS_SAMD21\src/runTimeStats_hooks.h \
  ../include/libraries/ECG/hdr.h ../include/libraries/ECG/comms.h \
- ../include/libraries/ECG/led.h ../include/libraries/ECG/adc.h
+ ../include/libraries/ECG/led.h ../include/libraries/ECG/adc.h \
+ ../include/libraries/ECG/wifi_init.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h:
 
@@ -562,3 +563,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../include/libraries/ECG/led.h:
 
 ../include/libraries/ECG/adc.h:
+
+../include/libraries/ECG/wifi_init.h:

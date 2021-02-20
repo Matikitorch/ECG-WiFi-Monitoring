@@ -58,6 +58,7 @@ C_SRCS +=  \
 ../include/libraries/ECG/comms.c \
 ../include/libraries/ECG/init.cpp \
 ../include/libraries/ECG/led.cpp \
+../include/libraries/ECG/wifi_init.cpp \
 ../Sketch.cpp \
 ../src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.cpp \
 ../src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameMessage.cpp \
@@ -90,6 +91,7 @@ include/libraries/ECG/adc.o \
 include/libraries/ECG/comms.o \
 include/libraries/ECG/init.o \
 include/libraries/ECG/led.o \
+include/libraries/ECG/wifi_init.o \
 Sketch.o \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.o \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameMessage.o \
@@ -115,6 +117,7 @@ include/libraries/ECG/adc.o \
 include/libraries/ECG/comms.o \
 include/libraries/ECG/init.o \
 include/libraries/ECG/led.o \
+include/libraries/ECG/wifi_init.o \
 Sketch.o \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.o \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameMessage.o \
@@ -140,6 +143,7 @@ include/libraries/ECG/adc.d \
 include/libraries/ECG/comms.d \
 include/libraries/ECG/init.d \
 include/libraries/ECG/led.d \
+include/libraries/ECG/wifi_init.d \
 Sketch.d \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.d \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameMessage.d \
@@ -165,6 +169,7 @@ include/libraries/ECG/adc.d \
 include/libraries/ECG/comms.d \
 include/libraries/ECG/init.d \
 include/libraries/ECG/led.d \
+include/libraries/ECG/wifi_init.d \
 Sketch.d \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.d \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameMessage.d \
@@ -192,7 +197,7 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 LIB_DEP+=  \
-C:/Projects/Atmel\ Studio/ECG-WiFi-Monitoring/MKRWiFi1010/ArduinoCore/Debug/libArduinoCore.a
+C:/Users/jbeea/Documents/Atmel\ Studio/7.0/ECG-WiFi-Monitoring/MKRWiFi1010/ArduinoCore/Debug/libArduinoCore.a
 
 LINKER_SCRIPT_DEP+=  \
 ../Device_Startup/samd21g18a_flash.ld \
@@ -238,6 +243,13 @@ include/libraries/ECG/init.o: ../include/libraries/ECG/init.cpp
 	
 
 include/libraries/ECG/led.o: ../include/libraries/ECG/led.cpp
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-g++.exe$(QUOTE) -mthumb -D__SAMD21G18A__ -DF_CPU=48000000L -DARDUINO=10805 -DARDUINO_SAMD_MKRWIFI1010 -DARDUINO_ARCH_SAMD -DUSB_VID=0x2341 -DUSB_PID=0x8054 -DUSB_PRODUCT="\"Arduino MKR WiFi 1010\"" -DUSB_MANUFACTURER="\"Arduino LLC\"" -DUSBCON -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\5.0.1\CMSIS\Include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants" -I"..\\..\ArduinoCore\include\core\avr" -I"..\\..\ArduinoCore\include\core\samd21" -I"..\\..\ArduinoCore\include\core\USB" -I"..\\..\ArduinoCore\include\core\samd21\include" -I"..\\..\ArduinoCore\include\core\samd21\include\component" -I"..\\..\ArduinoCore\include\core\samd21\include\instance" -I"..\\..\ArduinoCore\include\core\samd21\include\pio" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include" -I"..\include\libraries\FreeRTOS_SAMD21\examples\CompilerAndLinker_Test" -I"..\include\libraries\FreeRTOS_SAMD21\src" -I"../../ArduinoCore/WIRE" -I"../../ArduinoCore/SPI" -I"../../ArduinoCore/Ethernet" -I"../../ArduinoCore/Ethernet/EthernetLarge" -I"../../ArduinoCore/WiFiNINA" -I"../include/libraries/ECG"  -Og -fno-threadsafe-statics -fno-exceptions -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu++11 --param max-inline-insns-single=500 -nostdlib -v -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+include/libraries/ECG/wifi_init.o: ../include/libraries/ECG/wifi_init.cpp
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-g++.exe$(QUOTE) -mthumb -D__SAMD21G18A__ -DF_CPU=48000000L -DARDUINO=10805 -DARDUINO_SAMD_MKRWIFI1010 -DARDUINO_ARCH_SAMD -DUSB_VID=0x2341 -DUSB_PID=0x8054 -DUSB_PRODUCT="\"Arduino MKR WiFi 1010\"" -DUSB_MANUFACTURER="\"Arduino LLC\"" -DUSBCON -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\5.0.1\CMSIS\Include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants" -I"..\\..\ArduinoCore\include\core\avr" -I"..\\..\ArduinoCore\include\core\samd21" -I"..\\..\ArduinoCore\include\core\USB" -I"..\\..\ArduinoCore\include\core\samd21\include" -I"..\\..\ArduinoCore\include\core\samd21\include\component" -I"..\\..\ArduinoCore\include\core\samd21\include\instance" -I"..\\..\ArduinoCore\include\core\samd21\include\pio" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include" -I"..\include\libraries\FreeRTOS_SAMD21\examples\CompilerAndLinker_Test" -I"..\include\libraries\FreeRTOS_SAMD21\src" -I"../../ArduinoCore/WIRE" -I"../../ArduinoCore/SPI" -I"../../ArduinoCore/Ethernet" -I"../../ArduinoCore/Ethernet/EthernetLarge" -I"../../ArduinoCore/WiFiNINA" -I"../include/libraries/ECG"  -Og -fno-threadsafe-statics -fno-exceptions -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu++11 --param max-inline-insns-single=500 -nostdlib -v -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
@@ -389,7 +401,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER_SCRIPT_DEP)
 	@echo Building target: $@
 	@echo Invoking: ARM/GNU Linker : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-g++.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mthumb -Wl,-Map="MKRWiFi1010.map" --specs=nano.specs --specs=nosys.specs -Wl,--start-group -lm -lArduinoCore  -Wl,--end-group -L"..\linker_scripts\linker_scripts\gcc" -L"..\\Device_Startup" -L"C:\Projects\Atmel Studio\ECG-WiFi-Monitoring\MKRWiFi1010\ArduinoCore\Debug"  -Wl,--gc-sections -mcpu=cortex-m0plus -Tflash_without_bootloader.ld -Wl,--cref -Os -Wl,--check-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align  
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-g++.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mthumb -Wl,-Map="MKRWiFi1010.map" --specs=nano.specs --specs=nosys.specs -Wl,--start-group -lm -lArduinoCore  -Wl,--end-group -L"..\linker_scripts\linker_scripts\gcc" -L"..\\Device_Startup" -L"C:\Users\jbeea\Documents\Atmel Studio\7.0\ECG-WiFi-Monitoring\MKRWiFi1010\ArduinoCore\Debug"  -Wl,--gc-sections -mcpu=cortex-m0plus -Tflash_without_bootloader.ld -Wl,--cref -Os -Wl,--check-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align  
 	@echo Finished building target: $@
 	"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-size.exe" "MKRWiFi1010.elf"
 	
