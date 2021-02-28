@@ -368,6 +368,12 @@
     <Compile Include="include\libraries\ECG\led.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="include\libraries\ECG\utilities.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\ECG\utilities.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\libraries\ECG\wifi_init.cpp">
       <SubType>compile</SubType>
     </Compile>

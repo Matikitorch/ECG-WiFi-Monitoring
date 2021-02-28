@@ -58,6 +58,7 @@ C_SRCS +=  \
 ../include/libraries/ECG/comms.c \
 ../include/libraries/ECG/init.cpp \
 ../include/libraries/ECG/led.cpp \
+../include/libraries/ECG/utilities.cpp \
 ../include/libraries/ECG/wifi_init.cpp \
 ../Sketch.cpp \
 ../src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.cpp \
@@ -91,6 +92,7 @@ include/libraries/ECG/adc.o \
 include/libraries/ECG/comms.o \
 include/libraries/ECG/init.o \
 include/libraries/ECG/led.o \
+include/libraries/ECG/utilities.o \
 include/libraries/ECG/wifi_init.o \
 Sketch.o \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.o \
@@ -117,6 +119,7 @@ include/libraries/ECG/adc.o \
 include/libraries/ECG/comms.o \
 include/libraries/ECG/init.o \
 include/libraries/ECG/led.o \
+include/libraries/ECG/utilities.o \
 include/libraries/ECG/wifi_init.o \
 Sketch.o \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.o \
@@ -143,6 +146,7 @@ include/libraries/ECG/adc.d \
 include/libraries/ECG/comms.d \
 include/libraries/ECG/init.d \
 include/libraries/ECG/led.d \
+include/libraries/ECG/utilities.d \
 include/libraries/ECG/wifi_init.d \
 Sketch.d \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.d \
@@ -169,6 +173,7 @@ include/libraries/ECG/adc.d \
 include/libraries/ECG/comms.d \
 include/libraries/ECG/init.d \
 include/libraries/ECG/led.d \
+include/libraries/ECG/utilities.d \
 include/libraries/ECG/wifi_init.d \
 Sketch.d \
 src/libraries/FreeRTOS_SAMD21/examples/CompilerAndLinker_Test/GameData.d \
@@ -243,6 +248,13 @@ include/libraries/ECG/init.o: ../include/libraries/ECG/init.cpp
 	
 
 include/libraries/ECG/led.o: ../include/libraries/ECG/led.cpp
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-g++.exe$(QUOTE) -mthumb -D__SAMD21G18A__ -DF_CPU=48000000L -DARDUINO=10805 -DARDUINO_SAMD_MKRWIFI1010 -DARDUINO_ARCH_SAMD -DUSB_VID=0x2341 -DUSB_PID=0x8054 -DUSB_PRODUCT="\"Arduino MKR WiFi 1010\"" -DUSB_MANUFACTURER="\"Arduino LLC\"" -DUSBCON -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\5.0.1\CMSIS\Include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants" -I"..\\..\ArduinoCore\include\core\avr" -I"..\\..\ArduinoCore\include\core\samd21" -I"..\\..\ArduinoCore\include\core\USB" -I"..\\..\ArduinoCore\include\core\samd21\include" -I"..\\..\ArduinoCore\include\core\samd21\include\component" -I"..\\..\ArduinoCore\include\core\samd21\include\instance" -I"..\\..\ArduinoCore\include\core\samd21\include\pio" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include" -I"..\include\libraries\FreeRTOS_SAMD21\examples\CompilerAndLinker_Test" -I"..\include\libraries\FreeRTOS_SAMD21\src" -I"../../ArduinoCore/WIRE" -I"../../ArduinoCore/SPI" -I"../../ArduinoCore/Ethernet" -I"../../ArduinoCore/Ethernet/EthernetLarge" -I"../../ArduinoCore/WiFiNINA" -I"../include/libraries/ECG"  -Og -fno-threadsafe-statics -fno-exceptions -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu++11 --param max-inline-insns-single=500 -nostdlib -v -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+include/libraries/ECG/utilities.o: ../include/libraries/ECG/utilities.cpp
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-g++.exe$(QUOTE) -mthumb -D__SAMD21G18A__ -DF_CPU=48000000L -DARDUINO=10805 -DARDUINO_SAMD_MKRWIFI1010 -DARDUINO_ARCH_SAMD -DUSB_VID=0x2341 -DUSB_PID=0x8054 -DUSB_PRODUCT="\"Arduino MKR WiFi 1010\"" -DUSB_MANUFACTURER="\"Arduino LLC\"" -DUSBCON -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\5.0.1\CMSIS\Include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants" -I"..\\..\ArduinoCore\include\core\avr" -I"..\\..\ArduinoCore\include\core\samd21" -I"..\\..\ArduinoCore\include\core\USB" -I"..\\..\ArduinoCore\include\core\samd21\include" -I"..\\..\ArduinoCore\include\core\samd21\include\component" -I"..\\..\ArduinoCore\include\core\samd21\include\instance" -I"..\\..\ArduinoCore\include\core\samd21\include\pio" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include" -I"..\include\libraries\FreeRTOS_SAMD21\examples\CompilerAndLinker_Test" -I"..\include\libraries\FreeRTOS_SAMD21\src" -I"../../ArduinoCore/WIRE" -I"../../ArduinoCore/SPI" -I"../../ArduinoCore/Ethernet" -I"../../ArduinoCore/Ethernet/EthernetLarge" -I"../../ArduinoCore/WiFiNINA" -I"../include/libraries/ECG"  -Og -fno-threadsafe-statics -fno-exceptions -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu++11 --param max-inline-insns-single=500 -nostdlib -v -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

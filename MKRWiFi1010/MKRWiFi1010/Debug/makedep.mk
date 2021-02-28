@@ -14,6 +14,8 @@ include\libraries\ECG\init.cpp
 
 include\libraries\ECG\led.cpp
 
+include\libraries\ECG\utilities.cpp
+
 include\libraries\ECG\wifi_init.cpp
 
 Sketch.cpp

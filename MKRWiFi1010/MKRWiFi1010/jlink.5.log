@@ -1,8 +1,3841 @@
-T2420 22890:075.371   SEGGER J-Link V6.94d Log File
-T2420 22890:075.623   DLL Compiled: Feb 12 2021 15:52:57
-T2420 22890:075.722   Logging started @ 2021-02-20 21:59
-T2420 22890:075.816 - 107.090ms
-T2420 22890:172.352 JLINK_Close()
-T2420 22890:177.104 - 4.905ms
-T2420 22890:177.314   
-T2420 22890:177.416   Closed
+T2AB0 55917:324.805   SEGGER J-Link V6.94d Log File
+T2AB0 55917:325.077   DLL Compiled: Feb 12 2021 15:52:57
+T2AB0 55917:325.169   Logging started @ 2021-02-28 20:51
+T2AB0 55917:325.258 - 42556.425ms
+T2AB0 55917:463.109 JLINK_ExecCommand("Device = ATSAMD21G18A", ...). 
+T2AB0 55917:463.805   Device "ATSAMD21G18" selected.
+T2AB0 55917:467.506 - 4.351ms returns 0x00
+T2AB0 55917:494.240 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T2AB0 55917:494.968 - 0.783ms returns 0x00
+T2AB0 55917:495.069 JLINK_SetSpeed(4000)
+T2AB0 55917:495.234 - 0.209ms
+T2AB0 55917:495.324 JLINK_ResetPullsRESET(OFF)
+T2AB0 55917:495.406 - 0.121ms
+T2AB0 55917:495.488 JLINK_Connect()
+T2AB0 55917:495.828   InitTarget() start
+T2AB0 55917:496.020    J-Link Script File: Executing InitTarget()
+T2AB0 55917:496.509   InitTarget()
+T2AB0 55917:499.707   InitTarget() end
+T2AB0 55917:500.621   Found SW-DP with ID 0x0BC11477
+T2AB0 55917:503.243   DPIDR: 0x0BC11477
+T2AB0 55917:503.391   Scanning AP map to find all available APs
+T2AB0 55917:504.196   AP[1]: Stopped AP scan as end of AP map has been reached
+T2AB0 55917:504.342   AP[0]: AHB-AP (IDR: 0x04770031)
+T2AB0 55917:504.569   Iterating through AP map to find AHB-AP to use
+T2AB0 55917:505.565   AP[0]: Core found
+T2AB0 55917:505.647   AP[0]: AHB-AP ROM base: 0x41003000
+T2AB0 55917:506.395   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+T2AB0 55917:506.485   Found Cortex-M0 r0p1, Little endian.
+T2AB0 55917:607.538   -- Max. mem block: 0x000013C8
+T2AB0 55917:607.797   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2AB0 55917:608.204   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T2AB0 55917:608.600   CPU_ReadMem(4 bytes @ 0xE0002000)
+T2AB0 55917:609.056   FPUnit: 4 code (BP) slots and 0 literal slots
+T2AB0 55917:609.100   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2AB0 55917:609.488   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2AB0 55917:609.916   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2AB0 55917:610.330   CPU_WriteMem(4 bytes @ 0xE0001000)
+T2AB0 55917:610.752   CoreSight components:
+T2AB0 55917:610.810   ROMTbl[0] @ 41003000
+T2AB0 55917:610.853   CPU_ReadMem(64 bytes @ 0x41003000)
+T2AB0 55917:611.980   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+T2AB0 55917:612.936   ROMTbl[0][0]: E00FF000, CID: B105100D, PID: 000BB4C0 ROM Table
+T2AB0 55917:613.042   ROMTbl[1] @ E00FF000
+T2AB0 55917:613.090   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T2AB0 55917:614.268   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T2AB0 55917:615.290   ROMTbl[1][0]: E000E000, CID: B105E00D, PID: 000BB008 SCS
+T2AB0 55917:615.330   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T2AB0 55917:615.977   ROMTbl[1][1]: E0001000, CID: B105E00D, PID: 000BB00A DWT
+T2AB0 55917:616.030   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T2AB0 55917:616.663   ROMTbl[1][2]: E0002000, CID: B105E00D, PID: 000BB00B FPB
+T2AB0 55917:616.706   CPU_ReadMem(32 bytes @ 0x41006FE0)
+T2AB0 55917:617.540   ROMTbl[0][1]: 41006000, CID: B105900D, PID: 001BB932 MTB-M0+
+T2AB0 55917:617.623 - 122.149ms returns 0x00
+T2AB0 55917:617.785 JLINK_Halt()
+T2AB0 55917:620.878 - 3.150ms returns 0x00
+T2AB0 55917:623.201 JLINK_JTAG_GetDeviceID(DeviceIndex = 0)
+T2AB0 55917:623.237 - 0.049ms returns 0
+T2AB0 55917:623.266 JLINK_ReadMemU32(0x41002018, 0x1 Items)
+T2AB0 55917:623.316   CPU_ReadMem(4 bytes @ 0x41002018)
+T2AB0 55917:623.734   Data:  05 03 01 10
+T2AB0 55917:623.769 - 0.514ms returns 1 (0x1)
+T2E70 55917:631.756 JLINK_IsHalted()
+T2E70 55917:632.482 - 0.746ms returns TRUE
+T2E70 55917:632.524 JLINK_GetMOEs(...)
+T2E70 55917:632.585   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T2E70 55917:633.062 - 0.577ms returns 0x01
+T2E70 55917:633.128 JLINK_ReadReg(R15 (PC))
+T2E70 55917:633.164 - 0.049ms returns 0x00005F06
+T2AB0 55917:823.215 JLINK_BeginDownload(Flags = 0x00000000)
+T2AB0 55917:823.281 - 0.079ms
+T2AB0 55917:823.328 JLINK_WriteMem(0x00000000, 0x1EB40 Bytes, ...)
+T2AB0 55917:823.355   Data:  00 80 00 20 F1 5D 00 00 D9 5D 00 00 D9 5D 00 00 ...
+T2AB0 55917:824.132   completely In flash
+T2AB0 55917:824.516    -- Read from flash cache (125760 bytes @ 0x00000000)
+T2AB0 55917:824.573 - 1.255ms returns 0x1EB40
+T2AB0 55917:825.010 JLINK_WriteMem(0x0001EB40, 0x5C Bytes, ...)
+T2AB0 55917:825.254   Data:  72 B6 10 4B 04 33 10 4A 93 42 12 D9 0F 4A 12 7D ...
+T2AB0 55917:825.313   completely In flash
+T2AB0 55917:825.354    -- Read from flash cache (92 bytes @ 0x0001EB40)
+T2AB0 55917:825.389 - 0.390ms returns 0x5C
+T2AB0 55917:825.793 JLINK_WriteMem(0x0001EB9C, 0x310 Bytes, ...)
+T2AB0 55917:825.828   Data:  00 00 00 00 01 00 00 00 44 65 66 61 75 6C 74 2D ...
+T2AB0 55917:825.895   completely In flash
+T2AB0 55917:825.946    -- Read from flash cache (784 bytes @ 0x0001EB9C)
+T2AB0 55917:825.983 - 0.202ms returns 0x310
+T2E70 55917:833.840 JLINK_IsHalted()
+T2E70 55917:833.912 - 0.085ms returns TRUE
+T2AB0 55917:927.097 JLINK_EndDownload()
+T2AB0 55917:927.474   CPU_ReadMem(4 bytes @ 0x41006004)
+T2AB0 55917:927.831   CPU_ReadMem(4 bytes @ 0xE000ED90)
+T2AB0 55917:928.186    -- --------------------------------------
+T2AB0 55917:928.221   Flash bank @ 0x00000000: Default: L2 verify disabled because algorithm performs L1 verify
+T2AB0 55917:928.254    -- Start of determining dirty areas in flash cache
+T2AB0 55917:928.441    -- End of determining dirty areas
+T2AB0 55917:928.475    -- Start of preparing flash programming
+T2AB0 55917:928.507    -- Calculating RAM usage
+T2AB0 55917:928.559    -- RAM usage = 5860 Bytes
+T2AB0 55917:928.591    -- Preserving CPU registers
+T2AB0 55917:928.647    -- Preparing memory
+T2AB0 55917:928.679    -- Preparing target
+T2AB0 55917:928.711    -- Downloading RAMCode
+T2AB0 55917:945.683    -- Preparing RAMCode
+T2AB0 55917:951.195    -- Checking target RAM
+T2AB0 55917:952.644    -- End of preparing flash programming
+T2AB0 55917:953.021   Looking for J-Link GUI Server exe at: C:\Program Files (x86)\Atmel\Studio\7.0\atbackend\JLinkGUIServer.exe
+T2AB0 55917:953.223   Looking for J-Link GUI Server exe at: C:\Program Files (x86)\SEGGER\JLink\JLinkGUIServer.exe
+T2AB0 55917:953.339   Forking J-Link GUI Server: C:\Program Files (x86)\SEGGER\JLink\JLinkGUIServer.exe
+T2AB0 55918:114.920   J-Link GUI Server info: "J-Link GUI server V6.94d "
+T2AB0 55918:140.700    -- CPU speed could not be measured.
+T2AB0 55918:140.800    -- Start of comparing flash
+T2AB0 55918:140.845    -- CRC check was estimated as fastest method
+T2AB0 55918:196.182    -- Comparing range 0x0000 - 0xFFFF (256 Sectors, 64 KB), using multi-block CRC calculation
+T2AB0 55918:258.752    -- CRC does not match for sectors 0-16, 23-43, 45-49, 51, 53-61, 63-68, 71, 73, 77-78, 81, 85-88, 92-96, 100, 105-106, 108-110, 114, 116-117, 119-121, 123-127, 129-131, 136-138, 140, 144, 148, 253-255
+T2AB0 55918:259.532    -- Comparing range 0x10000 - 0x1EEFF (239 Sectors, 59 KB), using multi-block CRC calculation
+T2AB0 55918:312.909    -- CRC does not match for sectors 57-59, 61-63, 97, 101-104, 116, 118-119, 132-133, 142-143, 233, 235-238
+T2AB0 55918:313.530    -- Comparing range 0x1100 - 0x16FF (6 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2AB0 55918:320.511    -- All CRCs match
+T2AB0 55918:321.092    -- Comparing range 0x2C00 - 0x2CFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:325.815    -- All CRCs match
+T2AB0 55918:326.462    -- Comparing range 0x3200 - 0x32FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:331.130    -- All CRCs match
+T2AB0 55918:331.617    -- Comparing range 0x3400 - 0x34FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:337.633    -- All CRCs match
+T2AB0 55918:338.350    -- Comparing range 0x3E00 - 0x3EFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:344.116    -- All CRCs match
+T2AB0 55918:344.752    -- Comparing range 0x4500 - 0x46FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:350.435    -- All CRCs match
+T2AB0 55918:351.323    -- Comparing range 0x4800 - 0x48FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:356.856    -- All CRCs match
+T2AB0 55918:357.419    -- Comparing range 0x4A00 - 0x4CFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:364.585    -- All CRCs match
+T2AB0 55918:365.079    -- Comparing range 0x4F00 - 0x50FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:371.696    -- All CRCs match
+T2AB0 55918:372.199    -- Comparing range 0x5200 - 0x54FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:378.660    -- All CRCs match
+T2AB0 55918:379.259    -- Comparing range 0x5900 - 0x5BFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:385.749    -- All CRCs match
+T2AB0 55918:386.352    -- Comparing range 0x6100 - 0x63FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:392.096    -- All CRCs match
+T2AB0 55918:392.812    -- Comparing range 0x6500 - 0x68FF (4 Sectors, 1024 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:400.404    -- All CRCs match
+T2AB0 55918:401.218    -- Comparing range 0x6B00 - 0x6BFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:407.338    -- All CRCs match
+T2AB0 55918:408.078    -- Comparing range 0x6F00 - 0x71FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:414.108    -- All CRCs match
+T2AB0 55918:414.707    -- Comparing range 0x7300 - 0x73FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:420.844    -- All CRCs match
+T2AB0 55918:421.816    -- Comparing range 0x7600 - 0x76FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:426.828    -- All CRCs match
+T2AB0 55918:427.377    -- Comparing range 0x7A00 - 0x7AFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:432.378    -- All CRCs match
+T2AB0 55918:433.434    -- Comparing range 0x8000 - 0x80FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:440.000    -- All CRCs match
+T2AB0 55918:440.549    -- Comparing range 0x8400 - 0x87FF (4 Sectors, 1024 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:447.309    -- All CRCs match
+T2AB0 55918:448.058    -- Comparing range 0x8B00 - 0x8BFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:455.290    -- All CRCs match
+T2AB0 55918:456.010    -- Comparing range 0x8D00 - 0x8FFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:462.145    -- All CRCs match
+T2AB0 55918:462.858    -- Comparing range 0x9100 - 0x93FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:470.362    -- All CRCs match
+T2AB0 55918:471.131    -- Comparing range 0x9500 - 0xFCFF (104 Sectors, 26 KB), using alternative multi-block CRC calculation
+T2AB0 55918:495.740    -- All CRCs match
+T2AB0 55918:496.451    -- Comparing range 0x10000 - 0x138FF (57 Sectors, 14 KB), using alternative multi-block CRC calculation
+T2AB0 55918:513.226    -- All CRCs match
+T2AB0 55918:514.033    -- Comparing range 0x13C00 - 0x13CFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:519.298    -- All CRCs match
+T2AB0 55918:520.015    -- Comparing range 0x14000 - 0x160FF (33 Sectors, 8 KB), using alternative multi-block CRC calculation
+T2AB0 55918:531.643    -- All CRCs match
+T2AB0 55918:532.742    -- Comparing range 0x16200 - 0x164FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:539.341    -- All CRCs match
+T2AB0 55918:540.102    -- Comparing range 0x16900 - 0x173FF (11 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2AB0 55918:547.687    -- All CRCs match
+T2AB0 55918:548.823    -- Comparing range 0x17500 - 0x175FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:555.428    -- All CRCs match
+T2AB0 55918:556.131    -- Comparing range 0x17800 - 0x183FF (12 Sectors, 3 KB), using alternative multi-block CRC calculation
+T2AB0 55918:564.971    -- All CRCs match
+T2AB0 55918:566.028    -- Comparing range 0x18600 - 0x18DFF (8 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2AB0 55918:573.515    -- All CRCs match
+T2AB0 55918:574.256    -- Comparing range 0x19000 - 0x1E8FF (89 Sectors, 22 KB), using alternative multi-block CRC calculation
+T2AB0 55918:597.072    -- All CRCs match
+T2AB0 55918:597.668    -- Comparing range 0x1EA00 - 0x1EAFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2AB0 55918:603.496    -- All CRCs match
+T2AB0 55918:603.578    -- End of comparing flash
+T2AB0 55918:603.611    -- Start of erasing sectors
+T2AB0 55918:603.646    -- Erasing range 0x00000000 - 0x000010FF ( 17 Sectors, 4 KB)
+T2AB0 55918:624.211    -- Erasing range 0x00001700 - 0x00002BFF ( 21 Sectors, 5 KB)
+T2AB0 55918:646.849    -- Erasing range 0x00002D00 - 0x000031FF (  5 Sectors, 1 KB)
+T2AB0 55918:656.419    -- Erasing range 0x00003300 - 0x000033FF (  1 Sector, 256 Bytes)
+T2AB0 55918:661.958    -- Erasing range 0x00003500 - 0x00003DFF (  9 Sectors, 2 KB)
+T2AB0 55918:674.705    -- Erasing range 0x00003F00 - 0x000044FF (  6 Sectors, 1 KB)
+T2AB0 55918:685.284    -- Erasing range 0x00004700 - 0x000047FF (  1 Sector, 256 Bytes)
+T2AB0 55918:690.960    -- Erasing range 0x00004900 - 0x000049FF (  1 Sector, 256 Bytes)
+T2AB0 55918:696.646    -- Erasing range 0x00004D00 - 0x00004EFF (  2 Sectors, 512 Bytes)
+T2AB0 55918:703.248    -- Erasing range 0x00005100 - 0x000051FF (  1 Sector, 256 Bytes)
+T2AB0 55918:709.851    -- Erasing range 0x00005500 - 0x000058FF (  4 Sectors, 1024 Bytes)
+T2AB0 55918:718.730    -- Erasing range 0x00005C00 - 0x000060FF (  5 Sectors, 1 KB)
+T2AB0 55918:727.540    -- Erasing range 0x00006400 - 0x000064FF (  1 Sector, 256 Bytes)
+T2AB0 55918:734.374    -- Erasing range 0x00006900 - 0x00006AFF (  2 Sectors, 512 Bytes)
+T2AB0 55918:740.882    -- Erasing range 0x00006C00 - 0x00006EFF (  3 Sectors, 768 Bytes)
+T2AB0 55918:748.667    -- Erasing range 0x00007200 - 0x000072FF (  1 Sector, 256 Bytes)
+T2AB0 55918:756.188    -- Erasing range 0x00007400 - 0x000075FF (  2 Sectors, 512 Bytes)
+T2AB0 55918:763.848    -- Erasing range 0x00007700 - 0x000079FF (  3 Sectors, 768 Bytes)
+T2AB0 55918:773.283    -- Erasing range 0x00007B00 - 0x00007FFF (  5 Sectors, 1 KB)
+T2AB0 55918:783.549    -- Erasing range 0x00008100 - 0x000083FF (  3 Sectors, 768 Bytes)
+T2AB0 55918:792.048    -- Erasing range 0x00008800 - 0x00008AFF (  3 Sectors, 768 Bytes)
+T2AB0 55918:801.151    -- Erasing range 0x00008C00 - 0x00008CFF (  1 Sector, 256 Bytes)
+T2AB0 55918:807.052    -- Erasing range 0x00009000 - 0x000090FF (  1 Sector, 256 Bytes)
+T2AB0 55918:812.644    -- Erasing range 0x00009400 - 0x000094FF (  1 Sector, 256 Bytes)
+T2AB0 55918:818.912    -- Erasing range 0x0000FD00 - 0x0000FFFF (  3 Sectors, 768 Bytes)
+T2AB0 55918:826.893    -- Erasing range 0x00013900 - 0x00013BFF (  3 Sectors, 768 Bytes)
+T2AB0 55918:835.184    -- Erasing range 0x00013D00 - 0x00013FFF (  3 Sectors, 768 Bytes)
+T2AB0 55918:843.016    -- Erasing range 0x00016100 - 0x000161FF (  1 Sector, 256 Bytes)
+T2AB0 55918:848.495    -- Erasing range 0x00016500 - 0x000168FF (  4 Sectors, 1024 Bytes)
+T2AB0 55918:857.930    -- Erasing range 0x00017400 - 0x000174FF (  1 Sector, 256 Bytes)
+T2AB0 55918:863.740    -- Erasing range 0x00017600 - 0x000177FF (  2 Sectors, 512 Bytes)
+T2AB0 55918:871.625    -- Erasing range 0x00018400 - 0x000185FF (  2 Sectors, 512 Bytes)
+T2AB0 55918:878.804    -- Erasing range 0x00018E00 - 0x00018FFF (  2 Sectors, 512 Bytes)
+T2AB0 55918:885.801    -- Erasing range 0x0001E900 - 0x0001E9FF (  1 Sector, 256 Bytes)
+T2AB0 55918:891.348    -- Erasing range 0x0001EB00 - 0x0001EEFF (  4 Sectors, 1024 Bytes)
+T2AB0 55918:901.128    -- End of erasing sectors
+T2AB0 55918:901.210    -- Start of flash programming
+T2AB0 55918:901.245    -- Programming range 0x00000000 - 0x000010FF ( 17 Sectors, 4 KB)
+T2AB0 55918:929.122    -- Programming range 0x00001700 - 0x00002BFF ( 21 Sectors, 5 KB)
+T2AB0 55918:970.501    -- Programming range 0x00002D00 - 0x000031FF (  5 Sectors, 1 KB)
+T2AB0 55918:985.473    -- Programming range 0x00003300 - 0x000033FF (  1 Sector, 256 Bytes)
+T2AB0 55918:999.728    -- Programming range 0x00003500 - 0x00003DFF (  9 Sectors, 2 KB)
+T2AB0 55919:023.352    -- Programming range 0x00003F00 - 0x000044FF (  6 Sectors, 1 KB)
+T2AB0 55919:032.084    -- Programming range 0x00004700 - 0x000047FF (  1 Sector, 256 Bytes)
+T2AB0 55919:048.310    -- Programming range 0x00004900 - 0x000049FF (  1 Sector, 256 Bytes)
+T2AB0 55919:057.722    -- Programming range 0x00004D00 - 0x00004EFF (  2 Sectors, 512 Bytes)
+T2AB0 55919:065.622    -- Programming range 0x00005100 - 0x000051FF (  1 Sector, 256 Bytes)
+T2AB0 55919:075.208    -- Programming range 0x00005500 - 0x000058FF (  4 Sectors, 1024 Bytes)
+T2AB0 55919:083.812    -- Programming range 0x00005C00 - 0x000060FF (  5 Sectors, 1 KB)
+T2AB0 55919:096.525    -- Programming range 0x00006400 - 0x000064FF (  1 Sector, 256 Bytes)
+T2AB0 55919:111.407    -- Programming range 0x00006900 - 0x00006AFF (  2 Sectors, 512 Bytes)
+T2AB0 55919:118.785    -- Programming range 0x00006C00 - 0x00006EFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:129.105    -- Programming range 0x00007200 - 0x000072FF (  1 Sector, 256 Bytes)
+T2AB0 55919:139.656    -- Programming range 0x00007400 - 0x000075FF (  2 Sectors, 512 Bytes)
+T2AB0 55919:147.771    -- Programming range 0x00007700 - 0x000079FF (  3 Sectors, 768 Bytes)
+T2AB0 55919:158.058    -- Programming range 0x00007B00 - 0x00007FFF (  5 Sectors, 1 KB)
+T2AB0 55919:169.953    -- Programming range 0x00008100 - 0x000083FF (  3 Sectors, 768 Bytes)
+T2AB0 55919:184.013    -- Programming range 0x00008800 - 0x00008AFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:194.759    -- Programming range 0x00008C00 - 0x00008CFF (  1 Sector, 256 Bytes)
+T2AB0 55919:204.996    -- Programming range 0x00009000 - 0x000090FF (  1 Sector, 256 Bytes)
+T2AB0 55919:212.500    -- Programming range 0x00009400 - 0x000094FF (  1 Sector, 256 Bytes)
+T2AB0 55919:221.240    -- Programming range 0x0000FD00 - 0x0000FFFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:229.816    -- Programming range 0x00013900 - 0x00013BFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:240.460    -- Programming range 0x00013D00 - 0x00013FFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:251.706    -- Programming range 0x00016100 - 0x000161FF (  1 Sector, 256 Bytes)
+T2AB0 55919:263.487    -- Programming range 0x00016500 - 0x000168FF (  4 Sectors, 1024 Bytes)
+T2AB0 55919:272.845    -- Programming range 0x00017400 - 0x000174FF (  1 Sector, 256 Bytes)
+T2AB0 55919:286.380    -- Programming range 0x00017600 - 0x000177FF (  2 Sectors, 512 Bytes)
+T2AB0 55919:294.748    -- Programming range 0x00018400 - 0x000185FF (  2 Sectors, 512 Bytes)
+T2AB0 55919:304.227    -- Programming range 0x00018E00 - 0x00018FFF (  2 Sectors, 512 Bytes)
+T2AB0 55919:313.722    -- Programming range 0x0001E900 - 0x0001E9FF (  1 Sector, 256 Bytes)
+T2AB0 55919:325.475    -- Programming range 0x0001EB00 - 0x0001EEFF (  4 Sectors, 1024 Bytes)
+T2AB0 55919:334.538    -- End of flash programming
+T2AB0 55919:334.614    -- 0x0000 - 0x10FF ( 17 Sectors, 4 KB)
+T2AB0 55919:334.650    -- 0x1700 - 0x2BFF ( 21 Sectors, 5 KB)
+T2AB0 55919:334.685    -- 0x2D00 - 0x31FF (  5 Sectors, 1 KB)
+T2AB0 55919:334.718    -- 0x3300 - 0x33FF (  1 Sector, 256 Bytes)
+T2AB0 55919:334.750    -- 0x3500 - 0x3DFF (  9 Sectors, 2 KB)
+T2AB0 55919:334.782    -- 0x3F00 - 0x44FF (  6 Sectors, 1 KB)
+T2AB0 55919:334.813    -- 0x4700 - 0x47FF (  1 Sector, 256 Bytes)
+T2AB0 55919:334.844    -- 0x4900 - 0x49FF (  1 Sector, 256 Bytes)
+T2AB0 55919:334.875    -- 0x4D00 - 0x4EFF (  2 Sectors, 512 Bytes)
+T2AB0 55919:334.914    -- 0x5100 - 0x51FF (  1 Sector, 256 Bytes)
+T2AB0 55919:334.949    -- 0x5500 - 0x58FF (  4 Sectors, 1024 Bytes)
+T2AB0 55919:334.979    -- 0x5C00 - 0x60FF (  5 Sectors, 1 KB)
+T2AB0 55919:335.010    -- 0x6400 - 0x64FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.041    -- 0x6900 - 0x6AFF (  2 Sectors, 512 Bytes)
+T2AB0 55919:335.074    -- 0x6C00 - 0x6EFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.106    -- 0x7200 - 0x72FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.136    -- 0x7400 - 0x75FF (  2 Sectors, 512 Bytes)
+T2AB0 55919:335.192    -- 0x7700 - 0x79FF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.354    -- 0x7B00 - 0x7FFF (  5 Sectors, 1 KB)
+T2AB0 55919:335.414    -- 0x8100 - 0x83FF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.451    -- 0x8800 - 0x8AFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.490    -- 0x8C00 - 0x8CFF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.526    -- 0x9000 - 0x90FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.558    -- 0x9400 - 0x94FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.591    -- 0xFD00 - 0xFFFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.623    -- 0x13900 - 0x13BFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.654    -- 0x13D00 - 0x13FFF (  3 Sectors, 768 Bytes)
+T2AB0 55919:335.685    -- 0x16100 - 0x161FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.716    -- 0x16500 - 0x168FF (  4 Sectors, 1024 Bytes)
+T2AB0 55919:335.747    -- 0x17400 - 0x174FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.777    -- 0x17600 - 0x177FF (  2 Sectors, 512 Bytes)
+T2AB0 55919:335.808    -- 0x18400 - 0x185FF (  2 Sectors, 512 Bytes)
+T2AB0 55919:335.840    -- 0x18E00 - 0x18FFF (  2 Sectors, 512 Bytes)
+T2AB0 55919:335.899    -- 0x1E900 - 0x1E9FF (  1 Sector, 256 Bytes)
+T2AB0 55919:335.925    -- 0x1EB00 - 0x1EEFF (  4 Sectors, 1024 Bytes)
+T2AB0 55919:335.954    -- Start of restoring
+T2AB0 55919:335.982    -- Restoring RAMCode
+T2AB0 55919:356.502    -- Restore target
+T2AB0 55919:356.594    -- Restore memory
+T2AB0 55919:356.637    -- Restoring CPU registers
+T2AB0 55919:356.759    -- End of restoring
+T2AB0 55919:356.861    -- Bank 0 @ 0x00000000: 35 ranges affected (32000 bytes)
+T2AB0 55919:356.950    -- Total: 1.428s (Prepare: 0.212s, Compare: 0.462s, Erase: 0.297s, Program & Verify: 0.448s, Restore: 0.007s)
+T2AB0 55919:357.010    -- Program & Verify speed: 69 KB/s
+T2AB0 55919:360.194 - 1433.149ms returns 32000 (0x7D00)
+T2AB0 55919:360.810 JLINK_SetResetType(JLINKARM_CM3_RESET_TYPE_NORMAL)
+T2AB0 55919:360.854 - 0.056ms returns JLINKARM_CM3_RESET_TYPE_NORMAL
+T2AB0 55919:360.885 JLINK_Reset()
+T2AB0 55919:360.932   CPU_ReadMem(4 bytes @ 0x200006AC)
+T2AB0 55919:361.472   CPU_WriteMem(4 bytes @ 0x200006AC)
+T2AB0 55919:362.059   ResetTarget() start
+T2AB0 55919:362.105    J-Link Script File: Executing ResetTarget()
+T2AB0 55919:362.505   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2AB0 55919:362.865   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2AB0 55919:363.402   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T2AB0 55919:366.433   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2AB0 55919:369.450   CPU_ReadMem(4 bytes @ 0x41002100)
+T2AB0 55919:370.397   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2AB0 55919:370.979   ResetTarget() end
+T2AB0 55919:375.074   CPU_WriteMem(4 bytes @ 0xE0002000)
+T2AB0 55919:375.608   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2AB0 55919:376.140   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2AB0 55919:376.844   CPU_WriteMem(4 bytes @ 0xE0001000)
+T2AB0 55919:377.559 - 16.744ms
+T2E70 55919:450.217 JLINK_IsHalted()
+T2E70 55919:450.292 - 0.091ms returns TRUE
+T11B0 55919:617.506 JLINK_Halt()
+T11B0 55919:617.556 - 0.066ms returns 0x00
+T11B0 55919:617.619 JLINK_ReadReg(R15 (PC))
+T11B0 55919:617.665 - 0.061ms returns 0x00005DF0
+T11B0 55919:617.707 JLINK_ReadReg(R13 (SP))
+T11B0 55919:617.740 - 0.046ms returns 0x20008000
+T11B0 55919:625.755 JLINK_ReadMemHW(0x00005DF0, 0x0004 Bytes, ...)
+T11B0 55919:625.838   CPU_ReadMem(4 bytes @ 0x00005DF0)
+T11B0 55919:626.559   Data:  10 B5 12 4A
+T11B0 55919:626.650 - 0.909ms returns 0
+T11B0 55919:627.275 JLINK_ReadReg(R0)
+T11B0 55919:627.339 - 0.080ms returns 0x40001000
+T11B0 55919:627.382 JLINK_ReadReg(R1)
+T11B0 55919:627.418 - 0.051ms returns 0x00000000
+T11B0 55919:627.455 JLINK_ReadReg(R2)
+T11B0 55919:627.484 - 0.043ms returns 0x00000000
+T11B0 55919:627.520 JLINK_ReadReg(R3)
+T11B0 55919:627.550 - 0.043ms returns 0x0001EB00
+T11B0 55919:627.585 JLINK_ReadReg(R4)
+T11B0 55919:627.613 - 0.042ms returns 0x20000654
+T11B0 55919:627.647 JLINK_ReadReg(R5)
+T11B0 55919:627.675 - 0.041ms returns 0x20000674
+T11B0 55919:627.709 JLINK_ReadReg(R6)
+T11B0 55919:627.737 - 0.041ms returns 0x20000674
+T11B0 55919:627.771 JLINK_ReadReg(R7)
+T11B0 55919:627.798 - 0.056ms returns 0xA5A5A5A5
+T11B0 55919:627.856 JLINK_ReadReg(R8)
+T11B0 55919:627.884 - 0.042ms returns 0xA5A5A5A5
+T11B0 55919:627.919 JLINK_ReadReg(R9)
+T11B0 55919:627.947 - 0.042ms returns 0xA5A5A5A5
+T11B0 55919:627.981 JLINK_ReadReg(R10)
+T11B0 55919:628.009 - 0.042ms returns 0xA5A5A5A5
+T11B0 55919:628.044 JLINK_ReadReg(R11)
+T11B0 55919:628.071 - 0.041ms returns 0xA5A5A5A5
+T11B0 55919:628.105 JLINK_ReadReg(R12)
+T11B0 55919:628.133 - 0.042ms returns 0x200005D8
+T11B0 55919:628.171 JLINK_ReadReg(R13 (SP))
+T11B0 55919:628.201 - 0.043ms returns 0x20008000
+T11B0 55919:628.235 JLINK_ReadReg(R14)
+T11B0 55919:628.443 - 0.224ms returns 0x2000032F
+T11B0 55919:628.490 JLINK_ReadReg(R15 (PC))
+T11B0 55919:628.526 - 0.080ms returns 0x00005DF0
+T11B0 55919:628.716 JLINK_ReadReg(XPSR)
+T11B0 55919:628.767 - 0.068ms returns 0x81000000
+T11B0 55919:628.811 JLINK_ReadReg(MSP)
+T11B0 55919:628.843 - 0.049ms returns 0x20008000
+T11B0 55919:628.888 JLINK_ReadReg(PSP)
+T11B0 55919:628.921 - 0.047ms returns 0x20003020
+T11B0 55919:628.957 JLINK_ReadReg(PRIMASK)
+T11B0 55919:628.987 - 0.044ms returns 0x00000000
+T11B0 55919:629.023 JLINK_ReadReg(BASEPRI)
+T11B0 55919:629.053 - 0.045ms returns 0x00000000
+T11B0 55919:629.095 JLINK_ReadReg(FAULTMASK)
+T11B0 55919:629.127 - 0.049ms returns 0x00000000
+T11B0 55919:629.169 JLINK_ReadReg(CONTROL)
+T11B0 55919:629.202 - 0.047ms returns 0x00000000
+T11B0 55919:630.208 JLINK_ReadMemHW(0x00005DF0, 0x0002 Bytes, ...)
+T11B0 55919:630.271   CPU_ReadMem(2 bytes @ 0x00005DF0)
+T11B0 55919:630.954   Data:  10 B5
+T11B0 55919:631.051 - 0.857ms returns 0
+T2E70 55919:651.484 JLINK_IsHalted()
+T2E70 55919:651.572 - 0.104ms returns TRUE
+T11B0 55919:746.811 JLINK_ReadReg(R0)
+T11B0 55919:746.908 - 0.115ms returns 0x40001000
+T11B0 55919:746.956 JLINK_ReadReg(R1)
+T11B0 55919:746.987 - 0.046ms returns 0x00000000
+T11B0 55919:747.026 JLINK_ReadReg(R2)
+T11B0 55919:747.058 - 0.047ms returns 0x00000000
+T11B0 55919:747.096 JLINK_ReadReg(R3)
+T11B0 55919:747.127 - 0.045ms returns 0x0001EB00
+T11B0 55919:747.165 JLINK_ReadReg(R4)
+T11B0 55919:747.196 - 0.047ms returns 0x20000654
+T11B0 55919:747.234 JLINK_ReadReg(R5)
+T11B0 55919:747.263 - 0.043ms returns 0x20000674
+T11B0 55919:747.299 JLINK_ReadReg(R6)
+T11B0 55919:747.328 - 0.044ms returns 0x20000674
+T11B0 55919:747.367 JLINK_ReadReg(R7)
+T11B0 55919:747.398 - 0.046ms returns 0xA5A5A5A5
+T11B0 55919:747.458 JLINK_ReadReg(R8)
+T11B0 55919:747.493 - 0.052ms returns 0xA5A5A5A5
+T11B0 55919:747.535 JLINK_ReadReg(R9)
+T11B0 55919:747.568 - 0.048ms returns 0xA5A5A5A5
+T11B0 55919:747.605 JLINK_ReadReg(R10)
+T11B0 55919:747.634 - 0.043ms returns 0xA5A5A5A5
+T11B0 55919:747.669 JLINK_ReadReg(R11)
+T11B0 55919:747.697 - 0.042ms returns 0xA5A5A5A5
+T11B0 55919:747.732 JLINK_ReadReg(R12)
+T11B0 55919:747.763 - 0.045ms returns 0x200005D8
+T11B0 55919:747.803 JLINK_ReadReg(R13 (SP))
+T11B0 55919:747.836 - 0.048ms returns 0x20008000
+T11B0 55919:747.875 JLINK_ReadReg(R14)
+T11B0 55919:747.907 - 0.047ms returns 0x2000032F
+T11B0 55919:747.946 JLINK_ReadReg(R15 (PC))
+T11B0 55919:747.979 - 0.048ms returns 0x00005DF0
+T11B0 55919:748.044 JLINK_ReadReg(XPSR)
+T11B0 55919:748.077 - 0.047ms returns 0x81000000
+T11B0 55919:748.117 JLINK_ReadReg(MSP)
+T11B0 55919:748.147 - 0.045ms returns 0x20008000
+T11B0 55919:748.184 JLINK_ReadReg(PSP)
+T11B0 55919:748.215 - 0.044ms returns 0x20003020
+T11B0 55919:748.252 JLINK_ReadReg(PRIMASK)
+T11B0 55919:748.283 - 0.046ms returns 0x00000000
+T11B0 55919:748.323 JLINK_ReadReg(BASEPRI)
+T11B0 55919:748.356 - 0.048ms returns 0x00000000
+T11B0 55919:748.395 JLINK_ReadReg(FAULTMASK)
+T11B0 55919:748.428 - 0.065ms returns 0x00000000
+T11B0 55919:748.485 JLINK_ReadReg(CONTROL)
+T11B0 55919:748.514 - 0.043ms returns 0x00000000
+T2E70 55919:851.615 JLINK_IsHalted()
+T2E70 55919:851.687 - 0.084ms returns TRUE
+T11B0 55919:906.089 JLINK_ReadMemHW(0x00005DF0, 0x0004 Bytes, ...)
+T11B0 55919:906.167   CPU_ReadMem(4 bytes @ 0x00005DF0)
+T11B0 55919:906.591   Data:  10 B5 12 4A
+T11B0 55919:906.629 - 0.552ms returns 0
+T11B0 55919:984.385 JLINK_SetResetType(JLINKARM_CM3_RESET_TYPE_NORMAL)
+T11B0 55919:984.470 - 0.101ms returns JLINKARM_CM3_RESET_TYPE_NORMAL
+T11B0 55919:984.510 JLINK_Reset()
+T11B0 55919:984.582   ResetTarget() start
+T11B0 55919:984.626    J-Link Script File: Executing ResetTarget()
+T11B0 55919:989.467   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T11B0 55919:991.803   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T11B0 55919:995.881   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T11B0 55919:998.195   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T11B0 55920:010.643   CPU_ReadMem(4 bytes @ 0x41002100)
+T11B0 55920:011.176   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T11B0 55920:011.740   ResetTarget() end
+T11B0 55920:015.603   CPU_WriteMem(4 bytes @ 0xE0002000)
+T11B0 55920:016.978   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T11B0 55920:017.559   CPU_ReadMem(4 bytes @ 0xE0001000)
+T11B0 55920:017.996   CPU_WriteMem(4 bytes @ 0xE0001000)
+T11B0 55920:018.442 - 33.964ms
+T2E70 55920:018.531 JLINK_IsHalted()
+T2E70 55920:018.589 - 0.073ms returns TRUE
+T2E70 55920:018.624 JLINK_GetMOEs(...)
+T2E70 55920:018.664   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T2E70 55920:019.149 - 0.559ms returns 0x01
+T2E70 55920:019.213 JLINK_ReadReg(R15 (PC))
+T2E70 55920:019.254 - 0.056ms returns 0x00005DF0
+T11B0 55920:028.673 JLINK_ReadReg(R15 (PC))
+T11B0 55920:028.745 - 0.088ms returns 0x00005DF0
+T11B0 55920:028.787 JLINK_ReadReg(R13 (SP))
+T11B0 55920:028.816 - 0.043ms returns 0x20008000
+T11B0 55920:048.144 JLINK_ReadMemHW(0x00005DF0, 0x0004 Bytes, ...)
+T11B0 55920:048.226   CPU_ReadMem(4 bytes @ 0x00005DF0)
+T11B0 55920:048.695   Data:  10 B5 12 4A
+T11B0 55920:048.776 - 0.646ms returns 0
+T1D24 55920:087.769 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55920:092.372   [0]: USB, S/N: 801014814
+T1D24 55920:092.459 - 4.703ms returns 1
+T1D24 55920:093.319 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55920:151.652 - 58.374ms returns 0
+T11B0 55920:151.738 JLINK_ReadMemHW(0x00000000, 0x0004 Bytes, ...)
+T11B0 55920:151.822   CPU_ReadMem(4 bytes @ 0x00000000)
+T11B0 55920:152.276   Data:  00 80 00 20
+T11B0 55920:152.338 - 0.614ms returns 0
+T11B0 55920:187.998 JLINK_ReadMemHW(0x00000000, 0x0004 Bytes, ...)
+T11B0 55920:188.075   CPU_ReadMem(4 bytes @ 0x00000000)
+T11B0 55920:188.563   Data:  00 80 00 20
+T11B0 55920:188.624 - 0.641ms returns 0
+T11B0 55920:189.616 JLINK_ReadMemHW(0x00000000, 0x0004 Bytes, ...)
+T11B0 55920:189.680   CPU_ReadMem(4 bytes @ 0x00000000)
+T11B0 55920:190.183   Data:  00 80 00 20
+T11B0 55920:190.245 - 0.643ms returns 0
+T11B0 55920:208.013 JLINK_ReadMemHW(0x00000000, 0x0004 Bytes, ...)
+T11B0 55920:208.093   CPU_ReadMem(4 bytes @ 0x00000000)
+T11B0 55920:209.150   Data:  00 80 00 20
+T11B0 55920:209.228 - 1.229ms returns 0
+T2E70 55920:231.080 JLINK_IsHalted()
+T2E70 55920:231.147 - 0.081ms returns TRUE
+T11B0 55920:267.384 JLINK_ReadMemHW(0x0000600C, 0x0001 Bytes, ...)
+T11B0 55920:267.452   CPU_ReadMem(1 bytes @ 0x0000600C)
+T11B0 55920:267.902   Data:  10
+T11B0 55920:267.961 - 0.591ms returns 0
+T11B0 55920:319.296 JLINK_ReadReg(R15 (PC))
+T11B0 55920:319.381 - 0.105ms returns 0x00005DF0
+T11B0 55920:319.653 JLINK_GetNumBPUnits(Type = 0xFFFFFF02)
+T11B0 55920:319.704 - 0.071ms returns 0x04
+T11B0 55920:319.748 JLINK_SetBPEx(Addr = 0x0000600C, Type = 0xFFFFFFF2)
+T11B0 55920:319.798 - 0.069ms returns 0x00000001
+T11B0 55920:319.841 JLINK_GetBPInfo(BPHandle = 1)
+T11B0 55920:319.876 - 0.053ms returns 0x0
+T11B0 55920:320.304 JLINK_Go()
+T11B0 55920:320.387   CPU_WriteMem(4 bytes @ 0xE0002000)
+T11B0 55920:328.172   CPU_ReadMem(4 bytes @ 0xE0001000)
+T11B0 55920:329.392   CPU_WriteMem(4 bytes @ 0xE000ED30)
+T11B0 55920:329.975   CPU_WriteMem(4 bytes @ 0xE0001000)
+T11B0 55920:330.063   CPU_WriteMem(4 bytes @ 0xE0002008)
+T11B0 55920:330.117   CPU_WriteMem(4 bytes @ 0xE000200C)
+T11B0 55920:330.171   CPU_WriteMem(4 bytes @ 0xE0002010)
+T11B0 55920:330.223   CPU_WriteMem(4 bytes @ 0xE0002014)
+T11B0 55920:331.685   CPU_WriteMem(4 bytes @ 0xE0001004)
+T11B0 55920:333.769 - 13.515ms
+T2E70 55920:334.039 JLINK_IsHalted()
+T2E70 55920:334.550   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55920:336.777 - 2.785ms returns FALSE
+T2E70 55920:356.714 JLINK_IsHalted()
+T2E70 55920:357.373   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55920:357.930 - 1.248ms returns FALSE
+T2E70 55920:446.626 JLINK_IsHalted()
+T2E70 55920:501.283 - 54.713ms returns TRUE
+T2E70 55920:501.380 JLINK_GetMOEs(...)
+T2E70 55920:501.429   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T2E70 55920:538.630 - 37.366ms returns 0x01
+T2E70 55920:538.892 JLINK_ReadReg(R15 (PC))
+T2E70 55920:538.947 - 0.074ms returns 0x0000600C
+T11B0 55920:548.841 JLINK_ReadReg(R15 (PC))
+T11B0 55920:548.919 - 0.355ms returns 0x0000600C
+T11B0 55920:549.287 JLINK_ReadReg(R13 (SP))
+T11B0 55920:549.343 - 0.075ms returns 0x20007FF8
+T11B0 55920:560.041 JLINK_ReadMemHW(0x0000600C, 0x0004 Bytes, ...)
+T11B0 55920:560.135   CPU_ReadMem(4 bytes @ 0x0000600C)
+T11B0 55920:560.613   Data:  10 B5 02 F0
+T11B0 55920:560.702 - 0.679ms returns 0
+T11B0 55920:601.296 JLINK_WriteU32_64(0xE000EDFC, 0x01000000)
+T11B0 55920:601.366   Debug reg: DEMCR
+T11B0 55920:602.124   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T11B0 55920:602.691 - 1.431ms returns 0 (0x00000000)
+T11B0 55920:602.757 JLINK_ReadMem(0xE0001000, 0x4 Bytes, ...)
+T11B0 55920:602.806   CPU_ReadMem(4 bytes @ 0xE0001000)
+T11B0 55920:603.608   Data:  00 00 00 20
+T11B0 55920:603.711   Debug reg: DWT_CTRL
+T11B0 55920:603.753 - 1.011ms returns 0
+T11B0 55920:603.890 JLINK_WriteU32_64(0xE0001000, 0x20000001)
+T11B0 55920:603.923   Debug reg: DWT_CTRL
+T11B0 55920:604.060 - 0.189ms returns 0 (0x00000000)
+T11B0 55920:604.184 JLINK_WriteU32_64(0xE0001028, 0x00000100)
+T11B0 55920:604.220   Debug reg: DWT_FUNC[0]
+T11B0 55920:604.271 - 0.102ms returns 0 (0x00000000)
+T11B0 55920:604.308 JLINK_ReadMem(0xE0001028, 0x4 Bytes, ...)
+T11B0 55920:604.349   CPU_WriteMem(4 bytes @ 0xE0001028)
+T11B0 55920:607.326   CPU_ReadMem(4 bytes @ 0xE0001028)
+T11B0 55920:608.017   Data:  00 00 00 00
+T11B0 55920:608.094   Debug reg: DWT_FUNC[0]
+T11B0 55920:608.139 - 3.847ms returns 0
+T11B0 55920:608.282 JLINK_WriteU32_64(0xE0001024, 0x0000001F)
+T11B0 55920:608.318   Debug reg: DWT_MASK[0]
+T11B0 55920:608.385 - 0.120ms returns 0 (0x00000000)
+T11B0 55920:608.423 JLINK_ReadMem(0xE0001024, 0x4 Bytes, ...)
+T11B0 55920:608.464   CPU_WriteMem(4 bytes @ 0xE0001024)
+T11B0 55920:609.131   CPU_ReadMem(4 bytes @ 0xE0001024)
+T11B0 55920:609.609   Data:  1F 00 00 00
+T11B0 55920:609.669   Debug reg: DWT_MASK[0]
+T11B0 55920:609.707 - 1.297ms returns 0
+T11B0 55920:609.845 JLINK_WriteU32_64(0xE0001038, 0x00000100)
+T11B0 55920:609.876   Debug reg: DWT_FUNC[1]
+T11B0 55920:609.942 - 0.113ms returns 0 (0x00000000)
+T11B0 55920:609.976 JLINK_ReadMem(0xE0001038, 0x4 Bytes, ...)
+T11B0 55920:610.092   CPU_WriteMem(4 bytes @ 0xE0001038)
+T11B0 55920:610.606   CPU_ReadMem(4 bytes @ 0xE0001038)
+T11B0 55920:611.633   Data:  00 00 00 00
+T11B0 55920:611.711   Debug reg: DWT_FUNC[1]
+T11B0 55920:611.750 - 1.787ms returns 0
+T11B0 55920:611.882 JLINK_WriteU32_64(0xE0001034, 0x0000001F)
+T11B0 55920:611.913   Debug reg: DWT_MASK[1]
+T11B0 55920:611.976 - 0.109ms returns 0 (0x00000000)
+T11B0 55920:612.010 JLINK_ReadMem(0xE0001034, 0x4 Bytes, ...)
+T11B0 55920:612.046   CPU_WriteMem(4 bytes @ 0xE0001034)
+T11B0 55920:612.501   CPU_ReadMem(4 bytes @ 0xE0001034)
+T11B0 55920:612.899   Data:  1F 00 00 00
+T11B0 55920:612.937   Debug reg: DWT_MASK[1]
+T11B0 55920:612.974 - 0.975ms returns 0
+T11B0 55920:613.085 JLINK_WriteU32_64(0xE0001020, 0x00000000)
+T11B0 55920:613.113   Debug reg: DWT_COMP[0]
+T11B0 55920:613.164 - 0.093ms returns 0 (0x00000000)
+T11B0 55920:613.212 JLINK_WriteU32_64(0xE0001024, 0x00000000)
+T11B0 55920:613.243   Debug reg: DWT_MASK[0]
+T11B0 55920:613.284 - 0.084ms returns 0 (0x00000000)
+T11B0 55920:613.332 JLINK_WriteU32_64(0xE0001028, 0x00000000)
+T11B0 55920:613.359   Debug reg: DWT_FUNC[0]
+T11B0 55920:613.398 - 0.079ms returns 0 (0x00000000)
+T11B0 55920:613.444 JLINK_WriteU32_64(0xE0001030, 0x00000000)
+T11B0 55920:613.471   Debug reg: DWT_COMP[1]
+T11B0 55920:613.511 - 0.079ms returns 0 (0x00000000)
+T11B0 55920:613.570 JLINK_WriteU32_64(0xE0001034, 0x00000000)
+T11B0 55920:613.606   Debug reg: DWT_MASK[1]
+T11B0 55920:613.645 - 0.089ms returns 0 (0x00000000)
+T11B0 55920:613.696 JLINK_WriteU32_64(0xE0001038, 0x00000000)
+T11B0 55920:613.723   Debug reg: DWT_FUNC[1]
+T11B0 55920:613.764 - 0.080ms returns 0 (0x00000000)
+T11B0 55920:613.796 JLINK_GetBPInfo(BPHandle = 1)
+T11B0 55920:613.821 - 0.037ms returns 0x0
+T11B0 55920:613.848 JLINK_ClrBPEx(BPHandle = 0x00000001)
+T11B0 55920:613.876 - 0.039ms returns 0x00
+T11B0 55920:613.946 JLINK_ReadReg(R15 (PC))
+T11B0 55920:613.975 - 0.041ms returns 0x0000600C
+T11B0 55920:614.267 JLINK_Go()
+T11B0 55920:614.332   CPU_WriteMem(4 bytes @ 0xE0001000)
+T11B0 55920:614.857   CPU_ReadMem(4 bytes @ 0xE0001000)
+T11B0 55920:616.000   CPU_WriteMem(4 bytes @ 0xE000ED30)
+T11B0 55920:616.543   CPU_WriteMem(4 bytes @ 0xE0001000)
+T11B0 55920:616.618   CPU_WriteMem(4 bytes @ 0xE0001020)
+T11B0 55920:616.657   CPU_WriteMem(4 bytes @ 0xE0001030)
+T11B0 55920:616.729   CPU_WriteMem(4 bytes @ 0xE0001024)
+T11B0 55920:616.767   CPU_WriteMem(4 bytes @ 0xE0001034)
+T11B0 55920:616.806   CPU_WriteMem(4 bytes @ 0xE0001028)
+T11B0 55920:616.843   CPU_WriteMem(4 bytes @ 0xE0001038)
+T11B0 55920:616.903   CPU_WriteMem(4 bytes @ 0xE0002008)
+T11B0 55920:619.433 - 5.208ms
+T2E70 55920:619.605 JLINK_IsHalted()
+T2E70 55920:620.292   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55920:620.882 - 1.328ms returns FALSE
+T2E70 55920:660.781 JLINK_IsHalted()
+T2E70 55920:661.379   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55920:661.804 - 1.037ms returns FALSE
+T2E70 55920:823.771 JLINK_IsHalted()
+T2E70 55920:824.235   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55920:824.629 - 0.883ms returns FALSE
+T2E70 55921:026.561 JLINK_IsHalted()
+T2E70 55921:027.541   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55921:028.526 - 2.034ms returns FALSE
+T1D24 55921:227.319 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55921:229.891   [0]: USB, S/N: 801014814
+T1D24 55921:229.972 - 2.665ms returns 1
+T2E70 55921:230.176 JLINK_IsHalted()
+T2E70 55921:230.716   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55921:231.106 - 0.946ms returns FALSE
+T1D24 55921:231.151 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55921:286.523 - 55.424ms returns 0
+T2E70 55921:430.580 JLINK_IsHalted()
+T2E70 55921:431.313   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55921:431.700 - 1.142ms returns FALSE
+T2E70 55921:632.455 JLINK_IsHalted()
+T2E70 55921:633.530   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55921:635.143 - 2.834ms returns FALSE
+T2E70 55921:836.349 JLINK_IsHalted()
+T2E70 55921:836.891   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55921:838.670 - 2.367ms returns FALSE
+T2E70 55922:039.523 JLINK_IsHalted()
+T2E70 55922:039.986   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55922:040.494 - 1.030ms returns FALSE
+T2E70 55922:241.123 JLINK_IsHalted()
+T2E70 55922:241.652   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55922:242.134 - 1.065ms returns FALSE
+T1D24 55922:345.144 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55922:346.979   [0]: USB, S/N: 801014814
+T1D24 55922:347.026 - 1.892ms returns 1
+T1D24 55922:347.141 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55922:399.687 - 52.602ms returns 0
+T2E70 55922:444.813 JLINK_IsHalted()
+T2E70 55922:445.325   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55922:445.671 - 0.874ms returns FALSE
+T2E70 55922:645.970 JLINK_IsHalted()
+T2E70 55922:646.530   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55922:647.056 - 1.132ms returns FALSE
+T2E70 55922:846.837 JLINK_IsHalted()
+T2E70 55922:847.356   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55922:847.820 - 1.007ms returns FALSE
+T2E70 55923:048.434 JLINK_IsHalted()
+T2E70 55923:049.142   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55923:050.336 - 1.960ms returns FALSE
+T2E70 55923:251.241 JLINK_IsHalted()
+T2E70 55923:251.823   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55923:252.219 - 0.999ms returns FALSE
+T1D24 55923:453.159 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55923:455.612   [0]: USB, S/N: 801014814
+T1D24 55923:455.821 - 2.680ms returns 1
+T2E70 55923:455.876 JLINK_IsHalted()
+T2E70 55923:456.366   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55923:456.872 - 1.012ms returns FALSE
+T1D24 55923:456.934 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55923:508.783 - 51.908ms returns 0
+T2E70 55923:658.835 JLINK_IsHalted()
+T2E70 55923:659.332   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55923:659.693 - 0.875ms returns FALSE
+T2E70 55923:862.513 JLINK_IsHalted()
+T2E70 55923:862.999   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55923:863.355 - 0.858ms returns FALSE
+T2E70 55924:064.103 JLINK_IsHalted()
+T2E70 55924:064.577   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55924:065.059 - 0.971ms returns FALSE
+T2E70 55924:265.177 JLINK_IsHalted()
+T2E70 55924:265.673   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55924:266.123 - 0.976ms returns FALSE
+T2E70 55924:467.628 JLINK_IsHalted()
+T2E70 55924:468.124   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55924:468.483 - 0.870ms returns FALSE
+T1D24 55924:551.785 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55924:553.554   [0]: USB, S/N: 801014814
+T1D24 55924:553.601 - 1.828ms returns 1
+T1D24 55924:553.725 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55924:605.628 - 51.957ms returns 0
+T2E70 55924:673.784 JLINK_IsHalted()
+T2E70 55924:674.238   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55924:674.735 - 1.007ms returns FALSE
+T2E70 55924:876.490 JLINK_IsHalted()
+T2E70 55924:876.964   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55924:877.445 - 0.971ms returns FALSE
+T2E70 55925:081.691 JLINK_IsHalted()
+T2E70 55925:082.499   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55925:082.999 - 1.373ms returns FALSE
+T2E70 55925:283.545 JLINK_IsHalted()
+T2E70 55925:284.151   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55925:284.755 - 1.227ms returns FALSE
+T2E70 55925:488.754 JLINK_IsHalted()
+T2E70 55925:489.234   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55925:489.604 - 0.865ms returns FALSE
+T1D24 55925:653.221 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55925:655.507   [0]: USB, S/N: 801014814
+T1D24 55925:655.589 - 2.382ms returns 1
+T1D24 55925:655.745 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55925:712.274 - 56.603ms returns 0
+T2E70 55925:712.957 JLINK_IsHalted()
+T2E70 55925:713.341   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55925:713.695 - 0.753ms returns FALSE
+T2E70 55925:915.320 JLINK_IsHalted()
+T2E70 55925:915.913   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55925:916.384 - 1.096ms returns FALSE
+T2E70 55926:119.393 JLINK_IsHalted()
+T2E70 55926:119.852   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55926:120.212 - 0.832ms returns FALSE
+T2E70 55926:320.339 JLINK_IsHalted()
+T2E70 55926:320.826   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55926:321.221 - 0.915ms returns FALSE
+T2E70 55926:522.349 JLINK_IsHalted()
+T2E70 55926:522.848   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55926:523.239 - 0.905ms returns FALSE
+T2E70 55926:723.971 JLINK_IsHalted()
+T2E70 55926:724.483   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55926:724.877 - 0.928ms returns FALSE
+T1D24 55926:760.969 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55926:762.891   [0]: USB, S/N: 801014814
+T1D24 55926:762.961 - 2.006ms returns 1
+T1D24 55926:763.107 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55926:815.966 - 52.924ms returns 0
+T2E70 55926:926.353 JLINK_IsHalted()
+T2E70 55926:926.832   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55926:927.188 - 0.851ms returns FALSE
+T2E70 55927:130.809 JLINK_IsHalted()
+T2E70 55927:131.330   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55927:131.667 - 0.878ms returns FALSE
+T2E70 55927:334.175 JLINK_IsHalted()
+T2E70 55927:334.611   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55927:335.086 - 0.926ms returns FALSE
+T2E70 55927:535.623 JLINK_IsHalted()
+T2E70 55927:536.122   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55927:536.488 - 0.881ms returns FALSE
+T2E70 55927:738.710 JLINK_IsHalted()
+T2E70 55927:739.275   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55927:739.665 - 0.969ms returns FALSE
+T1D24 55927:863.085 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55927:864.861   [0]: USB, S/N: 801014814
+T1D24 55927:864.914 - 1.841ms returns 1
+T1D24 55927:865.051 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55927:918.777 - 53.776ms returns 0
+T2E70 55927:940.934 JLINK_IsHalted()
+T2E70 55927:941.437   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55927:941.783 - 0.862ms returns FALSE
+T2E70 55928:143.505 JLINK_IsHalted()
+T2E70 55928:143.998   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55928:144.352 - 0.863ms returns FALSE
+T2E70 55928:345.044 JLINK_IsHalted()
+T2E70 55928:345.526   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55928:345.890 - 0.862ms returns FALSE
+T2E70 55928:547.130 JLINK_IsHalted()
+T2E70 55928:547.718   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55928:548.294 - 1.180ms returns FALSE
+T2E70 55928:752.944 JLINK_IsHalted()
+T2E70 55928:753.426   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55928:753.794 - 0.873ms returns FALSE
+T2E70 55928:955.957 JLINK_IsHalted()
+T2E70 55928:956.584   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55928:957.146 - 1.242ms returns FALSE
+T1D24 55928:961.583 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55928:963.298   [0]: USB, S/N: 801014814
+T1D24 55928:963.340 - 1.769ms returns 1
+T1D24 55928:963.462 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55929:014.908 - 51.521ms returns 0
+T2E70 55929:157.107 JLINK_IsHalted()
+T2E70 55929:157.663   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55929:158.178 - 1.129ms returns FALSE
+T2E70 55929:358.973 JLINK_IsHalted()
+T2E70 55929:359.441   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55929:359.925 - 0.969ms returns FALSE
+T2E70 55929:562.534 JLINK_IsHalted()
+T2E70 55929:563.090   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55929:563.587 - 1.093ms returns FALSE
+T2E70 55929:764.549 JLINK_IsHalted()
+T2E70 55929:765.014   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55929:765.452 - 0.989ms returns FALSE
+T2E70 55929:965.414 JLINK_IsHalted()
+T2E70 55929:966.019   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55929:966.514 - 1.115ms returns FALSE
+T1D24 55930:058.500 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55930:059.925   [0]: USB, S/N: 801014814
+T1D24 55930:059.966 - 1.475ms returns 1
+T1D24 55930:060.078 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55930:111.534 - 51.523ms returns 0
+T2E70 55930:167.954 JLINK_IsHalted()
+T2E70 55930:168.558   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55930:168.961 - 1.028ms returns FALSE
+T2E70 55930:370.669 JLINK_IsHalted()
+T2E70 55930:371.155   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55930:371.521 - 0.867ms returns FALSE
+T2E70 55930:571.754 JLINK_IsHalted()
+T2E70 55930:572.207   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55930:572.559 - 0.821ms returns FALSE
+T2E70 55930:773.423 JLINK_IsHalted()
+T2E70 55930:773.892   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55930:774.272 - 0.864ms returns FALSE
+T2E70 55930:975.242 JLINK_IsHalted()
+T2E70 55930:975.725   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55930:976.262 - 1.036ms returns FALSE
+T1D24 55931:162.106 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55931:163.650   [0]: USB, S/N: 801014814
+T1D24 55931:163.692 - 1.595ms returns 1
+T1D24 55931:163.806 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55931:214.031 - 50.299ms returns 0
+T2E70 55931:214.141 JLINK_IsHalted()
+T2E70 55931:214.550   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55931:214.889 - 0.762ms returns FALSE
+T2E70 55931:415.498 JLINK_IsHalted()
+T2E70 55931:416.080   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55931:416.539 - 1.064ms returns FALSE
+T2E70 55931:616.829 JLINK_IsHalted()
+T2E70 55931:617.444   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55931:617.916 - 1.103ms returns FALSE
+T2E70 55931:823.333 JLINK_IsHalted()
+T2E70 55931:823.821   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55931:824.186 - 0.869ms returns FALSE
+T2E70 55932:026.585 JLINK_IsHalted()
+T2E70 55932:027.084   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55932:027.431 - 0.862ms returns FALSE
+T2E70 55932:228.301 JLINK_IsHalted()
+T2E70 55932:228.837   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55932:229.219 - 0.956ms returns FALSE
+T1D24 55932:261.181 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55932:262.774   [0]: USB, S/N: 801014814
+T1D24 55932:262.823 - 1.654ms returns 1
+T1D24 55932:262.962 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55932:316.347 - 53.436ms returns 0
+T2E70 55932:430.241 JLINK_IsHalted()
+T2E70 55932:430.722   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55932:431.121 - 0.896ms returns FALSE
+T2E70 55932:632.175 JLINK_IsHalted()
+T2E70 55932:632.730   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55932:633.167 - 1.016ms returns FALSE
+T2E70 55932:832.938 JLINK_IsHalted()
+T2E70 55932:833.585   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55932:834.066 - 1.144ms returns FALSE
+T2E70 55933:034.096 JLINK_IsHalted()
+T2E70 55933:034.580   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55933:034.938 - 0.858ms returns FALSE
+T2E70 55933:235.378 JLINK_IsHalted()
+T2E70 55933:235.958   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55933:236.393 - 1.069ms returns FALSE
+T1D24 55933:371.244 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55933:373.221   [0]: USB, S/N: 801014814
+T1D24 55933:373.274 - 2.044ms returns 1
+T1D24 55933:373.424 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55933:427.081 - 53.732ms returns 0
+T2E70 55933:438.203 JLINK_IsHalted()
+T2E70 55933:438.824   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55933:439.297 - 1.109ms returns FALSE
+T2E70 55933:643.645 JLINK_IsHalted()
+T2E70 55933:644.288   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55933:644.800 - 1.216ms returns FALSE
+T2E70 55933:844.713 JLINK_IsHalted()
+T2E70 55933:845.196   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55933:845.698 - 1.000ms returns FALSE
+T2E70 55934:047.270 JLINK_IsHalted()
+T2E70 55934:047.749   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55934:048.132 - 0.878ms returns FALSE
+T2E70 55934:250.882 JLINK_IsHalted()
+T2E70 55934:251.422   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55934:251.860 - 0.995ms returns FALSE
+T2E70 55934:455.041 JLINK_IsHalted()
+T2E70 55934:455.599   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55934:456.021 - 1.042ms returns FALSE
+T1D24 55934:483.905 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55934:485.627   [0]: USB, S/N: 801014814
+T1D24 55934:485.678 - 1.784ms returns 1
+T1D24 55934:485.823 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55934:539.028 - 53.266ms returns 0
+T2E70 55934:656.145 JLINK_IsHalted()
+T2E70 55934:656.608   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55934:657.092 - 0.962ms returns FALSE
+T2E70 55934:857.446 JLINK_IsHalted()
+T2E70 55934:857.905   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55934:858.251 - 0.823ms returns FALSE
+T2E70 55935:058.402 JLINK_IsHalted()
+T2E70 55935:058.873   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55935:059.242 - 0.856ms returns FALSE
+T2E70 55935:258.919 JLINK_IsHalted()
+T2E70 55935:259.384   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55935:259.737 - 0.834ms returns FALSE
+T2E70 55935:460.453 JLINK_IsHalted()
+T2E70 55935:460.905   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55935:461.314 - 0.878ms returns FALSE
+T1D24 55935:585.259 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55935:587.053   [0]: USB, S/N: 801014814
+T1D24 55935:587.099 - 1.852ms returns 1
+T1D24 55935:587.222 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55935:640.743 - 53.585ms returns 0
+T2E70 55935:661.723 JLINK_IsHalted()
+T2E70 55935:662.207   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55935:662.570 - 0.868ms returns FALSE
+T2E70 55935:863.759 JLINK_IsHalted()
+T2E70 55935:864.345   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55935:864.754 - 1.046ms returns FALSE
+T2E70 55936:064.783 JLINK_IsHalted()
+T2E70 55936:065.997   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55936:066.544 - 1.776ms returns FALSE
+T2E70 55936:267.942 JLINK_IsHalted()
+T2E70 55936:268.412   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55936:268.797 - 0.874ms returns FALSE
+T2E70 55936:469.916 JLINK_IsHalted()
+T2E70 55936:470.411   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55936:470.806 - 0.905ms returns FALSE
+T2E70 55936:671.728 JLINK_IsHalted()
+T2E70 55936:672.360   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55936:672.733 - 1.022ms returns FALSE
+T1D24 55936:684.423 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55936:686.228   [0]: USB, S/N: 801014814
+T1D24 55936:686.288 - 1.904ms returns 1
+T1D24 55936:686.433 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55936:738.671 - 52.289ms returns 0
+T2E70 55936:880.420 JLINK_IsHalted()
+T2E70 55936:880.967   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55936:881.392 - 0.989ms returns FALSE
+T2E70 55937:086.430 JLINK_IsHalted()
+T2E70 55937:086.968   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55937:087.337 - 0.923ms returns FALSE
+T2E70 55937:288.568 JLINK_IsHalted()
+T2E70 55937:289.210   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55937:289.655 - 1.112ms returns FALSE
+T2E70 55937:492.249 JLINK_IsHalted()
+T2E70 55937:492.716   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55937:493.121 - 0.886ms returns FALSE
+T2E70 55937:694.481 JLINK_IsHalted()
+T2E70 55937:695.049   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55937:695.479 - 1.015ms returns FALSE
+T1D24 55937:788.510 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55937:790.767   [0]: USB, S/N: 801014814
+T1D24 55937:790.829 - 2.333ms returns 1
+T1D24 55937:790.980 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55937:845.747 - 54.832ms returns 0
+T2E70 55937:896.869 JLINK_IsHalted()
+T2E70 55937:897.497   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55937:898.987 - 2.776ms returns FALSE
+T2E70 55938:100.569 JLINK_IsHalted()
+T2E70 55938:101.161   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55938:101.769 - 1.225ms returns FALSE
+T2E70 55938:301.852 JLINK_IsHalted()
+T2E70 55938:302.353   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55938:302.854 - 1.017ms returns FALSE
+T2E70 55938:503.765 JLINK_IsHalted()
+T2E70 55938:504.231   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55938:504.578 - 0.829ms returns FALSE
+T2E70 55938:705.375 JLINK_IsHalted()
+T2E70 55938:705.852   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55938:706.207 - 0.848ms returns FALSE
+T2E70 55938:907.851 JLINK_IsHalted()
+T2E70 55938:908.351   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55938:908.734 - 0.899ms returns FALSE
+T1D24 55938:927.607 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55938:929.423   [0]: USB, S/N: 801014814
+T1D24 55938:929.487 - 1.892ms returns 1
+T1D24 55938:929.618 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55938:983.508 - 54.161ms returns 0
+T2E70 55939:109.948 JLINK_IsHalted()
+T2E70 55939:110.398   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55939:110.739 - 0.887ms returns FALSE
+T2E70 55939:313.042 JLINK_IsHalted()
+T2E70 55939:313.516   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55939:313.878 - 0.852ms returns FALSE
+T2E70 55939:514.251 JLINK_IsHalted()
+T2E70 55939:514.711   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55939:515.138 - 1.024ms returns FALSE
+T2E70 55939:715.993 JLINK_IsHalted()
+T2E70 55939:716.556   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55939:717.020 - 1.063ms returns FALSE
+T2E70 55939:916.899 JLINK_IsHalted()
+T2E70 55939:917.595   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55939:917.953 - 1.068ms returns FALSE
+T1D24 55940:029.830 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55940:031.531   [0]: USB, S/N: 801014814
+T1D24 55940:031.650 - 1.834ms returns 1
+T1D24 55940:031.795 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55940:082.405 - 50.671ms returns 0
+T2E70 55940:122.671 JLINK_IsHalted()
+T2E70 55940:123.197   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55940:123.549 - 0.894ms returns FALSE
+T2E70 55940:324.033 JLINK_IsHalted()
+T2E70 55940:324.513   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55940:324.861 - 0.845ms returns FALSE
+T2E70 55940:526.429 JLINK_IsHalted()
+T2E70 55940:526.918   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55940:527.330 - 0.917ms returns FALSE
+T2E70 55940:729.511 JLINK_IsHalted()
+T2E70 55940:730.076   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55940:730.487 - 0.997ms returns FALSE
+T2E70 55940:931.781 JLINK_IsHalted()
+T2E70 55940:932.484   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55940:932.948 - 1.229ms returns FALSE
+T1D24 55941:124.072 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55941:126.064   [0]: USB, S/N: 801014814
+T1D24 55941:126.122 - 2.059ms returns 1
+T1D24 55941:126.249 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55941:177.402 - 51.207ms returns 0
+T2E70 55941:177.505 JLINK_IsHalted()
+T2E70 55941:177.936   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55941:178.334 - 0.843ms returns FALSE
+T2E70 55941:380.553 JLINK_IsHalted()
+T2E70 55941:381.032   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55941:381.495 - 1.014ms returns FALSE
+T2E70 55941:584.639 JLINK_IsHalted()
+T2E70 55941:585.165   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55941:585.560 - 0.941ms returns FALSE
+T2E70 55941:787.652 JLINK_IsHalted()
+T2E70 55941:788.175   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55941:788.566 - 0.936ms returns FALSE
+T2E70 55941:991.551 JLINK_IsHalted()
+T2E70 55941:992.006   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55941:992.588 - 1.116ms returns FALSE
+T2E70 55942:193.696 JLINK_IsHalted()
+T2E70 55942:194.246   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55942:194.634 - 0.954ms returns FALSE
+T1D24 55942:226.373 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55942:228.346   [0]: USB, S/N: 801014814
+T1D24 55942:228.414 - 2.054ms returns 1
+T1D24 55942:228.548 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55942:281.935 - 53.472ms returns 0
+T2E70 55942:396.497 JLINK_IsHalted()
+T2E70 55942:396.980   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55942:397.335 - 0.855ms returns FALSE
+T2E70 55942:597.483 JLINK_IsHalted()
+T2E70 55942:598.019   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55942:598.415 - 0.957ms returns FALSE
+T2E70 55942:798.802 JLINK_IsHalted()
+T2E70 55942:799.790   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55942:800.226 - 1.446ms returns FALSE
+T2E70 55943:004.235 JLINK_IsHalted()
+T2E70 55943:004.715   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55943:005.148 - 0.930ms returns FALSE
+T2E70 55943:210.625 JLINK_IsHalted()
+T2E70 55943:211.381   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55943:211.873 - 1.286ms returns FALSE
+T1D24 55943:328.854 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55943:330.627   [0]: USB, S/N: 801014814
+T1D24 55943:330.677 - 1.834ms returns 1
+T1D24 55943:330.802 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55943:382.058 - 51.353ms returns 0
+T2E70 55943:413.361 JLINK_IsHalted()
+T2E70 55943:413.844   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55943:414.224 - 0.880ms returns FALSE
+T2E70 55943:616.875 JLINK_IsHalted()
+T2E70 55943:617.583   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55943:618.034 - 1.176ms returns FALSE
+T2E70 55943:820.509 JLINK_IsHalted()
+T2E70 55943:820.992   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55943:821.350 - 0.857ms returns FALSE
+T2E70 55944:021.412 JLINK_IsHalted()
+T2E70 55944:021.865   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55944:022.324 - 0.926ms returns FALSE
+T2E70 55944:222.551 JLINK_IsHalted()
+T2E70 55944:223.020   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55944:223.392 - 0.857ms returns FALSE
+T2E70 55944:423.854 JLINK_IsHalted()
+T2E70 55944:424.378   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55944:424.758 - 0.920ms returns FALSE
+T1D24 55944:436.858 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55944:438.246   [0]: USB, S/N: 801014814
+T1D24 55944:438.286 - 1.437ms returns 1
+T1D24 55944:438.399 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55944:490.049 - 51.702ms returns 0
+T2E70 55944:626.840 JLINK_IsHalted()
+T2E70 55944:627.368   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55944:627.737 - 0.913ms returns FALSE
+T2E70 55944:830.029 JLINK_IsHalted()
+T2E70 55944:830.528   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55944:830.882 - 0.869ms returns FALSE
+T2E70 55945:035.249 JLINK_IsHalted()
+T2E70 55945:035.756   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55945:036.127 - 0.893ms returns FALSE
+T2E70 55945:235.870 JLINK_IsHalted()
+T2E70 55945:236.351   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55945:236.710 - 0.854ms returns FALSE
+T2E70 55945:437.920 JLINK_IsHalted()
+T2E70 55945:438.404   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55945:438.763 - 0.859ms returns FALSE
+T1D24 55945:531.554 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55945:533.374   [0]: USB, S/N: 801014814
+T1D24 55945:533.434 - 1.892ms returns 1
+T1D24 55945:533.559 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55945:584.346 - 50.839ms returns 0
+T2E70 55945:640.628 JLINK_IsHalted()
+T2E70 55945:641.182   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55945:641.597 - 0.983ms returns FALSE
+T2E70 55945:842.719 JLINK_IsHalted()
+T2E70 55945:843.232   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55945:843.674 - 0.977ms returns FALSE
+T2E70 55946:046.784 JLINK_IsHalted()
+T2E70 55946:047.274   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55946:047.691 - 0.921ms returns FALSE
+T2E70 55946:247.908 JLINK_IsHalted()
+T2E70 55946:248.479   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55946:248.885 - 0.993ms returns FALSE
+T2E70 55946:449.781 JLINK_IsHalted()
+T2E70 55946:450.286   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55946:450.730 - 0.965ms returns FALSE
+T1D24 55946:635.130 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55946:636.864   [0]: USB, S/N: 801014814
+T1D24 55946:636.948 - 1.830ms returns 1
+T1D24 55946:637.092 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55946:689.103 - 52.070ms returns 0
+T2E70 55946:689.294 JLINK_IsHalted()
+T2E70 55946:689.732   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55946:690.151 - 0.884ms returns FALSE
+T2E70 55946:891.797 JLINK_IsHalted()
+T2E70 55946:892.353   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55946:892.728 - 0.947ms returns FALSE
+T2E70 55947:096.429 JLINK_IsHalted()
+T2E70 55947:096.980   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55947:097.387 - 0.974ms returns FALSE
+T2E70 55947:297.548 JLINK_IsHalted()
+T2E70 55947:298.071   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55947:298.488 - 0.970ms returns FALSE
+T2E70 55947:500.096 JLINK_IsHalted()
+T2E70 55947:500.581   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55947:500.971 - 0.891ms returns FALSE
+T2E70 55947:702.608 JLINK_IsHalted()
+T2E70 55947:703.140   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55947:703.513 - 0.921ms returns FALSE
+T1D24 55947:730.380 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55947:732.158   [0]: USB, S/N: 801014814
+T1D24 55947:732.221 - 1.852ms returns 1
+T1D24 55947:732.350 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55947:782.694 - 50.406ms returns 0
+T2E70 55947:903.981 JLINK_IsHalted()
+T2E70 55947:904.551   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55947:904.984 - 1.019ms returns FALSE
+T2E70 55948:105.694 JLINK_IsHalted()
+T2E70 55948:106.181   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55948:106.541 - 0.864ms returns FALSE
+T2E70 55948:307.960 JLINK_IsHalted()
+T2E70 55948:308.509   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55948:308.955 - 1.009ms returns FALSE
+T2E70 55948:510.670 JLINK_IsHalted()
+T2E70 55948:511.215   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55948:511.665 - 1.011ms returns FALSE
+T2E70 55948:713.678 JLINK_IsHalted()
+T2E70 55948:714.156   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55948:714.741 - 1.090ms returns FALSE
+T1D24 55948:832.517 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55948:834.461   [0]: USB, S/N: 801014814
+T1D24 55948:834.538 - 2.035ms returns 1
+T1D24 55948:834.762 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55948:888.755 - 54.049ms returns 0
+T2E70 55948:914.816 JLINK_IsHalted()
+T2E70 55948:915.404   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55948:915.806 - 1.007ms returns FALSE
+T2E70 55949:116.929 JLINK_IsHalted()
+T2E70 55949:117.593   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55949:117.997 - 1.082ms returns FALSE
+T2E70 55949:319.520 JLINK_IsHalted()
+T2E70 55949:320.021   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55949:320.400 - 0.896ms returns FALSE
+T2E70 55949:521.475 JLINK_IsHalted()
+T2E70 55949:521.972   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55949:522.354 - 0.894ms returns FALSE
+T2E70 55949:727.496 JLINK_IsHalted()
+T2E70 55949:727.969   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55949:728.370 - 0.894ms returns FALSE
+T2E70 55949:929.158 JLINK_IsHalted()
+T2E70 55949:929.596   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55949:929.950 - 0.806ms returns FALSE
+T1D24 55949:940.084 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55949:941.848   [0]: USB, S/N: 801014814
+T1D24 55949:941.889 - 1.845ms returns 1
+T1D24 55949:942.072 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55949:995.150 - 53.134ms returns 0
+T2E70 55950:130.351 JLINK_IsHalted()
+T2E70 55950:130.819   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55950:131.363 - 1.036ms returns FALSE
+T2E70 55950:335.258 JLINK_IsHalted()
+T2E70 55950:335.728   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55950:336.147 - 0.904ms returns FALSE
+T2E70 55950:536.192 JLINK_IsHalted()
+T2E70 55950:536.632   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55950:536.996 - 0.819ms returns FALSE
+T2E70 55950:742.354 JLINK_IsHalted()
+T2E70 55950:742.840   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55950:743.224 - 0.885ms returns FALSE
+T2E70 55950:944.766 JLINK_IsHalted()
+T2E70 55950:945.254   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55950:945.630 - 0.881ms returns FALSE
+T1D24 55951:045.559 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55951:047.634   [0]: USB, S/N: 801014814
+T1D24 55951:047.701 - 2.184ms returns 1
+T1D24 55951:047.971 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55951:100.946 - 53.041ms returns 0
+T2E70 55951:146.124 JLINK_IsHalted()
+T2E70 55951:146.608   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55951:146.960 - 0.852ms returns FALSE
+T2E70 55951:346.849 JLINK_IsHalted()
+T2E70 55951:347.373   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55951:347.858 - 1.179ms returns FALSE
+T2E70 55951:550.474 JLINK_IsHalted()
+T2E70 55951:550.978   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55951:551.380 - 0.925ms returns FALSE
+T2E70 55951:758.835 JLINK_IsHalted()
+T2E70 55951:759.358   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55951:759.766 - 0.995ms returns FALSE
+T2E70 55951:962.399 JLINK_IsHalted()
+T2E70 55951:962.882   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55951:963.275 - 0.936ms returns FALSE
+T1D24 55952:150.108 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55952:151.771   [0]: USB, S/N: 801014814
+T1D24 55952:151.820 - 1.724ms returns 1
+T1D24 55952:151.959 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55952:205.004 - 53.113ms returns 0
+T2E70 55952:205.120 JLINK_IsHalted()
+T2E70 55952:205.573   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55952:205.943 - 0.841ms returns FALSE
+T2E70 55952:409.032 JLINK_IsHalted()
+T2E70 55952:409.523   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55952:409.890 - 0.874ms returns FALSE
+T2E70 55952:611.277 JLINK_IsHalted()
+T2E70 55952:611.772   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55952:612.142 - 0.881ms returns FALSE
+T2E70 55952:813.295 JLINK_IsHalted()
+T2E70 55952:813.851   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55952:814.593 - 1.329ms returns FALSE
+T2E70 55953:014.558 JLINK_IsHalted()
+T2E70 55953:015.202   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55953:015.718 - 1.212ms returns FALSE
+T2E70 55953:215.944 JLINK_IsHalted()
+T2E70 55953:216.424   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55953:216.807 - 0.876ms returns FALSE
+T1D24 55953:249.983 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55953:252.096   [0]: USB, S/N: 801014814
+T1D24 55953:252.169 - 2.198ms returns 1
+T1D24 55953:252.313 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55953:305.038 - 52.779ms returns 0
+T2E70 55953:420.806 JLINK_IsHalted()
+T2E70 55953:421.369   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55953:421.736 - 0.945ms returns FALSE
+T2E70 55953:622.599 JLINK_IsHalted()
+T2E70 55953:623.155   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55953:623.521 - 0.937ms returns FALSE
+T2E70 55953:823.688 JLINK_IsHalted()
+T2E70 55953:824.167   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55953:824.537 - 0.864ms returns FALSE
+T2E70 55954:026.769 JLINK_IsHalted()
+T2E70 55954:027.250   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55954:027.613 - 0.859ms returns FALSE
+T2E70 55954:228.501 JLINK_IsHalted()
+T2E70 55954:228.967   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55954:229.377 - 0.892ms returns FALSE
+T1D24 55954:356.376 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55954:358.358   [0]: USB, S/N: 801014814
+T1D24 55954:358.419 - 2.056ms returns 1
+T1D24 55954:358.561 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55954:411.233 - 52.738ms returns 0
+T2E70 55954:431.176 JLINK_IsHalted()
+T2E70 55954:431.643   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55954:432.000 - 0.838ms returns FALSE
+T2E70 55954:632.109 JLINK_IsHalted()
+T2E70 55954:632.675   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55954:633.133 - 1.041ms returns FALSE
+T2E70 55954:838.887 JLINK_IsHalted()
+T2E70 55954:839.387   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55954:839.751 - 0.879ms returns FALSE
+T2E70 55955:042.012 JLINK_IsHalted()
+T2E70 55955:042.573   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55955:043.139 - 1.149ms returns FALSE
+T2E70 55955:245.758 JLINK_IsHalted()
+T2E70 55955:246.230   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55955:246.609 - 0.867ms returns FALSE
+T2E70 55955:447.596 JLINK_IsHalted()
+T2E70 55955:448.157   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55955:448.866 - 1.427ms returns FALSE
+T1D24 55955:457.138 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55955:458.862   [0]: USB, S/N: 801014814
+T1D24 55955:458.920 - 1.793ms returns 1
+T1D24 55955:459.044 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55955:511.624 - 52.632ms returns 0
+T2E70 55955:649.678 JLINK_IsHalted()
+T2E70 55955:650.245   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55955:650.643 - 0.990ms returns FALSE
+T2E70 55955:851.674 JLINK_IsHalted()
+T2E70 55955:852.155   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55955:852.517 - 0.856ms returns FALSE
+T2E70 55956:054.797 JLINK_IsHalted()
+T2E70 55956:055.383   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55956:055.754 - 0.973ms returns FALSE
+T2E70 55956:257.801 JLINK_IsHalted()
+T2E70 55956:258.262   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55956:258.611 - 0.824ms returns FALSE
+T2E70 55956:460.800 JLINK_IsHalted()
+T2E70 55956:461.371   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55956:461.829 - 1.052ms returns FALSE
+T1D24 55956:558.584 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55956:560.331   [0]: USB, S/N: 801014814
+T1D24 55956:560.379 - 1.807ms returns 1
+T1D24 55956:560.507 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55956:611.979 - 51.519ms returns 0
+T2E70 55956:662.153 JLINK_IsHalted()
+T2E70 55956:662.691   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55956:663.146 - 1.009ms returns FALSE
+T2E70 55956:864.076 JLINK_IsHalted()
+T2E70 55956:864.702   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55956:865.137 - 1.079ms returns FALSE
+T2E70 55957:067.365 JLINK_IsHalted()
+T2E70 55957:067.915   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55957:068.364 - 1.023ms returns FALSE
+T2E70 55957:268.475 JLINK_IsHalted()
+T2E70 55957:268.945   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55957:269.363 - 0.904ms returns FALSE
+T2E70 55957:474.277 JLINK_IsHalted()
+T2E70 55957:474.773   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55957:475.181 - 0.968ms returns FALSE
+T1D24 55957:659.664 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55957:661.106   [0]: USB, S/N: 801014814
+T1D24 55957:661.179 - 1.527ms returns 1
+T1D24 55957:661.314 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55957:712.236 - 50.978ms returns 0
+T2E70 55957:712.339 JLINK_IsHalted()
+T2E70 55957:712.790   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55957:713.139 - 0.814ms returns FALSE
+T2E70 55957:914.065 JLINK_IsHalted()
+T2E70 55957:914.724   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55957:915.170 - 1.141ms returns FALSE
+T2E70 55958:116.857 JLINK_IsHalted()
+T2E70 55958:117.374   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55958:117.739 - 0.899ms returns FALSE
+T2E70 55958:319.619 JLINK_IsHalted()
+T2E70 55958:320.191   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55958:320.613 - 1.007ms returns FALSE
+T2E70 55958:522.573 JLINK_IsHalted()
+T2E70 55958:523.047   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55958:523.396 - 0.839ms returns FALSE
+T2E70 55958:728.134 JLINK_IsHalted()
+T2E70 55958:728.630   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55958:729.006 - 0.887ms returns FALSE
+T1D24 55958:758.652 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55958:760.046   [0]: USB, S/N: 801014814
+T1D24 55958:760.088 - 1.446ms returns 1
+T1D24 55958:760.204 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55958:812.299 - 52.148ms returns 0
+T2E70 55958:928.679 JLINK_IsHalted()
+T2E70 55958:929.165   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55958:929.545 - 0.881ms returns FALSE
+T2E70 55959:129.094 JLINK_IsHalted()
+T2E70 55959:129.564   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55959:129.927 - 0.849ms returns FALSE
+T2E70 55959:329.708 JLINK_IsHalted()
+T2E70 55959:330.263   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55959:330.834 - 1.161ms returns FALSE
+T2E70 55959:531.293 JLINK_IsHalted()
+T2E70 55959:531.776   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55959:532.142 - 0.873ms returns FALSE
+T2E70 55959:736.881 JLINK_IsHalted()
+T2E70 55959:737.604   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55959:738.042 - 1.178ms returns FALSE
+T1D24 55959:856.129 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55959:858.224   [0]: USB, S/N: 801014814
+T1D24 55959:858.289 - 2.171ms returns 1
+T1D24 55959:858.417 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55959:911.404 - 53.037ms returns 0
+T2E70 55959:938.217 JLINK_IsHalted()
+T2E70 55959:938.658   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55959:939.022 - 0.818ms returns FALSE
+T2E70 55960:142.728 JLINK_IsHalted()
+T2E70 55960:143.235   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55960:143.587 - 0.876ms returns FALSE
+T2E70 55960:344.523 JLINK_IsHalted()
+T2E70 55960:345.018   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55960:345.388 - 0.879ms returns FALSE
+T2E70 55960:546.467 JLINK_IsHalted()
+T2E70 55960:546.968   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55960:547.484 - 1.041ms returns FALSE
+T2E70 55960:749.528 JLINK_IsHalted()
+T2E70 55960:750.011   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55960:750.377 - 0.864ms returns FALSE
+T2E70 55960:951.273 JLINK_IsHalted()
+T2E70 55960:951.922   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55960:952.475 - 1.254ms returns FALSE
+T1D24 55960:960.048 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55960:961.946   [0]: USB, S/N: 801014814
+T1D24 55960:962.027 - 1.991ms returns 1
+T1D24 55960:962.198 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55961:016.301 - 54.177ms returns 0
+T2E70 55961:153.908 JLINK_IsHalted()
+T2E70 55961:154.400   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55961:155.242 - 1.360ms returns FALSE
+T2E70 55961:360.261 JLINK_IsHalted()
+T2E70 55961:360.775   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55961:361.170 - 0.925ms returns FALSE
+T2E70 55961:561.725 JLINK_IsHalted()
+T2E70 55961:562.396   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55961:562.819 - 1.109ms returns FALSE
+T2E70 55961:763.320 JLINK_IsHalted()
+T2E70 55961:763.786   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55961:764.192 - 0.894ms returns FALSE
+T2E70 55961:966.007 JLINK_IsHalted()
+T2E70 55961:966.482   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55961:966.833 - 0.841ms returns FALSE
+T1D24 55962:059.510 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55962:061.217   [0]: USB, S/N: 801014814
+T1D24 55962:061.265 - 1.765ms returns 1
+T1D24 55962:061.380 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55962:112.137 - 50.829ms returns 0
+T2E70 55962:167.005 JLINK_IsHalted()
+T2E70 55962:167.586   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55962:170.433 - 3.495ms returns FALSE
+T2E70 55962:375.435 JLINK_IsHalted()
+T2E70 55962:375.968   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55962:376.351 - 0.932ms returns FALSE
+T2E70 55962:578.331 JLINK_IsHalted()
+T2E70 55962:578.852   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55962:579.380 - 1.087ms returns FALSE
+T2E70 55962:780.144 JLINK_IsHalted()
+T2E70 55962:780.677   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55962:781.143 - 1.020ms returns FALSE
+T2E70 55962:987.752 JLINK_IsHalted()
+T2E70 55962:988.238   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55962:988.604 - 0.867ms returns FALSE
+T1D24 55963:164.095 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55963:166.267   [0]: USB, S/N: 801014814
+T1D24 55963:166.346 - 2.265ms returns 1
+T1D24 55963:166.541 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55963:220.807 - 54.329ms returns 0
+T2E70 55963:221.044 JLINK_IsHalted()
+T2E70 55963:221.485   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55963:221.857 - 0.828ms returns FALSE
+T2E70 55963:422.226 JLINK_IsHalted()
+T2E70 55963:422.690   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55963:423.053 - 0.844ms returns FALSE
+T2E70 55963:624.615 JLINK_IsHalted()
+T2E70 55963:625.188   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55963:625.607 - 1.034ms returns FALSE
+T2E70 55963:829.371 JLINK_IsHalted()
+T2E70 55963:829.895   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55963:830.272 - 0.917ms returns FALSE
+T2E70 55964:032.665 JLINK_IsHalted()
+T2E70 55964:033.161   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55964:033.528 - 0.878ms returns FALSE
+T2E70 55964:234.721 JLINK_IsHalted()
+T2E70 55964:235.216   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55964:235.591 - 0.886ms returns FALSE
+T1D24 55964:270.957 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55964:272.966   [0]: USB, S/N: 801014814
+T1D24 55964:273.033 - 2.089ms returns 1
+T1D24 55964:273.183 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55964:327.750 - 54.657ms returns 0
+T2E70 55964:436.631 JLINK_IsHalted()
+T2E70 55964:437.157   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55964:437.539 - 0.923ms returns FALSE
+T2E70 55964:641.056 JLINK_IsHalted()
+T2E70 55964:641.615   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55964:642.160 - 1.135ms returns FALSE
+T2E70 55964:845.423 JLINK_IsHalted()
+T2E70 55964:845.984   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55964:846.420 - 1.013ms returns FALSE
+T2E70 55965:046.284 JLINK_IsHalted()
+T2E70 55965:046.786   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55965:047.184 - 0.951ms returns FALSE
+T2E70 55965:250.463 JLINK_IsHalted()
+T2E70 55965:251.020   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55965:251.504 - 1.070ms returns FALSE
+T1D24 55965:377.147 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55965:378.524   [0]: USB, S/N: 801014814
+T1D24 55965:378.563 - 1.427ms returns 1
+T1D24 55965:378.742 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55965:429.711 - 51.040ms returns 0
+T2E70 55965:454.071 JLINK_IsHalted()
+T2E70 55965:454.556   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55965:454.918 - 0.862ms returns FALSE
+T2E70 55965:654.557 JLINK_IsHalted()
+T2E70 55965:655.110   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55965:655.549 - 1.007ms returns FALSE
+T2E70 55965:856.637 JLINK_IsHalted()
+T2E70 55965:857.270   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55965:857.756 - 1.178ms returns FALSE
+T2E70 55966:058.616 JLINK_IsHalted()
+T2E70 55966:059.148   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55966:059.515 - 0.914ms returns FALSE
+T2E70 55966:259.778 JLINK_IsHalted()
+T2E70 55966:260.239   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55966:260.606 - 0.841ms returns FALSE
+T2E70 55966:461.697 JLINK_IsHalted()
+T2E70 55966:462.207   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55966:462.628 - 0.949ms returns FALSE
+T1D24 55966:477.572 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55966:479.643   [0]: USB, S/N: 801014814
+T1D24 55966:479.728 - 2.170ms returns 1
+T1D24 55966:479.854 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55966:534.799 - 54.998ms returns 0
+T2E70 55966:663.279 JLINK_IsHalted()
+T2E70 55966:663.797   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55966:664.175 - 0.919ms returns FALSE
+T2E70 55966:864.001 JLINK_IsHalted()
+T2E70 55966:864.534   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55966:864.963 - 0.982ms returns FALSE
+T2E70 55967:066.915 JLINK_IsHalted()
+T2E70 55967:067.377   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55967:067.739 - 0.841ms returns FALSE
+T2E70 55967:267.194 JLINK_IsHalted()
+T2E70 55967:267.770   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55967:268.260 - 1.096ms returns FALSE
+T2E70 55967:468.264 JLINK_IsHalted()
+T2E70 55967:468.744   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55967:469.147 - 0.899ms returns FALSE
+T1D24 55967:580.631 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55967:582.635   [0]: USB, S/N: 801014814
+T1D24 55967:582.702 - 2.083ms returns 1
+T1D24 55967:582.870 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55967:634.236 - 51.422ms returns 0
+T2E70 55967:670.139 JLINK_IsHalted()
+T2E70 55967:670.602   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55967:670.961 - 0.835ms returns FALSE
+T2E70 55967:873.460 JLINK_IsHalted()
+T2E70 55967:873.963   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55967:874.365 - 0.921ms returns FALSE
+T2E70 55968:075.962 JLINK_IsHalted()
+T2E70 55968:076.434   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55968:076.796 - 0.850ms returns FALSE
+T2E70 55968:279.325 JLINK_IsHalted()
+T2E70 55968:279.786   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55968:280.154 - 0.845ms returns FALSE
+T2E70 55968:480.207 JLINK_IsHalted()
+T2E70 55968:480.831   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55968:481.239 - 1.049ms returns FALSE
+T1D24 55968:678.785 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55968:680.717   [0]: USB, S/N: 801014814
+T1D24 55968:680.796 - 2.026ms returns 1
+T1D24 55968:680.958 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55968:733.877 - 52.970ms returns 0
+T2E70 55968:733.977 JLINK_IsHalted()
+T2E70 55968:734.458   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55968:734.837 - 0.881ms returns FALSE
+T2E70 55968:938.022 JLINK_IsHalted()
+T2E70 55968:938.510   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55968:938.880 - 0.873ms returns FALSE
+T2E70 55969:138.966 JLINK_IsHalted()
+T2E70 55969:139.436   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55969:139.804 - 0.854ms returns FALSE
+T2E70 55969:339.265 JLINK_IsHalted()
+T2E70 55969:339.743   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55969:340.146 - 0.897ms returns FALSE
+T2E70 55969:540.486 JLINK_IsHalted()
+T2E70 55969:541.008   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55969:541.412 - 0.941ms returns FALSE
+T2E70 55969:742.614 JLINK_IsHalted()
+T2E70 55969:743.163   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55969:743.572 - 0.975ms returns FALSE
+T1D24 55969:777.314 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55969:779.082   [0]: USB, S/N: 801014814
+T1D24 55969:779.125 - 1.823ms returns 1
+T1D24 55969:779.281 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55969:832.704 - 53.484ms returns 0
+T2E70 55969:946.001 JLINK_IsHalted()
+T2E70 55969:946.503   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55969:946.976 - 0.994ms returns FALSE
+T2E70 55970:148.869 JLINK_IsHalted()
+T2E70 55970:149.381   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55970:149.733 - 0.881ms returns FALSE
+T2E70 55970:350.632 JLINK_IsHalted()
+T2E70 55970:351.160   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55970:351.525 - 0.908ms returns FALSE
+T2E70 55970:552.918 JLINK_IsHalted()
+T2E70 55970:553.411   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55970:553.783 - 0.880ms returns FALSE
+T2E70 55970:754.810 JLINK_IsHalted()
+T2E70 55970:755.263   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55970:755.631 - 0.835ms returns FALSE
+T1D24 55970:876.622 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55970:878.095   [0]: USB, S/N: 801014814
+T1D24 55970:878.135 - 1.522ms returns 1
+T1D24 55970:878.246 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55970:929.148 - 50.967ms returns 0
+T2E70 55970:959.255 JLINK_IsHalted()
+T2E70 55970:959.708   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55970:960.056 - 0.814ms returns FALSE
+T2E70 55971:161.363 JLINK_IsHalted()
+T2E70 55971:161.916   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55971:162.375 - 1.028ms returns FALSE
+T2E70 55971:362.356 JLINK_IsHalted()
+T2E70 55971:362.960   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55971:363.361 - 1.020ms returns FALSE
+T2E70 55971:563.805 JLINK_IsHalted()
+T2E70 55971:564.442   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55971:564.925 - 1.147ms returns FALSE
+T2E70 55971:766.949 JLINK_IsHalted()
+T2E70 55971:767.461   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55971:767.835 - 0.902ms returns FALSE
+T2E70 55971:969.297 JLINK_IsHalted()
+T2E70 55971:969.788   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55971:970.223 - 0.941ms returns FALSE
+T1D24 55971:973.695 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55971:975.115   [0]: USB, S/N: 801014814
+T1D24 55971:975.154 - 1.469ms returns 1
+T1D24 55971:975.267 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55972:027.175 - 51.980ms returns 0
+T2E70 55972:170.842 JLINK_IsHalted()
+T2E70 55972:171.487   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55972:171.888 - 1.061ms returns FALSE
+T2E70 55972:376.820 JLINK_IsHalted()
+T2E70 55972:377.383   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55972:377.759 - 0.958ms returns FALSE
+T2E70 55972:578.993 JLINK_IsHalted()
+T2E70 55972:579.481   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55972:579.857 - 0.879ms returns FALSE
+T2E70 55972:780.306 JLINK_IsHalted()
+T2E70 55972:780.888   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55972:781.504 - 1.261ms returns FALSE
+T2E70 55972:982.148 JLINK_IsHalted()
+T2E70 55972:982.742   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55972:983.164 - 1.051ms returns FALSE
+T1D24 55973:070.343 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55973:071.735   [0]: USB, S/N: 801014814
+T1D24 55973:071.775 - 1.441ms returns 1
+T1D24 55973:071.888 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55973:122.757 - 50.924ms returns 0
+T2E70 55973:185.722 JLINK_IsHalted()
+T2E70 55973:186.195   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55973:186.584 - 0.878ms returns FALSE
+T2E70 55973:387.144 JLINK_IsHalted()
+T2E70 55973:387.628   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55973:387.991 - 0.863ms returns FALSE
+T2E70 55973:590.271 JLINK_IsHalted()
+T2E70 55973:590.799   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55973:591.189 - 0.938ms returns FALSE
+T2E70 55973:792.374 JLINK_IsHalted()
+T2E70 55973:792.860   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55973:793.222 - 0.863ms returns FALSE
+T2E70 55973:995.113 JLINK_IsHalted()
+T2E70 55973:995.617   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55973:996.053 - 1.006ms returns FALSE
+T1D24 55974:172.470 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55974:174.100   [0]: USB, S/N: 801014814
+T1D24 55974:174.151 - 1.692ms returns 1
+T1D24 55974:174.288 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55974:226.868 - 52.630ms returns 0
+T2E70 55974:227.051 JLINK_IsHalted()
+T2E70 55974:227.495   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55974:227.853 - 0.814ms returns FALSE
+T2E70 55974:428.600 JLINK_IsHalted()
+T2E70 55974:429.065   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55974:429.443 - 0.859ms returns FALSE
+T2E70 55974:630.509 JLINK_IsHalted()
+T2E70 55974:631.363   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55974:631.833 - 1.344ms returns FALSE
+T2E70 55974:831.627 JLINK_IsHalted()
+T2E70 55974:832.325   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55974:832.702 - 1.090ms returns FALSE
+T2E70 55975:036.025 JLINK_IsHalted()
+T2E70 55975:036.577   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55975:037.017 - 1.007ms returns FALSE
+T2E70 55975:236.978 JLINK_IsHalted()
+T2E70 55975:237.464   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55975:237.899 - 0.935ms returns FALSE
+T1D24 55975:270.486 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55975:271.880   [0]: USB, S/N: 801014814
+T1D24 55975:271.923 - 1.446ms returns 1
+T1D24 55975:272.037 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55975:321.750 - 49.762ms returns 0
+T2E70 55975:438.901 JLINK_IsHalted()
+T2E70 55975:439.405   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55975:439.806 - 0.921ms returns FALSE
+T2E70 55975:642.481 JLINK_IsHalted()
+T2E70 55975:642.962   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55975:643.381 - 0.916ms returns FALSE
+T2E70 55975:846.079 JLINK_IsHalted()
+T2E70 55975:846.594   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55975:847.191 - 1.177ms returns FALSE
+T2E70 55976:049.101 JLINK_IsHalted()
+T2E70 55976:049.558   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55976:049.938 - 0.851ms returns FALSE
+T2E70 55976:251.073 JLINK_IsHalted()
+T2E70 55976:251.759   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55976:252.457 - 1.400ms returns FALSE
+T1D24 55976:376.793 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55976:379.192   [0]: USB, S/N: 801014814
+T1D24 55976:379.270 - 2.492ms returns 1
+T1D24 55976:379.423 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55976:434.260 - 54.891ms returns 0
+T2E70 55976:455.152 JLINK_IsHalted()
+T2E70 55976:455.659   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55976:456.058 - 0.921ms returns FALSE
+T2E70 55976:656.669 JLINK_IsHalted()
+T2E70 55976:657.201   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55976:657.687 - 1.044ms returns FALSE
+T2E70 55976:859.142 JLINK_IsHalted()
+T2E70 55976:859.642   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55976:860.020 - 0.894ms returns FALSE
+T2E70 55977:062.017 JLINK_IsHalted()
+T2E70 55977:062.593   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55977:063.105 - 1.139ms returns FALSE
+T2E70 55977:262.914 JLINK_IsHalted()
+T2E70 55977:263.483   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55977:263.937 - 1.086ms returns FALSE
+T2E70 55977:465.010 JLINK_IsHalted()
+T2E70 55977:465.447   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55977:465.812 - 0.815ms returns FALSE
+T1D24 55977:479.315 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55977:481.345   [0]: USB, S/N: 801014814
+T1D24 55977:481.413 - 2.109ms returns 1
+T1D24 55977:481.584 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55977:532.993 - 51.459ms returns 0
+T2E70 55977:666.009 JLINK_IsHalted()
+T2E70 55977:666.463   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55977:666.831 - 0.842ms returns FALSE
+T2E70 55977:867.408 JLINK_IsHalted()
+T2E70 55977:867.902   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55977:868.353 - 0.959ms returns FALSE
+T2E70 55978:069.562 JLINK_IsHalted()
+T2E70 55978:070.057   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55978:070.420 - 0.888ms returns FALSE
+T2E70 55978:270.948 JLINK_IsHalted()
+T2E70 55978:271.393   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55978:271.774 - 0.880ms returns FALSE
+T2E70 55978:471.206 JLINK_IsHalted()
+T2E70 55978:471.697   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55978:472.176 - 0.994ms returns FALSE
+T1D24 55978:584.036 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55978:585.855   [0]: USB, S/N: 801014814
+T1D24 55978:585.916 - 1.894ms returns 1
+T1D24 55978:586.063 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55978:638.571 - 52.580ms returns 0
+T2E70 55978:674.983 JLINK_IsHalted()
+T2E70 55978:675.508   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55978:675.902 - 0.935ms returns FALSE
+T2E70 55978:878.026 JLINK_IsHalted()
+T2E70 55978:878.529   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55978:878.890 - 0.888ms returns FALSE
+T2E70 55979:079.639 JLINK_IsHalted()
+T2E70 55979:080.211   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55979:080.679 - 1.083ms returns FALSE
+T2E70 55979:283.538 JLINK_IsHalted()
+T2E70 55979:284.098   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55979:284.562 - 1.052ms returns FALSE
+T2E70 55979:485.207 JLINK_IsHalted()
+T2E70 55979:485.670   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55979:486.022 - 0.835ms returns FALSE
+T1D24 55979:688.991 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T1D24 55979:691.008   [0]: USB, S/N: 801014814
+T1D24 55979:691.074 - 2.095ms returns 1
+T2E70 55979:691.272 JLINK_IsHalted()
+T2E70 55979:691.796   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55979:692.193 - 0.937ms returns FALSE
+T1D24 55979:692.244 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T1D24 55979:747.039 - 54.852ms returns 0
+T2E70 55979:895.621 JLINK_IsHalted()
+T2E70 55979:896.182   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55979:896.918 - 1.597ms returns FALSE
+T2E70 55980:097.072 JLINK_IsHalted()
+T2E70 55980:097.676   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55980:098.264 - 1.264ms returns FALSE
+T2E70 55980:302.025 JLINK_IsHalted()
+T2E70 55980:302.595   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55980:302.993 - 0.982ms returns FALSE
+T2E70 55980:503.332 JLINK_IsHalted()
+T2E70 55980:503.826   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55980:504.181 - 0.865ms returns FALSE
+T2E70 55980:704.447 JLINK_IsHalted()
+T2E70 55980:704.915   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55980:705.391 - 1.009ms returns FALSE
+T2E70 55980:908.007 JLINK_IsHalted()
+T2E70 55980:908.534   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55980:908.966 - 1.023ms returns FALSE
+T2E70 55981:112.485 JLINK_IsHalted()
+T2E70 55981:113.045   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55981:113.663 - 1.251ms returns FALSE
+T2E70 55981:315.905 JLINK_IsHalted()
+T2E70 55981:316.412   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55981:316.765 - 0.875ms returns FALSE
+T2E70 55981:518.133 JLINK_IsHalted()
+T2E70 55981:518.703   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55981:519.170 - 1.053ms returns FALSE
+T2E70 55981:721.819 JLINK_IsHalted()
+T2E70 55981:722.420   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55981:722.774 - 0.970ms returns FALSE
+T2E70 55981:923.063 JLINK_IsHalted()
+T2E70 55981:923.580   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55981:923.940 - 0.892ms returns FALSE
+T2E70 55982:126.484 JLINK_IsHalted()
+T2E70 55982:126.977   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55982:127.375 - 0.906ms returns FALSE
+T2E70 55982:327.382 JLINK_IsHalted()
+T2E70 55982:327.851   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55982:328.233 - 0.867ms returns FALSE
+T2E70 55982:529.373 JLINK_IsHalted()
+T2E70 55982:529.989   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55982:530.397 - 1.054ms returns FALSE
+T2E70 55982:732.131 JLINK_IsHalted()
+T2E70 55982:732.576   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55982:732.918 - 0.800ms returns FALSE
+T2E70 55982:933.232 JLINK_IsHalted()
+T2E70 55982:933.737   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55982:934.168 - 0.952ms returns FALSE
+T2E70 55983:134.367 JLINK_IsHalted()
+T2E70 55983:134.827   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55983:135.213 - 0.862ms returns FALSE
+T2E70 55983:337.551 JLINK_IsHalted()
+T2E70 55983:338.026   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55983:338.382 - 0.846ms returns FALSE
+T2E70 55983:538.112 JLINK_IsHalted()
+T2E70 55983:538.605   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55983:538.974 - 0.877ms returns FALSE
+T2E70 55983:739.807 JLINK_IsHalted()
+T2E70 55983:740.417   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55983:740.871 - 1.087ms returns FALSE
+T2E70 55983:942.297 JLINK_IsHalted()
+T2E70 55983:942.800   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55983:943.199 - 0.917ms returns FALSE
+T2E70 55984:143.245 JLINK_IsHalted()
+T2E70 55984:143.729   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55984:144.167 - 0.937ms returns FALSE
+T2E70 55984:345.484 JLINK_IsHalted()
+T2E70 55984:345.957   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55984:346.483 - 1.019ms returns FALSE
+T2E70 55984:547.333 JLINK_IsHalted()
+T2E70 55984:547.833   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55984:548.198 - 0.880ms returns FALSE
+T2E70 55984:748.514 JLINK_IsHalted()
+T2E70 55984:749.144   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55984:749.525 - 1.026ms returns FALSE
+T2E70 55984:951.996 JLINK_IsHalted()
+T2E70 55984:952.436   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55984:952.805 - 0.825ms returns FALSE
+T2E70 55985:153.433 JLINK_IsHalted()
+T2E70 55985:153.920   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55985:154.312 - 0.895ms returns FALSE
+T2E70 55985:354.379 JLINK_IsHalted()
+T2E70 55985:354.917   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55985:355.384 - 1.038ms returns FALSE
+T2E70 55985:556.174 JLINK_IsHalted()
+T2E70 55985:556.710   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55985:557.189 - 1.040ms returns FALSE
+T2E70 55985:758.062 JLINK_IsHalted()
+T2E70 55985:758.565   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55985:758.950 - 0.910ms returns FALSE
+T2E70 55985:958.255 JLINK_IsHalted()
+T2E70 55985:958.750   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55985:959.237 - 1.016ms returns FALSE
+T2E70 55986:159.325 JLINK_IsHalted()
+T2E70 55986:159.817   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55986:160.228 - 0.916ms returns FALSE
+T2E70 55986:362.229 JLINK_IsHalted()
+T2E70 55986:362.727   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55986:363.175 - 0.972ms returns FALSE
+T2E70 55986:563.258 JLINK_IsHalted()
+T2E70 55986:563.737   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55986:564.247 - 1.006ms returns FALSE
+T2E70 55986:764.767 JLINK_IsHalted()
+T2E70 55986:765.311   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55986:765.658 - 0.904ms returns FALSE
+T2E70 55986:966.646 JLINK_IsHalted()
+T2E70 55986:967.178   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55986:967.541 - 0.910ms returns FALSE
+T2E70 55987:169.906 JLINK_IsHalted()
+T2E70 55987:170.467   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55987:170.918 - 1.027ms returns FALSE
+T2E70 55987:371.074 JLINK_IsHalted()
+T2E70 55987:371.555   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55987:371.927 - 0.869ms returns FALSE
+T2E70 55987:573.976 JLINK_IsHalted()
+T2E70 55987:574.460   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55987:574.830 - 0.869ms returns FALSE
+T2E70 55987:774.760 JLINK_IsHalted()
+T2E70 55987:775.236   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55987:775.606 - 0.862ms returns FALSE
+T2E70 55987:975.848 JLINK_IsHalted()
+T2E70 55987:976.438   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55987:976.903 - 1.070ms returns FALSE
+T2E70 55988:177.141 JLINK_IsHalted()
+T2E70 55988:177.631   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55988:177.992 - 0.867ms returns FALSE
+T2E70 55988:377.292 JLINK_IsHalted()
+T2E70 55988:377.798   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55988:378.171 - 0.895ms returns FALSE
+T2E70 55988:578.221 JLINK_IsHalted()
+T2E70 55988:578.713   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55988:579.078 - 0.873ms returns FALSE
+T2E70 55988:780.200 JLINK_IsHalted()
+T2E70 55988:780.719   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55988:781.174 - 0.990ms returns FALSE
+T2E70 55988:982.007 JLINK_IsHalted()
+T2E70 55988:982.486   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55988:982.866 - 0.889ms returns FALSE
+T2E70 55989:183.653 JLINK_IsHalted()
+T2E70 55989:184.192   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55989:184.649 - 1.013ms returns FALSE
+T2E70 55989:386.933 JLINK_IsHalted()
+T2E70 55989:387.445   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55989:387.837 - 0.920ms returns FALSE
+T2E70 55989:588.825 JLINK_IsHalted()
+T2E70 55989:589.313   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55989:589.685 - 0.875ms returns FALSE
+T2E70 55989:791.487 JLINK_IsHalted()
+T2E70 55989:791.956   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55989:792.377 - 0.905ms returns FALSE
+T2E70 55989:993.007 JLINK_IsHalted()
+T2E70 55989:993.522   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55989:993.922 - 0.931ms returns FALSE
+T2E70 55990:194.580 JLINK_IsHalted()
+T2E70 55990:195.078   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55990:195.445 - 0.928ms returns FALSE
+T2E70 55990:396.196 JLINK_IsHalted()
+T2E70 55990:396.736   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55990:397.167 - 0.987ms returns FALSE
+T2E70 55990:597.600 JLINK_IsHalted()
+T2E70 55990:598.086   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55990:598.507 - 0.922ms returns FALSE
+T2E70 55990:798.976 JLINK_IsHalted()
+T2E70 55990:799.541   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55990:800.009 - 1.050ms returns FALSE
+T2E70 55991:000.418 JLINK_IsHalted()
+T2E70 55991:000.930   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55991:001.389 - 0.987ms returns FALSE
+T2E70 55991:203.811 JLINK_IsHalted()
+T2E70 55991:204.304   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55991:204.754 - 0.962ms returns FALSE
+T2E70 55991:404.928 JLINK_IsHalted()
+T2E70 55991:405.482   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55991:405.913 - 1.018ms returns FALSE
+T2E70 55991:606.000 JLINK_IsHalted()
+T2E70 55991:606.463   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55991:606.826 - 0.840ms returns FALSE
+T2E70 55991:810.547 JLINK_IsHalted()
+T2E70 55991:811.035   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55991:811.513 - 1.030ms returns FALSE
+T2E70 55992:011.603 JLINK_IsHalted()
+T2E70 55992:012.089   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55992:012.451 - 0.863ms returns FALSE
+T2E70 55992:213.034 JLINK_IsHalted()
+T2E70 55992:213.576   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55992:214.068 - 1.058ms returns FALSE
+T2E70 55992:415.753 JLINK_IsHalted()
+T2E70 55992:416.214   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55992:416.557 - 0.821ms returns FALSE
+T2E70 55992:616.691 JLINK_IsHalted()
+T2E70 55992:617.199   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55992:617.575 - 0.899ms returns FALSE
+T2E70 55992:818.739 JLINK_IsHalted()
+T2E70 55992:819.224   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55992:819.604 - 0.880ms returns FALSE
+T2E70 55993:022.574 JLINK_IsHalted()
+T2E70 55993:023.056   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55993:023.423 - 0.865ms returns FALSE
+T2E70 55993:222.863 JLINK_IsHalted()
+T2E70 55993:223.409   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55993:223.818 - 0.980ms returns FALSE
+T2E70 55993:424.927 JLINK_IsHalted()
+T2E70 55993:425.409   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55993:425.780 - 0.869ms returns FALSE
+T2E70 55993:626.897 JLINK_IsHalted()
+T2E70 55993:627.395   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55993:627.768 - 0.887ms returns FALSE
+T2E70 55993:828.209 JLINK_IsHalted()
+T2E70 55993:828.706   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55993:829.171 - 0.979ms returns FALSE
+T2E70 55994:029.564 JLINK_IsHalted()
+T2E70 55994:030.071   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55994:030.576 - 1.034ms returns FALSE
+T2E70 55994:231.441 JLINK_IsHalted()
+T2E70 55994:231.917   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55994:232.282 - 0.856ms returns FALSE
+T2E70 55994:434.161 JLINK_IsHalted()
+T2E70 55994:434.646   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55994:435.022 - 0.876ms returns FALSE
+T2E70 55994:637.245 JLINK_IsHalted()
+T2E70 55994:637.797   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55994:638.266 - 1.037ms returns FALSE
+T2E70 55994:842.956 JLINK_IsHalted()
+T2E70 55994:843.505   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55994:843.921 - 0.986ms returns FALSE
+T2E70 55995:044.417 JLINK_IsHalted()
+T2E70 55995:044.945   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55995:045.402 - 1.004ms returns FALSE
+T2E70 55995:245.791 JLINK_IsHalted()
+T2E70 55995:246.463   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55995:246.859 - 1.086ms returns FALSE
+T2E70 55995:451.581 JLINK_IsHalted()
+T2E70 55995:452.098   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55995:452.485 - 0.920ms returns FALSE
+T2E70 55995:653.175 JLINK_IsHalted()
+T2E70 55995:653.662   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55995:654.023 - 0.864ms returns FALSE
+T2E70 55995:856.511 JLINK_IsHalted()
+T2E70 55995:856.987   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55995:857.391 - 0.895ms returns FALSE
+T2E70 55996:058.502 JLINK_IsHalted()
+T2E70 55996:058.997   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55996:059.386 - 0.897ms returns FALSE
+T2E70 55996:262.657 JLINK_IsHalted()
+T2E70 55996:263.244   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55996:263.703 - 1.093ms returns FALSE
+T2E70 55996:463.963 JLINK_IsHalted()
+T2E70 55996:464.472   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55996:464.935 - 1.014ms returns FALSE
+T2E70 55996:667.146 JLINK_IsHalted()
+T2E70 55996:667.621   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55996:667.979 - 0.850ms returns FALSE
+T2E70 55996:868.302 JLINK_IsHalted()
+T2E70 55996:868.833   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55996:869.215 - 0.930ms returns FALSE
+T2E70 55997:070.899 JLINK_IsHalted()
+T2E70 55997:071.409   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55997:071.802 - 0.919ms returns FALSE
+T2E70 55997:272.860 JLINK_IsHalted()
+T2E70 55997:273.549   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55997:274.005 - 1.162ms returns FALSE
+T2E70 55997:474.918 JLINK_IsHalted()
+T2E70 55997:475.504   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55997:475.960 - 1.063ms returns FALSE
+T2E70 55997:676.835 JLINK_IsHalted()
+T2E70 55997:677.432   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55997:677.862 - 1.045ms returns FALSE
+T2E70 55997:878.270 JLINK_IsHalted()
+T2E70 55997:878.764   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55997:879.270 - 1.070ms returns FALSE
+T2E70 55998:087.123 JLINK_IsHalted()
+T2E70 55998:087.669   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55998:088.068 - 0.960ms returns FALSE
+T2E70 55998:289.148 JLINK_IsHalted()
+T2E70 55998:289.651   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55998:290.020 - 0.886ms returns FALSE
+T2E70 55998:495.187 JLINK_IsHalted()
+T2E70 55998:495.660   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55998:496.070 - 0.917ms returns FALSE
+T2E70 55998:697.885 JLINK_IsHalted()
+T2E70 55998:698.580   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55998:698.943 - 1.073ms returns FALSE
+T2E70 55998:900.851 JLINK_IsHalted()
+T2E70 55998:901.471   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55998:901.907 - 1.071ms returns FALSE
+T2E70 55999:102.750 JLINK_IsHalted()
+T2E70 55999:103.252   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55999:103.625 - 0.890ms returns FALSE
+T2E70 55999:310.146 JLINK_IsHalted()
+T2E70 55999:310.644   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55999:311.039 - 0.911ms returns FALSE
+T2E70 55999:512.315 JLINK_IsHalted()
+T2E70 55999:513.070   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55999:513.623 - 1.368ms returns FALSE
+T2E70 55999:714.745 JLINK_IsHalted()
+T2E70 55999:715.231   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55999:715.626 - 0.900ms returns FALSE
+T2E70 55999:921.355 JLINK_IsHalted()
+T2E70 55999:921.827   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 55999:922.360 - 1.075ms returns FALSE
+T2E70 56000:126.103 JLINK_IsHalted()
+T2E70 56000:126.597   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56000:126.964 - 0.876ms returns FALSE
+T2E70 56000:327.868 JLINK_IsHalted()
+T2E70 56000:328.422   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56000:328.843 - 0.991ms returns FALSE
+T2E70 56000:529.414 JLINK_IsHalted()
+T2E70 56000:530.003   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56000:530.561 - 1.190ms returns FALSE
+T2E70 56000:731.296 JLINK_IsHalted()
+T2E70 56000:731.798   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56000:732.183 - 0.903ms returns FALSE
+T2E70 56000:935.693 JLINK_IsHalted()
+T2E70 56000:936.199   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56000:936.599 - 0.921ms returns FALSE
+T2E70 56001:140.276 JLINK_IsHalted()
+T2E70 56001:140.799   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56001:141.276 - 1.021ms returns FALSE
+T2E70 56001:342.776 JLINK_IsHalted()
+T2E70 56001:343.337   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56001:343.787 - 1.026ms returns FALSE
+T2E70 56001:544.698 JLINK_IsHalted()
+T2E70 56001:545.177   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56001:545.520 - 0.834ms returns FALSE
+T2E70 56001:747.649 JLINK_IsHalted()
+T2E70 56001:748.186   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56001:748.562 - 0.929ms returns FALSE
+T2E70 56001:951.328 JLINK_IsHalted()
+T2E70 56001:951.808   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56001:952.192 - 0.879ms returns FALSE
+T2E70 56002:153.160 JLINK_IsHalted()
+T2E70 56002:153.651   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56002:154.012 - 0.867ms returns FALSE
+T2E70 56002:354.387 JLINK_IsHalted()
+T2E70 56002:355.038   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56002:355.436 - 1.065ms returns FALSE
+T2E70 56002:558.235 JLINK_IsHalted()
+T2E70 56002:558.736   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56002:559.180 - 0.964ms returns FALSE
+T2E70 56002:759.710 JLINK_IsHalted()
+T2E70 56002:760.210   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56002:760.573 - 0.880ms returns FALSE
+T2E70 56002:962.031 JLINK_IsHalted()
+T2E70 56002:962.533   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56002:962.998 - 0.989ms returns FALSE
+T2E70 56003:163.683 JLINK_IsHalted()
+T2E70 56003:164.353   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56003:164.737 - 1.067ms returns FALSE
+T2E70 56003:368.110 JLINK_IsHalted()
+T2E70 56003:368.588   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56003:368.964 - 0.870ms returns FALSE
+T2E70 56003:571.411 JLINK_IsHalted()
+T2E70 56003:571.949   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56003:572.411 - 1.027ms returns FALSE
+T2E70 56003:775.652 JLINK_IsHalted()
+T2E70 56003:776.193   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56003:776.550 - 0.912ms returns FALSE
+T2E70 56003:977.667 JLINK_IsHalted()
+T2E70 56003:978.311   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56003:978.937 - 1.358ms returns FALSE
+T2E70 56004:179.599 JLINK_IsHalted()
+T2E70 56004:180.044   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56004:180.392 - 0.807ms returns FALSE
+T2E70 56004:380.762 JLINK_IsHalted()
+T2E70 56004:381.280   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56004:381.643 - 0.898ms returns FALSE
+T2E70 56004:583.601 JLINK_IsHalted()
+T2E70 56004:584.102   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56004:584.460 - 0.874ms returns FALSE
+T2E70 56004:786.847 JLINK_IsHalted()
+T2E70 56004:787.416   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56004:787.816 - 0.984ms returns FALSE
+T2E70 56004:990.908 JLINK_IsHalted()
+T2E70 56004:991.409   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56004:991.920 - 1.027ms returns FALSE
+T2E70 56005:192.564 JLINK_IsHalted()
+T2E70 56005:193.041   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56005:193.406 - 0.858ms returns FALSE
+T2E70 56005:394.646 JLINK_IsHalted()
+T2E70 56005:395.194   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56005:395.762 - 1.191ms returns FALSE
+T2E70 56005:598.557 JLINK_IsHalted()
+T2E70 56005:598.992   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56005:599.534 - 0.991ms returns FALSE
+T2E70 56005:800.405 JLINK_IsHalted()
+T2E70 56005:800.842   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56005:801.201 - 0.810ms returns FALSE
+T2E70 56006:002.272 JLINK_IsHalted()
+T2E70 56006:002.776   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56006:003.186 - 0.928ms returns FALSE
+T2E70 56006:204.449 JLINK_IsHalted()
+T2E70 56006:205.065   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56006:205.758 - 1.326ms returns FALSE
+T2E70 56006:405.380 JLINK_IsHalted()
+T2E70 56006:405.957   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56006:406.381 - 1.016ms returns FALSE
+T2E70 56006:608.519 JLINK_IsHalted()
+T2E70 56006:608.994   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56006:609.413 - 0.943ms returns FALSE
+T2E70 56006:811.406 JLINK_IsHalted()
+T2E70 56006:811.847   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56006:812.422 - 1.039ms returns FALSE
+T2E70 56007:012.823 JLINK_IsHalted()
+T2E70 56007:013.425   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56007:013.884 - 1.089ms returns FALSE
+T2E70 56007:215.923 JLINK_IsHalted()
+T2E70 56007:216.593   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56007:216.968 - 1.061ms returns FALSE
+T2E70 56007:419.164 JLINK_IsHalted()
+T2E70 56007:419.655   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56007:420.149 - 1.000ms returns FALSE
+T2E70 56007:625.216 JLINK_IsHalted()
+T2E70 56007:625.734   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56007:626.086 - 0.886ms returns FALSE
+T2E70 56007:827.625 JLINK_IsHalted()
+T2E70 56007:828.190   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56007:828.553 - 0.943ms returns FALSE
+T2E70 56008:033.973 JLINK_IsHalted()
+T2E70 56008:034.509   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56008:034.896 - 0.938ms returns FALSE
+T2E70 56008:236.361 JLINK_IsHalted()
+T2E70 56008:237.118   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56008:237.536 - 1.196ms returns FALSE
+T2E70 56008:441.426 JLINK_IsHalted()
+T2E70 56008:441.895   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56008:442.266 - 0.855ms returns FALSE
+T2E70 56008:642.634 JLINK_IsHalted()
+T2E70 56008:643.194   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56008:643.580 - 0.961ms returns FALSE
+T2E70 56008:845.107 JLINK_IsHalted()
+T2E70 56008:845.610   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56008:846.128 - 1.058ms returns FALSE
+T2E70 56009:047.342 JLINK_IsHalted()
+T2E70 56009:047.785   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56009:048.169 - 0.838ms returns FALSE
+T2E70 56009:249.715 JLINK_IsHalted()
+T2E70 56009:250.190   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56009:250.721 - 1.075ms returns FALSE
+T2E70 56009:451.690 JLINK_IsHalted()
+T2E70 56009:452.346   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56009:452.798 - 1.125ms returns FALSE
+T2E70 56009:653.066 JLINK_IsHalted()
+T2E70 56009:653.626   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56009:654.053 - 1.003ms returns FALSE
+T2E70 56009:853.963 JLINK_IsHalted()
+T2E70 56009:854.451   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56009:854.954 - 1.007ms returns FALSE
+T2E70 56010:055.470 JLINK_IsHalted()
+T2E70 56010:055.980   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56010:056.395 - 0.940ms returns FALSE
+T2E70 56010:256.966 JLINK_IsHalted()
+T2E70 56010:257.465   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56010:257.820 - 0.870ms returns FALSE
+T2E70 56010:459.412 JLINK_IsHalted()
+T2E70 56010:459.901   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56010:460.276 - 0.879ms returns FALSE
+T2E70 56010:661.512 JLINK_IsHalted()
+T2E70 56010:662.108   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56010:662.665 - 1.193ms returns FALSE
+T2E70 56010:862.973 JLINK_IsHalted()
+T2E70 56010:863.481   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56010:863.878 - 0.921ms returns FALSE
+T2E70 56011:064.642 JLINK_IsHalted()
+T2E70 56011:065.218   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56011:065.614 - 0.983ms returns FALSE
+T2E70 56011:268.303 JLINK_IsHalted()
+T2E70 56011:268.745   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56011:269.088 - 0.799ms returns FALSE
+T2E70 56011:471.825 JLINK_IsHalted()
+T2E70 56011:472.336   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56011:472.722 - 0.912ms returns FALSE
+T2E70 56011:673.558 JLINK_IsHalted()
+T2E70 56011:674.036   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56011:674.405 - 0.863ms returns FALSE
+T2E70 56011:876.233 JLINK_IsHalted()
+T2E70 56011:876.777   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56011:877.183 - 0.970ms returns FALSE
+T2E70 56012:077.475 JLINK_IsHalted()
+T2E70 56012:077.947   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56012:078.411 - 0.951ms returns FALSE
+T2E70 56012:278.694 JLINK_IsHalted()
+T2E70 56012:279.275   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56012:279.779 - 1.106ms returns FALSE
+T2E70 56012:482.004 JLINK_IsHalted()
+T2E70 56012:482.515   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56012:482.887 - 0.898ms returns FALSE
+T2E70 56012:683.199 JLINK_IsHalted()
+T2E70 56012:683.689   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56012:684.060 - 0.877ms returns FALSE
+T2E70 56012:888.190 JLINK_IsHalted()
+T2E70 56012:888.721   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56012:889.094 - 0.920ms returns FALSE
+T2E70 56013:089.382 JLINK_IsHalted()
+T2E70 56013:089.906   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56013:090.279 - 0.910ms returns FALSE
+T2E70 56013:290.724 JLINK_IsHalted()
+T2E70 56013:291.215   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56013:291.595 - 0.886ms returns FALSE
+T2E70 56013:492.077 JLINK_IsHalted()
+T2E70 56013:492.587   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56013:493.060 - 0.999ms returns FALSE
+T2E70 56013:694.166 JLINK_IsHalted()
+T2E70 56013:694.663   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56013:695.080 - 1.060ms returns FALSE
+T2E70 56013:896.488 JLINK_IsHalted()
+T2E70 56013:897.030   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56013:897.409 - 0.936ms returns FALSE
+T2E70 56014:098.088 JLINK_IsHalted()
+T2E70 56014:098.635   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56014:099.048 - 0.975ms returns FALSE
+T2E70 56014:299.420 JLINK_IsHalted()
+T2E70 56014:299.899   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56014:300.419 - 1.012ms returns FALSE
+T2E70 56014:502.037 JLINK_IsHalted()
+T2E70 56014:502.514   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56014:502.899 - 0.879ms returns FALSE
+T2E70 56014:703.425 JLINK_IsHalted()
+T2E70 56014:703.940   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56014:704.407 - 0.998ms returns FALSE
+T2E70 56014:905.795 JLINK_IsHalted()
+T2E70 56014:906.370   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56014:906.805 - 1.026ms returns FALSE
+T2E70 56015:107.445 JLINK_IsHalted()
+T2E70 56015:107.925   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56015:108.412 - 0.983ms returns FALSE
+T2E70 56015:310.427 JLINK_IsHalted()
+T2E70 56015:310.907   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56015:311.410 - 0.999ms returns FALSE
+T2E70 56015:514.297 JLINK_IsHalted()
+T2E70 56015:514.867   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56015:515.314 - 1.034ms returns FALSE
+T2E70 56015:719.650 JLINK_IsHalted()
+T2E70 56015:720.242   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56015:720.679 - 1.044ms returns FALSE
+T2E70 56015:920.711 JLINK_IsHalted()
+T2E70 56015:921.214   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56015:921.691 - 1.000ms returns FALSE
+T2E70 56016:122.836 JLINK_IsHalted()
+T2E70 56016:123.287   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56016:123.657 - 0.835ms returns FALSE
+T2E70 56016:325.872 JLINK_IsHalted()
+T2E70 56016:326.322   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56016:326.686 - 0.833ms returns FALSE
+T2E70 56016:527.915 JLINK_IsHalted()
+T2E70 56016:528.432   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56016:528.923 - 1.059ms returns FALSE
+T2E70 56016:730.556 JLINK_IsHalted()
+T2E70 56016:731.198   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56016:731.583 - 1.042ms returns FALSE
+T2E70 56016:932.301 JLINK_IsHalted()
+T2E70 56016:932.878   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56016:933.459 - 1.193ms returns FALSE
+T2E70 56017:135.392 JLINK_IsHalted()
+T2E70 56017:135.853   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56017:136.218 - 0.841ms returns FALSE
+T2E70 56017:338.788 JLINK_IsHalted()
+T2E70 56017:339.269   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56017:339.626 - 0.885ms returns FALSE
+T2E70 56017:539.993 JLINK_IsHalted()
+T2E70 56017:540.575   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56017:541.013 - 1.038ms returns FALSE
+T2E70 56017:743.997 JLINK_IsHalted()
+T2E70 56017:744.488   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56017:745.217 - 1.254ms returns FALSE
+T2E70 56017:945.897 JLINK_IsHalted()
+T2E70 56017:946.430   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56017:946.815 - 0.932ms returns FALSE
+T2E70 56018:147.546 JLINK_IsHalted()
+T2E70 56018:148.299   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56018:148.812 - 1.308ms returns FALSE
+T2E70 56018:349.005 JLINK_IsHalted()
+T2E70 56018:349.489   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56018:349.844 - 0.856ms returns FALSE
+T2E70 56018:554.021 JLINK_IsHalted()
+T2E70 56018:554.495   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56018:554.892 - 0.887ms returns FALSE
+T2E70 56018:756.176 JLINK_IsHalted()
+T2E70 56018:756.685   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56018:757.068 - 0.912ms returns FALSE
+T2E70 56018:959.851 JLINK_IsHalted()
+T2E70 56018:960.337   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56018:960.721 - 0.885ms returns FALSE
+T2E70 56019:161.644 JLINK_IsHalted()
+T2E70 56019:162.329   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56019:162.823 - 1.212ms returns FALSE
+T2E70 56019:366.838 JLINK_IsHalted()
+T2E70 56019:367.296   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56019:367.790 - 0.967ms returns FALSE
+T2E70 56019:570.300 JLINK_IsHalted()
+T2E70 56019:571.013   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56019:571.504 - 1.266ms returns FALSE
+T2E70 56019:772.183 JLINK_IsHalted()
+T2E70 56019:772.646   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56019:772.999 - 0.831ms returns FALSE
+T2E70 56019:976.432 JLINK_IsHalted()
+T2E70 56019:976.907   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56019:977.268 - 0.851ms returns FALSE
+T2E70 56020:178.481 JLINK_IsHalted()
+T2E70 56020:179.086   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56020:179.665 - 1.203ms returns FALSE
+T2E70 56020:380.477 JLINK_IsHalted()
+T2E70 56020:381.011   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56020:381.430 - 0.970ms returns FALSE
+T2E70 56020:584.712 JLINK_IsHalted()
+T2E70 56020:585.198   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56020:585.552 - 0.855ms returns FALSE
+T2E70 56020:784.866 JLINK_IsHalted()
+T2E70 56020:785.589   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56020:786.208 - 1.376ms returns FALSE
+T2E70 56020:990.936 JLINK_IsHalted()
+T2E70 56020:991.485   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56020:991.893 - 0.973ms returns FALSE
+T2E70 56021:192.603 JLINK_IsHalted()
+T2E70 56021:193.080   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56021:193.453 - 0.865ms returns FALSE
+T2E70 56021:394.241 JLINK_IsHalted()
+T2E70 56021:394.719   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56021:396.267 - 2.163ms returns FALSE
+T2E70 56021:596.990 JLINK_IsHalted()
+T2E70 56021:597.450   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56021:597.806 - 0.831ms returns FALSE
+T2E70 56021:797.960 JLINK_IsHalted()
+T2E70 56021:798.435   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56021:798.941 - 0.996ms returns FALSE
+T2E70 56022:000.730 JLINK_IsHalted()
+T2E70 56022:001.324   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56022:001.699 - 0.984ms returns FALSE
+T2E70 56022:203.747 JLINK_IsHalted()
+T2E70 56022:204.218   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56022:204.577 - 0.847ms returns FALSE
+T2E70 56022:405.102 JLINK_IsHalted()
+T2E70 56022:405.634   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56022:406.001 - 0.915ms returns FALSE
+T2E70 56022:608.459 JLINK_IsHalted()
+T2E70 56022:608.980   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56022:609.418 - 0.976ms returns FALSE
+T2E70 56022:810.863 JLINK_IsHalted()
+T2E70 56022:811.318   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56022:811.849 - 1.035ms returns FALSE
+T2E70 56023:014.393 JLINK_IsHalted()
+T2E70 56023:014.894   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56023:015.344 - 0.966ms returns FALSE
+T2E70 56023:217.600 JLINK_IsHalted()
+T2E70 56023:218.146   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56023:218.550 - 0.965ms returns FALSE
+T2E70 56023:418.601 JLINK_IsHalted()
+T2E70 56023:419.174   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56023:419.533 - 0.945ms returns FALSE
+T2E70 56023:620.839 JLINK_IsHalted()
+T2E70 56023:621.470   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56023:621.944 - 1.124ms returns FALSE
+T2E70 56023:821.968 JLINK_IsHalted()
+T2E70 56023:822.474   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56023:823.000 - 1.047ms returns FALSE
+T2E70 56024:025.531 JLINK_IsHalted()
+T2E70 56024:026.017   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56024:026.407 - 0.891ms returns FALSE
+T2E70 56024:226.923 JLINK_IsHalted()
+T2E70 56024:227.549   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56024:228.105 - 1.202ms returns FALSE
+T2E70 56024:428.239 JLINK_IsHalted()
+T2E70 56024:429.121   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56024:429.608 - 1.414ms returns FALSE
+T2E70 56024:631.429 JLINK_IsHalted()
+T2E70 56024:631.917   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56024:632.302 - 0.890ms returns FALSE
+T2E70 56024:835.289 JLINK_IsHalted()
+T2E70 56024:835.867   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56024:836.302 - 1.030ms returns FALSE
+T2E70 56025:036.494 JLINK_IsHalted()
+T2E70 56025:037.042   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56025:037.446 - 0.972ms returns FALSE
+T2E70 56025:239.089 JLINK_IsHalted()
+T2E70 56025:239.647   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56025:240.094 - 1.020ms returns FALSE
+T2E70 56025:440.393 JLINK_IsHalted()
+T2E70 56025:440.874   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56025:441.246 - 0.868ms returns FALSE
+T2E70 56025:640.931 JLINK_IsHalted()
+T2E70 56025:641.543   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56025:641.950 - 1.037ms returns FALSE
+T2E70 56025:842.509 JLINK_IsHalted()
+T2E70 56025:843.004   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56025:843.416 - 0.920ms returns FALSE
+T2E70 56026:044.614 JLINK_IsHalted()
+T2E70 56026:045.105   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56026:045.577 - 0.993ms returns FALSE
+T2E70 56026:247.645 JLINK_IsHalted()
+T2E70 56026:248.107   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56026:248.612 - 0.983ms returns FALSE
+T2E70 56026:449.621 JLINK_IsHalted()
+T2E70 56026:450.112   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56026:450.528 - 0.922ms returns FALSE
+T2E70 56026:652.848 JLINK_IsHalted()
+T2E70 56026:653.618   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56026:654.113 - 1.281ms returns FALSE
+T2E70 56026:855.743 JLINK_IsHalted()
+T2E70 56026:856.216   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56026:856.609 - 0.882ms returns FALSE
+T2E70 56027:057.144 JLINK_IsHalted()
+T2E70 56027:057.682   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56027:058.096 - 0.970ms returns FALSE
+T2E70 56027:260.263 JLINK_IsHalted()
+T2E70 56027:260.919   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56027:261.426 - 1.253ms returns FALSE
+T2E70 56027:462.066 JLINK_IsHalted()
+T2E70 56027:462.612   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56027:463.029 - 0.979ms returns FALSE
+T2E70 56027:663.730 JLINK_IsHalted()
+T2E70 56027:664.447   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56027:664.959 - 1.278ms returns FALSE
+T2E70 56027:866.777 JLINK_IsHalted()
+T2E70 56027:867.472   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56027:867.958 - 1.194ms returns FALSE
+T2E70 56028:071.314 JLINK_IsHalted()
+T2E70 56028:071.813   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56028:072.368 - 1.131ms returns FALSE
+T2E70 56028:276.878 JLINK_IsHalted()
+T2E70 56028:277.470   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56028:277.843 - 0.986ms returns FALSE
+T2E70 56028:480.015 JLINK_IsHalted()
+T2E70 56028:480.516   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56028:480.871 - 0.870ms returns FALSE
+T2E70 56028:682.214 JLINK_IsHalted()
+T2E70 56028:682.706   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56028:683.075 - 0.876ms returns FALSE
+T2E70 56028:883.670 JLINK_IsHalted()
+T2E70 56028:884.457   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56028:884.899 - 1.242ms returns FALSE
+T2E70 56029:085.635 JLINK_IsHalted()
+T2E70 56029:086.453   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56029:086.932 - 1.314ms returns FALSE
+T2E70 56029:288.265 JLINK_IsHalted()
+T2E70 56029:288.732   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56029:289.099 - 0.849ms returns FALSE
+T2E70 56029:490.593 JLINK_IsHalted()
+T2E70 56029:491.044   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56029:491.607 - 1.067ms returns FALSE
+T2E70 56029:693.706 JLINK_IsHalted()
+T2E70 56029:694.268   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56029:694.740 - 1.053ms returns FALSE
+T2E70 56029:896.935 JLINK_IsHalted()
+T2E70 56029:897.426   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56029:897.788 - 0.866ms returns FALSE
+T2E70 56030:100.946 JLINK_IsHalted()
+T2E70 56030:101.561   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56030:102.202 - 1.322ms returns FALSE
+T2E70 56030:302.381 JLINK_IsHalted()
+T2E70 56030:302.871   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56030:303.283 - 0.915ms returns FALSE
+T2E70 56030:505.179 JLINK_IsHalted()
+T2E70 56030:505.681   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56030:506.078 - 0.916ms returns FALSE
+T2E70 56030:709.791 JLINK_IsHalted()
+T2E70 56030:710.494   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56030:711.305 - 1.613ms returns FALSE
+T2E70 56030:912.331 JLINK_IsHalted()
+T2E70 56030:912.824   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56030:913.208 - 0.893ms returns FALSE
+T2E70 56031:113.720 JLINK_IsHalted()
+T2E70 56031:114.330   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56031:114.888 - 1.242ms returns FALSE
+T2E70 56031:314.307 JLINK_IsHalted()
+T2E70 56031:314.803   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56031:315.315 - 1.073ms returns FALSE
+T2E70 56031:515.514 JLINK_IsHalted()
+T2E70 56031:515.971   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56031:516.425 - 0.934ms returns FALSE
+T2E70 56031:717.013 JLINK_IsHalted()
+T2E70 56031:717.518   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56031:717.916 - 0.920ms returns FALSE
+T2E70 56031:921.951 JLINK_IsHalted()
+T2E70 56031:922.514   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56031:922.967 - 1.032ms returns FALSE
+T2E70 56032:125.187 JLINK_IsHalted()
+T2E70 56032:125.655   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56032:126.043 - 0.874ms returns FALSE
+T2E70 56032:326.872 JLINK_IsHalted()
+T2E70 56032:327.441   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56032:327.971 - 1.178ms returns FALSE
+T2E70 56032:528.353 JLINK_IsHalted()
+T2E70 56032:528.854   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56032:529.222 - 0.885ms returns FALSE
+T2E70 56032:731.141 JLINK_IsHalted()
+T2E70 56032:731.641   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56032:732.153 - 1.070ms returns FALSE
+T2E70 56032:932.079 JLINK_IsHalted()
+T2E70 56032:932.691   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56032:933.243 - 1.178ms returns FALSE
+T2E70 56033:133.424 JLINK_IsHalted()
+T2E70 56033:133.913   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56033:134.506 - 1.147ms returns FALSE
+T2E70 56033:336.167 JLINK_IsHalted()
+T2E70 56033:336.901   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56033:337.436 - 1.285ms returns FALSE
+T2E70 56033:538.826 JLINK_IsHalted()
+T2E70 56033:539.383   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56033:539.835 - 1.028ms returns FALSE
+T2E70 56033:740.784 JLINK_IsHalted()
+T2E70 56033:741.296   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56033:741.716 - 0.945ms returns FALSE
+T2E70 56033:943.545 JLINK_IsHalted()
+T2E70 56033:944.014   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56033:944.532 - 1.053ms returns FALSE
+T2E70 56034:145.106 JLINK_IsHalted()
+T2E70 56034:145.642   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56034:146.083 - 1.008ms returns FALSE
+T2E70 56034:347.658 JLINK_IsHalted()
+T2E70 56034:348.278   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56034:348.775 - 1.154ms returns FALSE
+T2E70 56034:550.424 JLINK_IsHalted()
+T2E70 56034:551.185   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56034:551.753 - 1.343ms returns FALSE
+T2E70 56034:753.560 JLINK_IsHalted()
+T2E70 56034:754.040   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56034:754.430 - 0.887ms returns FALSE
+T2E70 56034:958.244 JLINK_IsHalted()
+T2E70 56034:958.717   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56034:959.192 - 0.961ms returns FALSE
+T2E70 56035:159.643 JLINK_IsHalted()
+T2E70 56035:160.228   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56035:160.824 - 1.247ms returns FALSE
+T2E70 56035:361.169 JLINK_IsHalted()
+T2E70 56035:361.705   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56035:362.233 - 1.112ms returns FALSE
+T2E70 56035:568.714 JLINK_IsHalted()
+T2E70 56035:569.249   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56035:569.664 - 0.966ms returns FALSE
+T2E70 56035:770.739 JLINK_IsHalted()
+T2E70 56035:771.269   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56035:771.687 - 0.969ms returns FALSE
+T2E70 56035:971.923 JLINK_IsHalted()
+T2E70 56035:972.453   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56035:972.866 - 0.957ms returns FALSE
+T2E70 56036:172.822 JLINK_IsHalted()
+T2E70 56036:173.334   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56036:173.698 - 0.891ms returns FALSE
+T2E70 56036:375.994 JLINK_IsHalted()
+T2E70 56036:376.459   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56036:376.852 - 0.910ms returns FALSE
+T2E70 56036:576.916 JLINK_IsHalted()
+T2E70 56036:577.426   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56036:577.807 - 0.944ms returns FALSE
+T2E70 56036:782.729 JLINK_IsHalted()
+T2E70 56036:783.273   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56036:783.895 - 1.215ms returns FALSE
+T2E70 56036:989.890 JLINK_IsHalted()
+T2E70 56036:990.482   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56036:990.911 - 1.049ms returns FALSE
+T2E70 56037:193.246 JLINK_IsHalted()
+T2E70 56037:193.719   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56037:194.077 - 0.846ms returns FALSE
+T2E70 56037:393.483 JLINK_IsHalted()
+T2E70 56037:393.955   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56037:394.358 - 0.947ms returns FALSE
+T2E70 56037:595.655 JLINK_IsHalted()
+T2E70 56037:596.583   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56037:597.109 - 1.477ms returns FALSE
+T2E70 56037:801.050 JLINK_IsHalted()
+T2E70 56037:801.532   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56037:801.915 - 0.881ms returns FALSE
+T2E70 56038:003.185 JLINK_IsHalted()
+T2E70 56038:003.898   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56038:004.454 - 1.297ms returns FALSE
+T2E70 56038:210.691 JLINK_IsHalted()
+T2E70 56038:211.478   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56038:212.476 - 1.845ms returns FALSE
+T2E70 56038:415.265 JLINK_IsHalted()
+T2E70 56038:415.830   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56038:416.316 - 1.082ms returns FALSE
+T2E70 56038:617.495 JLINK_IsHalted()
+T2E70 56038:618.069   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56038:618.613 - 1.184ms returns FALSE
+T2E70 56038:823.793 JLINK_IsHalted()
+T2E70 56038:824.341   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56038:824.764 - 0.986ms returns FALSE
+T2E70 56039:026.477 JLINK_IsHalted()
+T2E70 56039:026.987   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56039:027.571 - 1.113ms returns FALSE
+T2E70 56039:227.889 JLINK_IsHalted()
+T2E70 56039:228.472   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56039:229.310 - 1.470ms returns FALSE
+T2E70 56039:429.609 JLINK_IsHalted()
+T2E70 56039:430.187   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56039:430.814 - 1.297ms returns FALSE
+T2E70 56039:633.756 JLINK_IsHalted()
+T2E70 56039:634.252   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56039:634.763 - 1.023ms returns FALSE
+T2E70 56039:838.448 JLINK_IsHalted()
+T2E70 56039:839.041   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56039:839.662 - 1.283ms returns FALSE
+T2E70 56040:040.070 JLINK_IsHalted()
+T2E70 56040:040.618   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56040:041.139 - 1.128ms returns FALSE
+T2E70 56040:241.201 JLINK_IsHalted()
+T2E70 56040:241.657   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56040:242.032 - 0.844ms returns FALSE
+T2E70 56040:443.055 JLINK_IsHalted()
+T2E70 56040:443.532   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56040:443.893 - 0.853ms returns FALSE
+T2E70 56040:643.681 JLINK_IsHalted()
+T2E70 56040:644.229   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56040:644.719 - 1.101ms returns FALSE
+T2E70 56040:848.822 JLINK_IsHalted()
+T2E70 56040:849.485   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56040:849.887 - 1.080ms returns FALSE
+T2E70 56041:050.260 JLINK_IsHalted()
+T2E70 56041:050.779   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56041:051.206 - 0.962ms returns FALSE
+T2E70 56041:251.422 JLINK_IsHalted()
+T2E70 56041:252.107   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56041:252.668 - 1.272ms returns FALSE
+T2E70 56041:458.554 JLINK_IsHalted()
+T2E70 56041:459.102   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56041:459.461 - 0.923ms returns FALSE
+T2E70 56041:659.944 JLINK_IsHalted()
+T2E70 56041:660.444   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56041:660.950 - 1.029ms returns FALSE
+T2E70 56041:861.903 JLINK_IsHalted()
+T2E70 56041:862.455   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56041:862.834 - 0.951ms returns FALSE
+T2E70 56042:068.479 JLINK_IsHalted()
+T2E70 56042:069.102   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56042:069.531 - 1.068ms returns FALSE
+T2E70 56042:272.201 JLINK_IsHalted()
+T2E70 56042:272.763   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56042:273.217 - 1.032ms returns FALSE
+T2E70 56042:473.986 JLINK_IsHalted()
+T2E70 56042:474.502   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56042:474.868 - 0.898ms returns FALSE
+T2E70 56042:675.905 JLINK_IsHalted()
+T2E70 56042:676.449   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56042:676.808 - 0.919ms returns FALSE
+T2E70 56042:877.989 JLINK_IsHalted()
+T2E70 56042:878.494   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56042:878.893 - 0.919ms returns FALSE
+T2E70 56043:084.216 JLINK_IsHalted()
+T2E70 56043:084.722   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56043:085.210 - 1.008ms returns FALSE
+T2E70 56043:287.069 JLINK_IsHalted()
+T2E70 56043:287.766   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56043:288.431 - 1.391ms returns FALSE
+T2E70 56043:493.544 JLINK_IsHalted()
+T2E70 56043:494.155   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56043:494.710 - 1.212ms returns FALSE
+T2E70 56043:694.505 JLINK_IsHalted()
+T2E70 56043:695.083   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56043:695.569 - 1.092ms returns FALSE
+T2E70 56043:902.639 JLINK_IsHalted()
+T2E70 56043:903.134   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56043:903.502 - 0.883ms returns FALSE
+T2E70 56044:106.037 JLINK_IsHalted()
+T2E70 56044:106.548   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56044:106.922 - 0.900ms returns FALSE
+T2E70 56044:309.136 JLINK_IsHalted()
+T2E70 56044:309.636   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56044:310.082 - 0.972ms returns FALSE
+T2E70 56044:510.833 JLINK_IsHalted()
+T2E70 56044:511.378   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56044:511.856 - 1.049ms returns FALSE
+T2E70 56044:713.650 JLINK_IsHalted()
+T2E70 56044:714.288   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56044:714.992 - 1.414ms returns FALSE
+T2E70 56044:918.231 JLINK_IsHalted()
+T2E70 56044:918.671   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56044:919.029 - 0.814ms returns FALSE
+T2E70 56045:120.374 JLINK_IsHalted()
+T2E70 56045:120.938   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56045:121.491 - 1.151ms returns FALSE
+T2E70 56045:323.001 JLINK_IsHalted()
+T2E70 56045:339.023   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56045:339.471 - 16.496ms returns FALSE
+T2E70 56045:541.236 JLINK_IsHalted()
+T2E70 56045:541.700   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56045:542.192 - 0.972ms returns FALSE
+T2E70 56045:743.221 JLINK_IsHalted()
+T2E70 56045:743.714   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56045:744.275 - 1.085ms returns FALSE
+T2E70 56045:950.207 JLINK_IsHalted()
+T2E70 56045:950.655   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56045:951.003 - 0.811ms returns FALSE
+T2E70 56046:152.411 JLINK_IsHalted()
+T2E70 56046:152.868   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56046:153.298 - 0.902ms returns FALSE
+T2E70 56046:353.373 JLINK_IsHalted()
+T2E70 56046:354.165   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56046:354.629 - 1.270ms returns FALSE
+T2E70 56046:554.381 JLINK_IsHalted()
+T2E70 56046:554.836   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56046:555.216 - 0.850ms returns FALSE
+T2E70 56046:756.473 JLINK_IsHalted()
+T2E70 56046:757.109   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56046:757.527 - 1.075ms returns FALSE
+T2E70 56046:958.554 JLINK_IsHalted()
+T2E70 56046:959.031   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56046:959.500 - 0.960ms returns FALSE
+T2E70 56047:159.956 JLINK_IsHalted()
+T2E70 56047:160.566   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56047:161.240 - 1.321ms returns FALSE
+T2E70 56047:367.271 JLINK_IsHalted()
+T2E70 56047:367.791   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56047:368.219 - 0.964ms returns FALSE
+T2E70 56047:573.780 JLINK_IsHalted()
+T2E70 56047:574.265   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56047:574.837 - 1.075ms returns FALSE
+T2E70 56047:776.045 JLINK_IsHalted()
+T2E70 56047:776.578   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56047:777.028 - 1.576ms returns FALSE
+T2E70 56047:977.811 JLINK_IsHalted()
+T2E70 56047:978.316   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56047:978.781 - 0.986ms returns FALSE
+T2E70 56048:180.867 JLINK_IsHalted()
+T2E70 56048:181.352   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56048:181.715 - 0.863ms returns FALSE
+T2E70 56048:382.786 JLINK_IsHalted()
+T2E70 56048:383.286   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56048:383.688 - 0.918ms returns FALSE
+T2E70 56048:584.460 JLINK_IsHalted()
+T2E70 56048:584.973   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56048:585.524 - 1.086ms returns FALSE
+T2E70 56048:787.658 JLINK_IsHalted()
+T2E70 56048:788.221   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56048:788.572 - 0.929ms returns FALSE
+T2E70 56048:989.900 JLINK_IsHalted()
+T2E70 56048:990.471   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56048:990.846 - 0.961ms returns FALSE
+T2E70 56049:193.062 JLINK_IsHalted()
+T2E70 56049:193.669   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56049:194.144 - 1.178ms returns FALSE
+T2E70 56049:394.608 JLINK_IsHalted()
+T2E70 56049:395.121   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56049:395.494 - 0.901ms returns FALSE
+T2E70 56049:596.638 JLINK_IsHalted()
+T2E70 56049:597.138   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56049:597.542 - 0.919ms returns FALSE
+T2E70 56049:799.601 JLINK_IsHalted()
+T2E70 56049:800.113   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56049:800.518 - 0.987ms returns FALSE
+T2E70 56050:003.175 JLINK_IsHalted()
+T2E70 56050:003.706   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56050:004.076 - 0.921ms returns FALSE
+T2E70 56050:206.228 JLINK_IsHalted()
+T2E70 56050:206.719   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56050:207.092 - 0.880ms returns FALSE
+T2E70 56050:406.500 JLINK_IsHalted()
+T2E70 56050:407.043   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56050:407.455 - 0.977ms returns FALSE
+T2E70 56050:609.667 JLINK_IsHalted()
+T2E70 56050:610.436   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56050:611.297 - 1.677ms returns FALSE
+T2E70 56050:812.984 JLINK_IsHalted()
+T2E70 56050:813.488   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56050:814.016 - 1.048ms returns FALSE
+T2E70 56051:015.622 JLINK_IsHalted()
+T2E70 56051:016.159   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56051:016.601 - 0.995ms returns FALSE
+T2E70 56051:219.726 JLINK_IsHalted()
+T2E70 56051:220.263   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56051:220.641 - 0.931ms returns FALSE
+T2E70 56051:422.427 JLINK_IsHalted()
+T2E70 56051:422.962   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56051:423.324 - 0.912ms returns FALSE
+T2E70 56051:626.280 JLINK_IsHalted()
+T2E70 56051:626.747   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56051:627.228 - 1.027ms returns FALSE
+T2E70 56051:827.359 JLINK_IsHalted()
+T2E70 56051:827.954   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56051:828.444 - 1.101ms returns FALSE
+T2E70 56052:029.232 JLINK_IsHalted()
+T2E70 56052:029.931   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56052:030.458 - 1.276ms returns FALSE
+T2E70 56052:231.562 JLINK_IsHalted()
+T2E70 56052:232.044   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56052:232.433 - 0.886ms returns FALSE
+T2E70 56052:435.625 JLINK_IsHalted()
+T2E70 56052:436.106   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56052:436.489 - 0.879ms returns FALSE
+T2E70 56052:636.204 JLINK_IsHalted()
+T2E70 56052:636.665   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56052:637.036 - 0.849ms returns FALSE
+T2E70 56052:839.683 JLINK_IsHalted()
+T2E70 56052:840.293   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56052:840.732 - 1.064ms returns FALSE
+T2E70 56053:041.124 JLINK_IsHalted()
+T2E70 56053:041.591   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56053:042.084 - 0.975ms returns FALSE
+T2E70 56053:242.685 JLINK_IsHalted()
+T2E70 56053:243.277   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56053:243.877 - 1.234ms returns FALSE
+T2E70 56053:445.260 JLINK_IsHalted()
+T2E70 56053:445.813   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56053:446.310 - 1.118ms returns FALSE
+T2E70 56053:646.829 JLINK_IsHalted()
+T2E70 56053:647.299   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56053:647.664 - 0.850ms returns FALSE
+T2E70 56053:847.594 JLINK_IsHalted()
+T2E70 56053:848.188   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56053:848.592 - 1.013ms returns FALSE
+T2E70 56054:048.665 JLINK_IsHalted()
+T2E70 56054:049.144   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56054:049.635 - 0.985ms returns FALSE
+T2E70 56054:251.376 JLINK_IsHalted()
+T2E70 56054:251.858   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56054:252.241 - 0.881ms returns FALSE
+T2E70 56054:452.448 JLINK_IsHalted()
+T2E70 56054:452.904   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56054:453.387 - 0.955ms returns FALSE
+T2E70 56054:653.850 JLINK_IsHalted()
+T2E70 56054:654.319   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56054:654.799 - 0.965ms returns FALSE
+T2E70 56054:855.374 JLINK_IsHalted()
+T2E70 56054:856.052   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56054:856.482 - 1.123ms returns FALSE
+T2E70 56055:057.023 JLINK_IsHalted()
+T2E70 56055:057.495   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56055:057.875 - 0.868ms returns FALSE
+T2E70 56055:259.734 JLINK_IsHalted()
+T2E70 56055:260.393   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56055:260.794 - 1.083ms returns FALSE
+T2E70 56055:461.050 JLINK_IsHalted()
+T2E70 56055:461.653   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56055:462.137 - 1.104ms returns FALSE
+T2E70 56055:662.361 JLINK_IsHalted()
+T2E70 56055:662.975   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56055:663.440 - 1.094ms returns FALSE
+T2E70 56055:865.306 JLINK_IsHalted()
+T2E70 56055:865.788   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56055:866.218 - 0.928ms returns FALSE
+T2E70 56056:066.197 JLINK_IsHalted()
+T2E70 56056:066.649   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56056:067.004 - 0.819ms returns FALSE
+T2E70 56056:270.349 JLINK_IsHalted()
+T2E70 56056:270.840   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56056:271.248 - 0.912ms returns FALSE
+T2E70 56056:473.443 JLINK_IsHalted()
+T2E70 56056:473.902   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56056:474.309 - 0.885ms returns FALSE
+T2E70 56056:675.525 JLINK_IsHalted()
+T2E70 56056:676.001   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56056:676.447 - 0.939ms returns FALSE
+T2E70 56056:877.876 JLINK_IsHalted()
+T2E70 56056:878.675   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56056:879.179 - 1.365ms returns FALSE
+T2E70 56057:086.742 JLINK_IsHalted()
+T2E70 56057:087.332   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56057:087.736 - 1.010ms returns FALSE
+T2E70 56057:290.236 JLINK_IsHalted()
+T2E70 56057:290.742   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56057:291.115 - 0.895ms returns FALSE
+T2E70 56057:492.296 JLINK_IsHalted()
+T2E70 56057:492.759   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56057:493.118 - 0.839ms returns FALSE
+T2E70 56057:692.968 JLINK_IsHalted()
+T2E70 56057:693.478   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56057:693.882 - 0.978ms returns FALSE
+T2E70 56057:894.114 JLINK_IsHalted()
+T2E70 56057:894.641   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56057:895.008 - 0.910ms returns FALSE
+T2E70 56058:095.915 JLINK_IsHalted()
+T2E70 56058:096.503   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56058:096.953 - 1.053ms returns FALSE
+T2E70 56058:301.192 JLINK_IsHalted()
+T2E70 56058:301.669   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56058:302.184 - 1.008ms returns FALSE
+T2E70 56058:503.340 JLINK_IsHalted()
+T2E70 56058:503.892   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56058:504.430 - 1.149ms returns FALSE
+T2E70 56058:704.469 JLINK_IsHalted()
+T2E70 56058:704.969   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56058:705.442 - 0.988ms returns FALSE
+T2E70 56058:907.548 JLINK_IsHalted()
+T2E70 56058:908.034   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56058:908.479 - 0.962ms returns FALSE
+T2E70 56059:109.322 JLINK_IsHalted()
+T2E70 56059:110.070   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56059:110.817 - 1.709ms returns FALSE
+T2E70 56059:318.261 JLINK_IsHalted()
+T2E70 56059:318.927   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56059:319.329 - 1.083ms returns FALSE
+T2E70 56059:519.601 JLINK_IsHalted()
+T2E70 56059:520.128   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56059:520.529 - 0.944ms returns FALSE
+T2E70 56059:723.805 JLINK_IsHalted()
+T2E70 56059:724.481   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56059:724.887 - 1.100ms returns FALSE
+T2E70 56059:925.917 JLINK_IsHalted()
+T2E70 56059:926.441   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56059:926.931 - 1.037ms returns FALSE
+T2E70 56060:127.481 JLINK_IsHalted()
+T2E70 56060:128.038   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56060:128.462 - 1.002ms returns FALSE
+T2E70 56060:334.856 JLINK_IsHalted()
+T2E70 56060:335.363   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56060:335.732 - 0.891ms returns FALSE
+T2E70 56060:536.414 JLINK_IsHalted()
+T2E70 56060:536.987   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56060:537.466 - 1.069ms returns FALSE
+T2E70 56060:739.329 JLINK_IsHalted()
+T2E70 56060:739.830   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56060:740.224 - 0.910ms returns FALSE
+T2E70 56060:940.420 JLINK_IsHalted()
+T2E70 56060:940.902   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56060:941.258 - 0.854ms returns FALSE
+T2E70 56061:142.123 JLINK_IsHalted()
+T2E70 56061:142.641   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56061:143.011 - 0.904ms returns FALSE
+T2E70 56061:342.628 JLINK_IsHalted()
+T2E70 56061:343.099   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56061:343.490 - 0.911ms returns FALSE
+T2E70 56061:545.299 JLINK_IsHalted()
+T2E70 56061:545.781   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56061:546.217 - 0.931ms returns FALSE
+T2E70 56061:751.193 JLINK_IsHalted()
+T2E70 56061:751.683   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56061:752.057 - 0.879ms returns FALSE
+T2E70 56061:957.194 JLINK_IsHalted()
+T2E70 56061:957.819   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56061:958.302 - 1.139ms returns FALSE
+T2E70 56062:159.247 JLINK_IsHalted()
+T2E70 56062:159.711   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56062:160.156 - 0.985ms returns FALSE
+T2E70 56062:360.743 JLINK_IsHalted()
+T2E70 56062:361.259   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56062:361.640 - 0.912ms returns FALSE
+T2E70 56062:562.388 JLINK_IsHalted()
+T2E70 56062:562.950   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56062:563.437 - 1.065ms returns FALSE
+T2E70 56062:764.187 JLINK_IsHalted()
+T2E70 56062:764.685   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56062:765.106 - 0.940ms returns FALSE
+T2E70 56062:972.561 JLINK_IsHalted()
+T2E70 56062:973.114   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56062:973.776 - 1.275ms returns FALSE
+T2E70 56063:176.110 JLINK_IsHalted()
+T2E70 56063:176.758   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56063:177.486 - 1.423ms returns FALSE
+T2E70 56063:378.682 JLINK_IsHalted()
+T2E70 56063:379.183   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56063:379.555 - 0.886ms returns FALSE
+T2E70 56063:581.080 JLINK_IsHalted()
+T2E70 56063:581.566   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56063:581.934 - 0.870ms returns FALSE
+T2E70 56063:784.443 JLINK_IsHalted()
+T2E70 56063:784.913   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56063:785.279 - 0.850ms returns FALSE
+T2E70 56063:988.539 JLINK_IsHalted()
+T2E70 56063:989.048   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56063:989.453 - 0.930ms returns FALSE
+T2E70 56064:191.262 JLINK_IsHalted()
+T2E70 56064:191.730   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56064:192.225 - 0.978ms returns FALSE
+T2E70 56064:393.344 JLINK_IsHalted()
+T2E70 56064:393.889   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56064:394.358 - 1.031ms returns FALSE
+T2E70 56064:598.833 JLINK_IsHalted()
+T2E70 56064:599.329   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56064:599.764 - 0.974ms returns FALSE
+T2E70 56064:805.450 JLINK_IsHalted()
+T2E70 56064:805.932   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56064:806.421 - 1.040ms returns FALSE
+T2E70 56065:009.157 JLINK_IsHalted()
+T2E70 56065:009.645   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56065:010.033 - 0.897ms returns FALSE
+T2E70 56065:212.744 JLINK_IsHalted()
+T2E70 56065:213.255   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56065:213.612 - 0.881ms returns FALSE
+T2E70 56065:414.674 JLINK_IsHalted()
+T2E70 56065:415.137   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56065:415.505 - 0.847ms returns FALSE
+T2E70 56065:615.766 JLINK_IsHalted()
+T2E70 56065:616.242   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56065:616.607 - 0.856ms returns FALSE
+T2E70 56065:819.316 JLINK_IsHalted()
+T2E70 56065:819.802   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56065:820.223 - 0.924ms returns FALSE
+T2E70 56066:022.556 JLINK_IsHalted()
+T2E70 56066:023.053   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56066:023.464 - 0.950ms returns FALSE
+T2E70 56066:224.512 JLINK_IsHalted()
+T2E70 56066:224.962   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56066:225.333 - 0.836ms returns FALSE
+T2E70 56066:425.566 JLINK_IsHalted()
+T2E70 56066:426.060   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56066:426.491 - 0.945ms returns FALSE
+T2E70 56066:628.916 JLINK_IsHalted()
+T2E70 56066:629.613   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56066:629.992 - 1.091ms returns FALSE
+T2E70 56066:831.308 JLINK_IsHalted()
+T2E70 56066:831.848   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56066:832.362 - 1.083ms returns FALSE
+T2E70 56067:034.430 JLINK_IsHalted()
+T2E70 56067:034.919   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56067:035.302 - 0.887ms returns FALSE
+T2E70 56067:235.358 JLINK_IsHalted()
+T2E70 56067:235.865   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56067:236.223 - 0.880ms returns FALSE
+T2E70 56067:436.139 JLINK_IsHalted()
+T2E70 56067:436.615   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56067:437.016 - 0.898ms returns FALSE
+T2E70 56067:640.755 JLINK_IsHalted()
+T2E70 56067:641.394   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56067:641.816 - 1.075ms returns FALSE
+T2E70 56067:842.625 JLINK_IsHalted()
+T2E70 56067:843.103   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56067:843.531 - 0.948ms returns FALSE
+T2E70 56068:043.738 JLINK_IsHalted()
+T2E70 56068:044.252   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56068:044.727 - 1.009ms returns FALSE
+T2E70 56068:251.817 JLINK_IsHalted()
+T2E70 56068:252.337   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56068:252.727 - 0.926ms returns FALSE
+T2E70 56068:453.004 JLINK_IsHalted()
+T2E70 56068:453.563   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56068:454.018 - 1.030ms returns FALSE
+T2E70 56068:655.245 JLINK_IsHalted()
+T2E70 56068:655.801   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56068:656.412 - 1.236ms returns FALSE
+T2E70 56068:856.414 JLINK_IsHalted()
+T2E70 56068:857.111   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56068:857.482 - 1.084ms returns FALSE
+T2E70 56069:058.993 JLINK_IsHalted()
+T2E70 56069:059.487   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56069:059.847 - 0.878ms returns FALSE
+T2E70 56069:260.693 JLINK_IsHalted()
+T2E70 56069:261.255   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56069:261.649 - 0.982ms returns FALSE
+T2E70 56069:465.709 JLINK_IsHalted()
+T2E70 56069:466.241   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56069:466.614 - 0.920ms returns FALSE
+T2E70 56069:670.484 JLINK_IsHalted()
+T2E70 56069:671.076   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56069:671.599 - 1.139ms returns FALSE
+T2E70 56069:872.748 JLINK_IsHalted()
+T2E70 56069:873.246   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56069:873.610 - 0.877ms returns FALSE
+T2E70 56070:074.586 JLINK_IsHalted()
+T2E70 56070:075.092   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56070:075.446 - 0.877ms returns FALSE
+T2E70 56070:275.695 JLINK_IsHalted()
+T2E70 56070:276.350   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56070:277.006 - 1.412ms returns FALSE
+T2E70 56070:479.135 JLINK_IsHalted()
+T2E70 56070:479.634   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56070:480.005 - 0.886ms returns FALSE
+T2E70 56070:680.719 JLINK_IsHalted()
+T2E70 56070:681.282   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56070:681.701 - 0.999ms returns FALSE
+T2E70 56070:881.873 JLINK_IsHalted()
+T2E70 56070:882.375   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56070:882.735 - 0.877ms returns FALSE
+T2E70 56071:083.206 JLINK_IsHalted()
+T2E70 56071:083.683   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56071:084.044 - 0.854ms returns FALSE
+T2E70 56071:286.771 JLINK_IsHalted()
+T2E70 56071:287.342   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56071:287.808 - 1.052ms returns FALSE
+T2E70 56071:488.099 JLINK_IsHalted()
+T2E70 56071:488.632   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56071:489.113 - 1.029ms returns FALSE
+T2E70 56071:691.347 JLINK_IsHalted()
+T2E70 56071:691.829   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56071:692.244 - 0.912ms returns FALSE
+T2E70 56071:892.707 JLINK_IsHalted()
+T2E70 56071:893.313   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56071:893.789 - 1.150ms returns FALSE
+T2E70 56072:094.489 JLINK_IsHalted()
+T2E70 56072:094.968   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56072:095.440 - 0.966ms returns FALSE
+T2E70 56072:296.772 JLINK_IsHalted()
+T2E70 56072:297.247   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56072:297.612 - 0.856ms returns FALSE
+T2E70 56072:499.561 JLINK_IsHalted()
+T2E70 56072:500.026   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56072:500.589 - 1.046ms returns FALSE
+T2E70 56072:704.891 JLINK_IsHalted()
+T2E70 56072:705.607   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56072:705.983 - 1.107ms returns FALSE
+T2E70 56072:906.809 JLINK_IsHalted()
+T2E70 56072:907.283   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56072:907.812 - 1.019ms returns FALSE
+T2E70 56073:109.149 JLINK_IsHalted()
+T2E70 56073:109.877   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56073:110.335 - 1.234ms returns FALSE
+T2E70 56073:313.291 JLINK_IsHalted()
+T2E70 56073:313.808   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56073:314.295 - 1.071ms returns FALSE
+T2E70 56073:519.812 JLINK_IsHalted()
+T2E70 56073:520.374   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56073:520.954 - 1.158ms returns FALSE
+T2E70 56073:721.282 JLINK_IsHalted()
+T2E70 56073:721.786   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56073:722.155 - 0.889ms returns FALSE
+T2E70 56073:922.422 JLINK_IsHalted()
+T2E70 56073:922.933   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56073:923.318 - 0.913ms returns FALSE
+T2E70 56074:125.563 JLINK_IsHalted()
+T2E70 56074:126.113   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56074:126.665 - 1.130ms returns FALSE
+T2E70 56074:329.145 JLINK_IsHalted()
+T2E70 56074:329.633   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56074:330.008 - 0.878ms returns FALSE
+T2E70 56074:530.281 JLINK_IsHalted()
+T2E70 56074:530.779   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56074:531.146 - 0.880ms returns FALSE
+T2E70 56074:733.132 JLINK_IsHalted()
+T2E70 56074:733.643   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56074:734.020 - 0.901ms returns FALSE
+T2E70 56074:934.798 JLINK_IsHalted()
+T2E70 56074:935.383   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56074:935.867 - 1.097ms returns FALSE
+T2E70 56075:137.406 JLINK_IsHalted()
+T2E70 56075:137.929   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56075:138.345 - 0.955ms returns FALSE
+T2E70 56075:341.073 JLINK_IsHalted()
+T2E70 56075:341.584   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56075:341.988 - 0.931ms returns FALSE
+T2E70 56075:542.593 JLINK_IsHalted()
+T2E70 56075:543.270   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56075:543.663 - 1.088ms returns FALSE
+T2E70 56075:749.486 JLINK_IsHalted()
+T2E70 56075:750.043   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56075:750.467 - 0.996ms returns FALSE
+T2E70 56075:954.502 JLINK_IsHalted()
+T2E70 56075:954.983   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56075:955.462 - 0.974ms returns FALSE
+T2E70 56076:159.874 JLINK_IsHalted()
+T2E70 56076:160.668   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56076:161.116 - 1.271ms returns FALSE
+T2E70 56076:362.648 JLINK_IsHalted()
+T2E70 56076:363.151   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56076:363.552 - 0.918ms returns FALSE
+T2E70 56076:564.692 JLINK_IsHalted()
+T2E70 56076:565.276   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56076:565.746 - 1.079ms returns FALSE
+T2E70 56076:770.417 JLINK_IsHalted()
+T2E70 56076:770.889   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56076:771.372 - 0.971ms returns FALSE
+T2E70 56076:972.436 JLINK_IsHalted()
+T2E70 56076:972.933   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56076:973.441 - 1.019ms returns FALSE
+T2E70 56077:175.279 JLINK_IsHalted()
+T2E70 56077:175.764   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56077:176.254 - 1.064ms returns FALSE
+T2E70 56077:377.894 JLINK_IsHalted()
+T2E70 56077:378.528   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56077:378.899 - 1.020ms returns FALSE
+T2E70 56077:579.995 JLINK_IsHalted()
+T2E70 56077:580.477   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56077:580.855 - 0.873ms returns FALSE
+T2E70 56077:782.564 JLINK_IsHalted()
+T2E70 56077:783.239   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56077:783.835 - 1.297ms returns FALSE
+T2E70 56077:987.513 JLINK_IsHalted()
+T2E70 56077:988.071   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56077:988.555 - 1.097ms returns FALSE
+T2E70 56078:190.399 JLINK_IsHalted()
+T2E70 56078:190.964   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56078:191.456 - 1.073ms returns FALSE
+T2E70 56078:391.917 JLINK_IsHalted()
+T2E70 56078:392.460   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56078:392.882 - 1.197ms returns FALSE
+T2E70 56078:593.474 JLINK_IsHalted()
+T2E70 56078:594.023   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56078:594.484 - 1.041ms returns FALSE
+T2E70 56078:796.539 JLINK_IsHalted()
+T2E70 56078:797.135   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56078:797.536 - 1.013ms returns FALSE
+T2E70 56079:004.059 JLINK_IsHalted()
+T2E70 56079:004.562   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56079:005.087 - 1.049ms returns FALSE
+T2E70 56079:207.612 JLINK_IsHalted()
+T2E70 56079:208.099   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56079:208.536 - 0.949ms returns FALSE
+T2E70 56079:409.429 JLINK_IsHalted()
+T2E70 56079:410.013   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56079:410.467 - 1.066ms returns FALSE
+T2E70 56079:611.357 JLINK_IsHalted()
+T2E70 56079:611.927   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56079:612.346 - 1.005ms returns FALSE
+T2E70 56079:813.245 JLINK_IsHalted()
+T2E70 56079:813.770   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56079:814.146 - 0.918ms returns FALSE
+T2E70 56080:016.697 JLINK_IsHalted()
+T2E70 56080:017.286   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56080:017.698 - 1.017ms returns FALSE
+T2E70 56080:220.382 JLINK_IsHalted()
+T2E70 56080:220.905   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56080:221.458 - 1.092ms returns FALSE
+T2E70 56080:425.081 JLINK_IsHalted()
+T2E70 56080:425.600   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56080:426.111 - 1.083ms returns FALSE
+T2E70 56080:626.492 JLINK_IsHalted()
+T2E70 56080:627.503   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56080:627.988 - 1.531ms returns FALSE
+T2E70 56080:828.142 JLINK_IsHalted()
+T2E70 56080:828.887   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56080:829.310 - 1.194ms returns FALSE
+T2E70 56081:033.248 JLINK_IsHalted()
+T2E70 56081:033.749   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56081:034.118 - 0.894ms returns FALSE
+T2E70 56081:234.173 JLINK_IsHalted()
+T2E70 56081:234.612   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56081:234.952 - 0.792ms returns FALSE
+T2E70 56081:435.105 JLINK_IsHalted()
+T2E70 56081:435.657   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56081:436.104 - 1.018ms returns FALSE
+T2E70 56081:636.465 JLINK_IsHalted()
+T2E70 56081:636.966   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56081:637.372 - 0.923ms returns FALSE
+T2E70 56081:840.090 JLINK_IsHalted()
+T2E70 56081:840.646   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56081:841.072 - 0.998ms returns FALSE
+T2E70 56082:041.685 JLINK_IsHalted()
+T2E70 56082:042.257   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56082:042.688 - 1.031ms returns FALSE
+T2E70 56082:244.859 JLINK_IsHalted()
+T2E70 56082:245.372   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56082:245.786 - 0.941ms returns FALSE
+T2E70 56082:447.108 JLINK_IsHalted()
+T2E70 56082:447.605   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56082:447.975 - 0.883ms returns FALSE
+T2E70 56082:651.197 JLINK_IsHalted()
+T2E70 56082:651.678   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56082:652.114 - 0.933ms returns FALSE
+T2E70 56082:858.201 JLINK_IsHalted()
+T2E70 56082:858.687   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56082:859.262 - 1.081ms returns FALSE
+T2E70 56083:065.052 JLINK_IsHalted()
+T2E70 56083:065.682   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56083:066.069 - 1.035ms returns FALSE
+T2E70 56083:270.367 JLINK_IsHalted()
+T2E70 56083:270.905   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56083:271.491 - 1.142ms returns FALSE
+T2E70 56083:472.667 JLINK_IsHalted()
+T2E70 56083:473.366   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56083:473.821 - 1.171ms returns FALSE
+T2E70 56083:674.159 JLINK_IsHalted()
+T2E70 56083:674.644   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56083:675.005 - 0.861ms returns FALSE
+T2E70 56083:875.021 JLINK_IsHalted()
+T2E70 56083:875.561   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56083:876.003 - 1.027ms returns FALSE
+T2E70 56084:076.026 JLINK_IsHalted()
+T2E70 56084:076.498   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56084:076.972 - 0.966ms returns FALSE
+T2E70 56084:278.797 JLINK_IsHalted()
+T2E70 56084:279.323   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56084:279.677 - 0.895ms returns FALSE
+T2E70 56084:482.607 JLINK_IsHalted()
+T2E70 56084:483.297   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56084:483.807 - 1.222ms returns FALSE
+T2E70 56084:685.855 JLINK_IsHalted()
+T2E70 56084:686.345   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56084:686.872 - 1.032ms returns FALSE
+T2E70 56084:886.826 JLINK_IsHalted()
+T2E70 56084:887.377   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56084:887.784 - 0.974ms returns FALSE
+T2E70 56085:090.723 JLINK_IsHalted()
+T2E70 56085:091.285   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56085:091.682 - 0.972ms returns FALSE
+T2E70 56085:291.753 JLINK_IsHalted()
+T2E70 56085:292.848   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56085:293.405 - 1.742ms returns FALSE
+T2E70 56085:495.961 JLINK_IsHalted()
+T2E70 56085:496.494   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56085:496.870 - 0.925ms returns FALSE
+T2E70 56085:698.458 JLINK_IsHalted()
+T2E70 56085:699.032   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56085:699.463 - 1.022ms returns FALSE
+T2E70 56085:903.084 JLINK_IsHalted()
+T2E70 56085:903.709   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56085:904.399 - 1.333ms returns FALSE
+T2E70 56086:108.083 JLINK_IsHalted()
+T2E70 56086:108.615   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56086:109.633 - 1.600ms returns FALSE
+T2E70 56086:309.161 JLINK_IsHalted()
+T2E70 56086:309.950   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56086:310.575 - 1.727ms returns FALSE
+T2E70 56086:511.128 JLINK_IsHalted()
+T2E70 56086:511.956   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56086:512.482 - 1.401ms returns FALSE
+T2E70 56086:714.240 JLINK_IsHalted()
+T2E70 56086:714.705   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56086:715.076 - 0.850ms returns FALSE
+T2E70 56086:922.053 JLINK_IsHalted()
+T2E70 56086:922.566   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56086:923.329 - 1.340ms returns FALSE
+T2E70 56087:125.126 JLINK_IsHalted()
+T2E70 56087:125.769   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56087:126.256 - 1.153ms returns FALSE
+T2E70 56087:327.416 JLINK_IsHalted()
+T2E70 56087:328.041   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56087:328.484 - 1.083ms returns FALSE
+T2E70 56087:529.883 JLINK_IsHalted()
+T2E70 56087:530.404   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56087:530.790 - 0.922ms returns FALSE
+T2E70 56087:734.051 JLINK_IsHalted()
+T2E70 56087:734.612   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56087:735.090 - 1.058ms returns FALSE
+T2E70 56087:936.453 JLINK_IsHalted()
+T2E70 56087:937.049   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56087:937.540 - 1.113ms returns FALSE
+T2E70 56088:139.668 JLINK_IsHalted()
+T2E70 56088:140.175   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56088:140.551 - 0.898ms returns FALSE
+T2E70 56088:341.171 JLINK_IsHalted()
+T2E70 56088:341.657   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56088:342.025 - 0.869ms returns FALSE
+T2E70 56088:542.138 JLINK_IsHalted()
+T2E70 56088:542.800   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56088:543.329 - 1.248ms returns FALSE
+T2E70 56088:749.560 JLINK_IsHalted()
+T2E70 56088:750.111   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56088:750.509 - 0.963ms returns FALSE
+T2E70 56088:951.260 JLINK_IsHalted()
+T2E70 56088:951.839   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56088:952.367 - 1.137ms returns FALSE
+T2E70 56089:155.424 JLINK_IsHalted()
+T2E70 56089:155.885   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56089:156.255 - 0.847ms returns FALSE
+T2E70 56089:357.447 JLINK_IsHalted()
+T2E70 56089:357.953   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56089:358.328 - 0.897ms returns FALSE
+T2E70 56089:558.203 JLINK_IsHalted()
+T2E70 56089:558.674   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56089:559.097 - 0.917ms returns FALSE
+T2E70 56089:759.897 JLINK_IsHalted()
+T2E70 56089:760.424   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56089:760.894 - 1.024ms returns FALSE
+T2E70 56089:962.044 JLINK_IsHalted()
+T2E70 56089:962.529   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56089:962.881 - 0.854ms returns FALSE
+T2E70 56090:162.436 JLINK_IsHalted()
+T2E70 56090:163.132   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56090:163.803 - 1.405ms returns FALSE
+T2E70 56090:365.692 JLINK_IsHalted()
+T2E70 56090:366.352   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56090:366.731 - 1.055ms returns FALSE
+T2E70 56090:571.797 JLINK_IsHalted()
+T2E70 56090:572.340   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56090:572.771 - 0.999ms returns FALSE
+T2E70 56090:774.250 JLINK_IsHalted()
+T2E70 56090:774.733   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56090:775.302 - 1.069ms returns FALSE
+T2E70 56090:982.709 JLINK_IsHalted()
+T2E70 56090:983.329   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56090:983.800 - 1.107ms returns FALSE
+T2E70 56091:184.073 JLINK_IsHalted()
+T2E70 56091:184.580   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56091:185.112 - 1.054ms returns FALSE
+T2E70 56091:385.697 JLINK_IsHalted()
+T2E70 56091:386.519   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56091:386.971 - 1.308ms returns FALSE
+T2E70 56091:590.727 JLINK_IsHalted()
+T2E70 56091:591.254   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56091:591.655 - 0.945ms returns FALSE
+T2E70 56091:793.298 JLINK_IsHalted()
+T2E70 56091:793.797   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56091:794.160 - 0.878ms returns FALSE
+T2E70 56091:994.036 JLINK_IsHalted()
+T2E70 56091:994.530   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56091:994.899 - 0.878ms returns FALSE
+T2E70 56092:195.145 JLINK_IsHalted()
+T2E70 56092:195.638   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56092:195.998 - 0.870ms returns FALSE
+T2E70 56092:397.018 JLINK_IsHalted()
+T2E70 56092:397.521   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56092:397.921 - 0.916ms returns FALSE
+T2E70 56092:600.450 JLINK_IsHalted()
+T2E70 56092:601.012   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56092:601.470 - 1.036ms returns FALSE
+T2E70 56092:803.493 JLINK_IsHalted()
+T2E70 56092:803.997   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56092:804.474 - 1.001ms returns FALSE
+T2E70 56093:004.405 JLINK_IsHalted()
+T2E70 56093:004.881   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56093:005.250 - 0.861ms returns FALSE
+T2E70 56093:206.435 JLINK_IsHalted()
+T2E70 56093:207.013   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56093:207.479 - 1.059ms returns FALSE
+T2E70 56093:407.561 JLINK_IsHalted()
+T2E70 56093:408.082   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56093:408.487 - 0.941ms returns FALSE
+T2E70 56093:610.029 JLINK_IsHalted()
+T2E70 56093:610.819   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56093:611.274 - 1.263ms returns FALSE
+T2E70 56093:815.469 JLINK_IsHalted()
+T2E70 56093:816.076   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56093:816.547 - 1.091ms returns FALSE
+T2E70 56094:020.093 JLINK_IsHalted()
+T2E70 56094:020.572   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56094:020.979 - 0.937ms returns FALSE
+T2E70 56094:222.020 JLINK_IsHalted()
+T2E70 56094:222.722   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56094:223.284 - 1.283ms returns FALSE
+T2E70 56094:425.233 JLINK_IsHalted()
+T2E70 56094:425.874   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56094:426.350 - 1.133ms returns FALSE
+T2E70 56094:630.267 JLINK_IsHalted()
+T2E70 56094:630.832   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56094:631.276 - 1.026ms returns FALSE
+T2E70 56094:832.453 JLINK_IsHalted()
+T2E70 56094:832.951   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56094:833.315 - 0.877ms returns FALSE
+T2E70 56095:033.717 JLINK_IsHalted()
+T2E70 56095:034.273   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56095:034.651 - 0.947ms returns FALSE
+T2E70 56095:241.402 JLINK_IsHalted()
+T2E70 56095:242.063   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56095:243.383 - 2.388ms returns FALSE
+T2E70 56095:444.044 JLINK_IsHalted()
+T2E70 56095:444.503   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56095:444.886 - 0.856ms returns FALSE
+T2E70 56095:652.913 JLINK_IsHalted()
+T2E70 56095:653.367   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56095:653.739 - 0.841ms returns FALSE
+T2E70 56095:855.617 JLINK_IsHalted()
+T2E70 56095:856.096   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56095:856.617 - 1.046ms returns FALSE
+T2E70 56096:056.672 JLINK_IsHalted()
+T2E70 56096:057.159   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56096:057.547 - 0.890ms returns FALSE
+T2E70 56096:256.743 JLINK_IsHalted()
+T2E70 56096:257.278   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56096:257.698 - 0.981ms returns FALSE
+T2E70 56096:458.827 JLINK_IsHalted()
+T2E70 56096:459.346   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56096:459.809 - 1.031ms returns FALSE
+T2E70 56096:659.834 JLINK_IsHalted()
+T2E70 56096:660.306   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56096:660.667 - 0.848ms returns FALSE
+T2E70 56096:860.133 JLINK_IsHalted()
+T2E70 56096:861.365   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56096:862.125 - 2.134ms returns FALSE
+T2E70 56097:062.692 JLINK_IsHalted()
+T2E70 56097:063.290   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56097:063.847 - 1.186ms returns FALSE
+T2E70 56097:265.057 JLINK_IsHalted()
+T2E70 56097:265.562   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56097:266.029 - 0.994ms returns FALSE
+T2E70 56097:466.887 JLINK_IsHalted()
+T2E70 56097:467.386   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56097:467.778 - 0.908ms returns FALSE
+T2E70 56097:674.766 JLINK_IsHalted()
+T2E70 56097:675.433   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56097:675.908 - 1.178ms returns FALSE
+T2E70 56097:875.894 JLINK_IsHalted()
+T2E70 56097:876.588   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56097:877.038 - 1.200ms returns FALSE
+T2E70 56098:079.559 JLINK_IsHalted()
+T2E70 56098:080.123   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56098:080.569 - 1.025ms returns FALSE
+T2E70 56098:282.414 JLINK_IsHalted()
+T2E70 56098:282.918   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56098:283.271 - 0.873ms returns FALSE
+T2E70 56098:484.534 JLINK_IsHalted()
+T2E70 56098:485.031   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56098:485.468 - 0.948ms returns FALSE
+T2E70 56098:685.662 JLINK_IsHalted()
+T2E70 56098:686.082   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56098:686.468 - 0.820ms returns FALSE
+T2E70 56098:887.584 JLINK_IsHalted()
+T2E70 56098:888.059   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56098:888.485 - 0.920ms returns FALSE
+T2E70 56099:089.430 JLINK_IsHalted()
+T2E70 56099:089.902   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56099:090.266 - 0.852ms returns FALSE
+T2E70 56099:290.932 JLINK_IsHalted()
+T2E70 56099:291.486   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56099:291.890 - 1.074ms returns FALSE
+T2E70 56099:492.682 JLINK_IsHalted()
+T2E70 56099:493.327   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56099:494.363 - 1.764ms returns FALSE
+T2E70 56099:693.918 JLINK_IsHalted()
+T2E70 56099:694.378   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56099:694.749 - 0.845ms returns FALSE
+T2E70 56099:897.662 JLINK_IsHalted()
+T2E70 56099:898.167   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56099:898.539 - 0.893ms returns FALSE
+T2E70 56100:101.003 JLINK_IsHalted()
+T2E70 56100:101.564   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56100:101.976 - 0.988ms returns FALSE
+T2E70 56100:303.079 JLINK_IsHalted()
+T2E70 56100:303.562   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56100:303.926 - 0.863ms returns FALSE
+T2E70 56100:507.105 JLINK_IsHalted()
+T2E70 56100:507.578   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56100:507.946 - 0.856ms returns FALSE
+T2E70 56100:707.413 JLINK_IsHalted()
+T2E70 56100:708.031   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56100:708.492 - 1.101ms returns FALSE
+T2E70 56100:908.846 JLINK_IsHalted()
+T2E70 56100:909.568   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56100:910.014 - 1.184ms returns FALSE
+T2E70 56101:109.500 JLINK_IsHalted()
+T2E70 56101:109.979   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56101:110.351 - 0.866ms returns FALSE
+T2E70 56101:310.365 JLINK_IsHalted()
+T2E70 56101:310.843   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56101:311.265 - 0.913ms returns FALSE
+T2E70 56101:516.599 JLINK_IsHalted()
+T2E70 56101:517.096   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56101:517.483 - 0.901ms returns FALSE
+T2E70 56101:718.618 JLINK_IsHalted()
+T2E70 56101:719.071   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56101:719.475 - 0.885ms returns FALSE
+T2E70 56101:918.772 JLINK_IsHalted()
+T2E70 56101:919.277   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56101:919.649 - 0.893ms returns FALSE
+T2E70 56102:123.767 JLINK_IsHalted()
+T2E70 56102:124.276   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56102:124.664 - 0.956ms returns FALSE
+T2E70 56102:328.125 JLINK_IsHalted()
+T2E70 56102:328.646   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56102:329.053 - 0.946ms returns FALSE
+T2E70 56102:531.361 JLINK_IsHalted()
+T2E70 56102:531.862   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56102:532.268 - 0.922ms returns FALSE
+T2E70 56102:733.743 JLINK_IsHalted()
+T2E70 56102:734.275   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56102:734.633 - 0.906ms returns FALSE
+T2E70 56102:938.528 JLINK_IsHalted()
+T2E70 56102:939.014   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56102:939.393 - 0.881ms returns FALSE
+T2E70 56103:140.333 JLINK_IsHalted()
+T2E70 56103:140.822   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56103:141.257 - 0.940ms returns FALSE
+T2E70 56103:341.939 JLINK_IsHalted()
+T2E70 56103:342.667   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56103:343.504 - 1.616ms returns FALSE
+T2E70 56103:550.289 JLINK_IsHalted()
+T2E70 56103:550.757   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56103:551.183 - 0.960ms returns FALSE
+T2E70 56103:751.701 JLINK_IsHalted()
+T2E70 56103:752.181   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56103:752.538 - 0.852ms returns FALSE
+T2E70 56103:953.296 JLINK_IsHalted()
+T2E70 56103:953.782   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56103:954.163 - 0.883ms returns FALSE
+T2E70 56104:155.229 JLINK_IsHalted()
+T2E70 56104:155.659   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56104:156.018 - 0.802ms returns FALSE
+T2E70 56104:357.007 JLINK_IsHalted()
+T2E70 56104:357.481   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56104:357.839 - 0.847ms returns FALSE
+T2E70 56104:557.374 JLINK_IsHalted()
+T2E70 56104:557.828   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56104:558.240 - 0.887ms returns FALSE
+T2E70 56104:758.568 JLINK_IsHalted()
+T2E70 56104:759.099   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56104:759.486 - 0.931ms returns FALSE
+T2E70 56104:963.547 JLINK_IsHalted()
+T2E70 56104:964.033   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56104:964.504 - 1.008ms returns FALSE
+T2E70 56105:166.680 JLINK_IsHalted()
+T2E70 56105:167.121   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56105:167.471 - 0.808ms returns FALSE
+T2E70 56105:367.723 JLINK_IsHalted()
+T2E70 56105:368.282   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56105:368.665 - 0.960ms returns FALSE
+T2E70 56105:572.786 JLINK_IsHalted()
+T2E70 56105:573.298   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56105:573.719 - 0.960ms returns FALSE
+T2E70 56105:774.299 JLINK_IsHalted()
+T2E70 56105:774.929   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56105:775.505 - 1.262ms returns FALSE
+T2E70 56105:977.479 JLINK_IsHalted()
+T2E70 56105:977.966   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56105:978.345 - 0.880ms returns FALSE
+T2E70 56106:178.547 JLINK_IsHalted()
+T2E70 56106:179.045   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56106:179.489 - 0.955ms returns FALSE
+T2E70 56106:380.396 JLINK_IsHalted()
+T2E70 56106:380.901   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56106:381.336 - 0.968ms returns FALSE
+T2E70 56106:585.584 JLINK_IsHalted()
+T2E70 56106:586.079   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56106:586.503 - 0.933ms returns FALSE
+T2E70 56106:788.996 JLINK_IsHalted()
+T2E70 56106:789.491   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56106:789.855 - 0.874ms returns FALSE
+T2E70 56106:991.071 JLINK_IsHalted()
+T2E70 56106:991.588   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56106:992.094 - 1.076ms returns FALSE
+T2E70 56107:192.329 JLINK_IsHalted()
+T2E70 56107:193.002   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56107:193.487 - 1.173ms returns FALSE
+T2E70 56107:393.649 JLINK_IsHalted()
+T2E70 56107:394.183   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56107:394.661 - 1.037ms returns FALSE
+T2E70 56107:601.448 JLINK_IsHalted()
+T2E70 56107:602.099   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56107:602.526 - 1.094ms returns FALSE
+T2E70 56107:805.688 JLINK_IsHalted()
+T2E70 56107:806.194   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56107:806.556 - 0.884ms returns FALSE
+T2E70 56108:008.446 JLINK_IsHalted()
+T2E70 56108:009.047   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56108:009.901 - 1.512ms returns FALSE
+T2E70 56108:211.210 JLINK_IsHalted()
+T2E70 56108:211.713   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56108:212.083 - 0.889ms returns FALSE
+T2E70 56108:412.981 JLINK_IsHalted()
+T2E70 56108:413.495   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56108:413.864 - 0.899ms returns FALSE
+T2E70 56108:614.440 JLINK_IsHalted()
+T2E70 56108:614.934   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56108:615.309 - 0.885ms returns FALSE
+T2E70 56108:816.355 JLINK_IsHalted()
+T2E70 56108:816.907   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56108:817.350 - 1.012ms returns FALSE
+T2E70 56109:021.134 JLINK_IsHalted()
+T2E70 56109:021.628   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56109:021.998 - 0.880ms returns FALSE
+T2E70 56109:223.679 JLINK_IsHalted()
+T2E70 56109:224.160   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56109:224.528 - 0.864ms returns FALSE
+T2E70 56109:424.013 JLINK_IsHalted()
+T2E70 56109:424.517   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56109:424.872 - 0.877ms returns FALSE
+T2E70 56109:626.414 JLINK_IsHalted()
+T2E70 56109:626.847   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56109:627.266 - 0.865ms returns FALSE
+T2E70 56109:828.657 JLINK_IsHalted()
+T2E70 56109:829.138   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56109:829.494 - 0.853ms returns FALSE
+T2E70 56110:033.222 JLINK_IsHalted()
+T2E70 56110:033.693   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56110:034.055 - 0.849ms returns FALSE
+T2E70 56110:235.309 JLINK_IsHalted()
+T2E70 56110:235.816   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56110:236.277 - 0.983ms returns FALSE
+T2E70 56110:438.022 JLINK_IsHalted()
+T2E70 56110:438.501   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56110:438.861 - 0.855ms returns FALSE
+T2E70 56110:640.627 JLINK_IsHalted()
+T2E70 56110:641.122   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56110:641.557 - 0.997ms returns FALSE
+T2E70 56110:844.176 JLINK_IsHalted()
+T2E70 56110:844.668   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56110:845.076 - 0.915ms returns FALSE
+T2E70 56111:046.098 JLINK_IsHalted()
+T2E70 56111:046.598   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56111:046.959 - 0.876ms returns FALSE
+T2E70 56111:247.262 JLINK_IsHalted()
+T2E70 56111:247.806   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56111:248.222 - 1.024ms returns FALSE
+T2E70 56111:449.111 JLINK_IsHalted()
+T2E70 56111:449.662   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56111:450.114 - 1.018ms returns FALSE
+T2E70 56111:650.642 JLINK_IsHalted()
+T2E70 56111:651.137   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56111:651.551 - 0.924ms returns FALSE
+T2E70 56111:853.926 JLINK_IsHalted()
+T2E70 56111:854.535   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56111:854.990 - 1.083ms returns FALSE
+T2E70 56112:055.389 JLINK_IsHalted()
+T2E70 56112:055.875   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56112:056.272 - 0.908ms returns FALSE
+T2E70 56112:256.637 JLINK_IsHalted()
+T2E70 56112:257.206   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56112:257.662 - 1.042ms returns FALSE
+T2E70 56112:459.236 JLINK_IsHalted()
+T2E70 56112:460.312   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56112:460.710 - 1.490ms returns FALSE
+T2E70 56112:664.323 JLINK_IsHalted()
+T2E70 56112:664.804   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56112:665.162 - 0.855ms returns FALSE
+T2E70 56112:865.782 JLINK_IsHalted()
+T2E70 56112:866.286   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56112:866.687 - 0.971ms returns FALSE
+T2E70 56113:066.675 JLINK_IsHalted()
+T2E70 56113:067.173   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56113:067.551 - 0.895ms returns FALSE
+T2E70 56113:271.717 JLINK_IsHalted()
+T2E70 56113:272.319   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56113:272.752 - 1.110ms returns FALSE
+T2E70 56113:472.961 JLINK_IsHalted()
+T2E70 56113:473.549   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56113:474.103 - 1.177ms returns FALSE
+T2E70 56113:674.845 JLINK_IsHalted()
+T2E70 56113:675.535   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56113:676.099 - 1.277ms returns FALSE
+T2E70 56113:876.681 JLINK_IsHalted()
+T2E70 56113:877.308   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56113:877.800 - 1.188ms returns FALSE
+T2E70 56114:078.515 JLINK_IsHalted()
+T2E70 56114:079.029   CPU_ReadMem(4 bytes @ 0x41002100)
+T2E70 56114:079.490 - 0.988ms returns FALSE
+T11B0 56114:198.923 JLINK_Halt()
+T11B0 56114:202.500 - 3.628ms returns 0x00
+T2E70 56114:280.247 JLINK_IsHalted()
+T2E70 56114:280.302 - 0.069ms returns TRUE
+T2E70 56114:280.337 JLINK_GetMOEs(...)
+T2E70 56114:280.374   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T2E70 56114:285.335 - 5.050ms returns 0x01
+T2E70 56114:285.416 JLINK_ReadReg(R15 (PC))
+T2E70 56114:285.459 - 0.058ms returns 0x000007F4
+T2E70 56114:487.034 JLINK_IsHalted()
+T2E70 56114:487.116 - 0.094ms returns TRUE
+T2AB0 56114:489.476 JLINK_ResetPullsRESET(ON)
+T2AB0 56114:489.536 - 0.076ms
+T2AB0 56114:489.571 JLINK_ResetNoHalt()
+T2AB0 56114:490.036   InitTarget() start
+T2AB0 56114:490.085    J-Link Script File: Executing InitTarget()
+T2AB0 56114:490.179   InitTarget()
+T2AB0 56114:494.213   InitTarget() end
+T2AB0 56114:496.246   Found SW-DP with ID 0x0BC11477
+T2AB0 56114:499.378   DPIDR: 0x0BC11477
+T2AB0 56114:499.470   AP map detection skipped. Manually configured AP map found.
+T2AB0 56114:499.565   AP[0]: AHB-AP (IDR: Not set)
+T2AB0 56114:500.706   AP[0]: Core found
+T2AB0 56114:500.772   AP[0]: AHB-AP ROM base: 0x41003000
+T2AB0 56114:501.427   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+T2AB0 56114:501.494   Found Cortex-M0 r0p1, Little endian.
+T2AB0 56114:603.306   -- Max. mem block: 0x000010B8
+T2AB0 56114:603.401   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2AB0 56114:603.810   CPU_ReadMem(4 bytes @ 0xE0002000)
+T2AB0 56114:604.663   FPUnit: 4 code (BP) slots and 0 literal slots
+T2AB0 56114:604.704   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2AB0 56114:605.322   CoreSight components:
+T2AB0 56114:605.384   ROMTbl[0] @ 41003000
+T2AB0 56114:605.428   CPU_ReadMem(64 bytes @ 0x41003000)
+T2AB0 56114:606.464   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+T2AB0 56114:607.342   ROMTbl[0][0]: E00FF000, CID: B105100D, PID: 000BB4C0 ROM Table
+T2AB0 56114:607.400   ROMTbl[1] @ E00FF000
+T2AB0 56114:607.444   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T2AB0 56114:609.052   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T2AB0 56114:609.972   ROMTbl[1][0]: E000E000, CID: B105E00D, PID: 000BB008 SCS
+T2AB0 56114:610.138   CPU_WriteMem(4 bytes @ 0xE0001000)
+T2AB0 56114:610.713   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T2AB0 56114:611.789   ROMTbl[1][1]: E0001000, CID: B105E00D, PID: 000BB00A DWT
+T2AB0 56114:611.887   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T2AB0 56114:612.723   ROMTbl[1][2]: E0002000, CID: B105E00D, PID: 000BB00B FPB
+T2AB0 56114:612.770   CPU_ReadMem(32 bytes @ 0x41006FE0)
+T2AB0 56114:613.362   ROMTbl[0][1]: 41006000, CID: B105900D, PID: 001BB932 MTB-M0+
+T2AB0 56114:613.427   JLINK_Reset()
+T2AB0 56114:613.481     ResetTarget() start
+T2AB0 56114:613.527      J-Link Script File: Executing ResetTarget()
+T2AB0 56114:614.111     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2AB0 56114:614.848     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2AB0 56114:615.329     CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T2AB0 56114:617.803     CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2AB0 56114:618.408     CPU_ReadMem(4 bytes @ 0x41002100)
+T2AB0 56114:619.018     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2AB0 56114:619.619     ResetTarget() end
+T2AB0 56114:623.239     CPU_WriteMem(4 bytes @ 0xE0002000)
+T2AB0 56114:623.845     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2AB0 56114:624.425     CPU_ReadMem(4 bytes @ 0xE0001000)
+T2AB0 56114:625.315     CPU_WriteMem(4 bytes @ 0xE0001000)
+T2AB0 56114:626.255   - 12.885ms
+T2AB0 56114:626.338   JLINK_Go()
+T2AB0 56114:626.478     CPU_ReadMem(4 bytes @ 0xE0001000)
+T2AB0 56114:627.220     CPU_WriteMem(4 bytes @ 0xE0001000)
+T2AB0 56114:627.403     CPU_WriteMem(4 bytes @ 0xE0002008)
+T2AB0 56114:627.459     CPU_WriteMem(4 bytes @ 0xE000200C)
+T2AB0 56114:627.522     CPU_WriteMem(4 bytes @ 0xE0002010)
+T2AB0 56114:627.657     CPU_WriteMem(4 bytes @ 0xE0002014)
+T2AB0 56114:631.113     CPU_WriteMem(4 bytes @ 0xE0001004)
+T2AB0 56114:632.767   - 6.501ms
+T2AB0 56114:632.947 - 143.392ms
+T2AB0 56114:657.230 JLINK_Close()
+T2AB0 56114:660.278   CPU is running
+T2AB0 56114:660.607   CPU_WriteMem(4 bytes @ 0xE0002008)
+T2AB0 56114:661.650   CPU is running
+T2AB0 56114:661.775   CPU_WriteMem(4 bytes @ 0xE000200C)
+T2AB0 56114:662.347   CPU is running
+T2AB0 56114:662.454   CPU_WriteMem(4 bytes @ 0xE0002010)
+T2AB0 56114:663.157   CPU is running
+T2AB0 56114:663.255   CPU_WriteMem(4 bytes @ 0xE0002014)
+T2AB0 56114:679.242 - 22.111ms
+T2AB0 56114:679.426   
+T2AB0 56114:679.482   Closed

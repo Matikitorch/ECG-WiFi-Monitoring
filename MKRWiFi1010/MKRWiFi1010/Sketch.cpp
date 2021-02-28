@@ -32,6 +32,7 @@
 #include "hdr.h"
 #include "init.h"
 #include "led.h"
+#include "utilities.h"
 
 
 
@@ -61,6 +62,8 @@ void setup() {
 	Serial.println(F("    Authors: Matias Blanc and Justin Bee"));
 	Serial.println(F("    Copyright: 2021"));
 	Serial.println(F("=============================================="));
+	Serial.print(F("Serial Number: "));
+	Serial.println(serialNumber);
 
 //SPI
  	Serial.println(F("SPI setup"));
