@@ -11,6 +11,9 @@
 
 
 
-
+/*
+ * Initializes the ADC
+ */
+void task_ADCInitialize( void *pvParameters );
 
 #endif /* ADC_H_ */

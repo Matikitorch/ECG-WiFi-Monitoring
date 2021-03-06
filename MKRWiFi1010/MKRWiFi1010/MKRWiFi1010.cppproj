@@ -344,7 +344,7 @@
     <Compile Include="Ethernet.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\libraries\ECG\adc.c">
+    <Compile Include="include\libraries\ECG\adc.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\libraries\ECG\adc.h">
