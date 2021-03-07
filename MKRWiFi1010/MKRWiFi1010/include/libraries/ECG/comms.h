@@ -9,8 +9,7 @@
 #ifndef COMMS_H_
 #define COMMS_H_
 
-
-
+void task_WiFiComm( void *pvParameters );
 
 
 #endif /* COMMS_H_ */

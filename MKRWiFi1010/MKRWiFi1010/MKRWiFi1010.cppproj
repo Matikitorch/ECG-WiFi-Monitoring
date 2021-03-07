@@ -350,7 +350,7 @@
     <Compile Include="include\libraries\ECG\adc.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\libraries\ECG\comms.c">
+    <Compile Include="include\libraries\ECG\comms.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\libraries\ECG\comms.h">

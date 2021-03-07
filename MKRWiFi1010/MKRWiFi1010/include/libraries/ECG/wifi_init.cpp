@@ -8,16 +8,17 @@
 
 
 #include "FreeRTOS_SAMD21.h"
-
+#include "hdr.h"
 #include "wifi_init.h"
 #include "WiFi.h"
 #include "led.h"
+#include "comms.h"
 
 //---------------------------------------------------------------
 //  Local variables
 //---------------------------------------------------------------
-char ssid[] = "NETGEAR42";  //enter your SSID here
-char pass[] = "bravecheese823";  //enter your password here
+char ssid[] = "b33zhive";  //enter your SSID here
+char pass[] = "Lyla_Bee_3";  //enter your password here
 int status = WL_IDLE_STATUS;
 bool isConnected = false;
 
@@ -47,6 +48,7 @@ void task_WiFiInitialize(void *pvParamters)
 		}
 		if ( !isConnected )
 		{
+			
 			led_mode(led_mode_connecting);
 			Serial.print("\r\nAttempting to connect to SSID: ");
 			Serial.print(ssid);
@@ -65,11 +67,25 @@ void task_WiFiInitialize(void *pvParamters)
 				Serial.println("Connected to wifi");
 				isConnected = true;
 				led_mode(led_mode_normal);
-				vTaskDelay(1000);
 				//TODO - start the Wifi Communication Task
+				xTaskCreate(task_WiFiComm,    "WiFi Comm",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
+				vTaskDelay(1000);
 			}
 		}
 		vTaskDelay(1000); //wait 1 seconds
 	}
 	vTaskDelete( NULL );
+}
+
+//********************************************************
+//
+// bool IsWifiConnected()
+//
+// Author: Justin Bee
+// Date: 3/06/2021
+// Returns true is connected, false otherwise
+//********************************************************
+bool IsWifiConnected()
+{
+	return isConnected;
 }
