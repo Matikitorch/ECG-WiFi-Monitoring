@@ -35,7 +35,7 @@ void task_WiFiInitialize(void *pvParamters)
 	
 	for (;;)
 	{
-		if ( ( WiFi.RSSI() == 0 ) && ( isConnected == true ) )
+		if ( ( WiFi.status() ==  WL_CONNECTION_LOST ) )
 		{
 			isConnected = false;
 			led_mode(led_mode_faulted);
@@ -45,7 +45,7 @@ void task_WiFiInitialize(void *pvParamters)
 		else
 		{
 			// Do nothing
-		}
+		} 
 		if ( !isConnected )
 		{
 			
@@ -55,7 +55,7 @@ void task_WiFiInitialize(void *pvParamters)
 			Serial.print(" Password ");
 			Serial.println(pass);
 			vTaskDelay(10000); //10 second wait to allow LED behavior to run correctly
-			status = WiFi.begin(ssid, pass);		// Connect to WPA/WPA2 network. Change this line if using open or WEP network:
+			status = WiFi.begin(ssid, pass);		// Connect to WPA/WPA2 network. 
 			if( status != WL_CONNECTED )
 			{
 				Serial.println("Not connected");
@@ -71,6 +71,10 @@ void task_WiFiInitialize(void *pvParamters)
 				xTaskCreate(task_WiFiComm,    "WiFi Comm",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
 				vTaskDelay(1000);
 			}
+		}
+		else
+		{
+			//Do nothing
 		}
 		vTaskDelay(1000); //wait 1 seconds
 	}

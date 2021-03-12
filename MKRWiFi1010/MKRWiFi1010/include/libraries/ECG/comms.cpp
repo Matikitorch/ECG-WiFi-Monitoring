@@ -43,7 +43,7 @@ void task_WiFiComm(void *pvParamters)
 		if(IsWifiConnected())
 		{
 			//Close the connection in case it is still open
-			//client.stop();
+			client.stop();
 			Serial.println("Attempting to connect to server....");
 			if( client.connectSSL(server,443) ){
 				Serial.println("connected to server");
@@ -62,7 +62,7 @@ void task_WiFiComm(void *pvParamters)
 				client.println(); 
 				client.println();
 				
-				/* while(client.available()==0)//wait until data reception
+				 while(client.available()==0)//wait until data reception
 				 {
 					 
 				 }
@@ -70,8 +70,8 @@ void task_WiFiComm(void *pvParamters)
 				 {
 					 char codeResponse = client.read();
 					 Serial.write(codeResponse);
-				 } */
-				 client.stop();
+				 } 
+				// client.stop();
 			}
 			else{
 				Serial.println("Not connected to server");
@@ -79,6 +79,7 @@ void task_WiFiComm(void *pvParamters)
 		}
 		vTaskDelay(5000);
 	}
+	vTaskDelete( NULL );
 }
 
 
