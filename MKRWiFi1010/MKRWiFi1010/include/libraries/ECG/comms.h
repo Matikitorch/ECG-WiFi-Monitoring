@@ -11,5 +11,7 @@
 
 void task_WiFiComm( void *pvParameters );
 
+void task_WiFiSend( void *pvParameters );
+
 
 #endif /* COMMS_H_ */
