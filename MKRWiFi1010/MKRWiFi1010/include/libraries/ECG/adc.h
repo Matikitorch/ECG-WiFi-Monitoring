@@ -9,8 +9,9 @@
 #ifndef ADC_H_
 #define ADC_H_
 
-
-
-
+/*
+ * Initializes the ADC
+ */
+void task_ADCInitialize( void *pvParameters );
 
 #endif /* ADC_H_ */
