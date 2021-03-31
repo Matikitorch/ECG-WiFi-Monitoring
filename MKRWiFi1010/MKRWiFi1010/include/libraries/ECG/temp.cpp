@@ -31,7 +31,7 @@ void task_TempRun(void *pvParameters)
 		tempC = ((0.0032258 * (float)tempADC) - 0.5333) / 0.0093;
 		tempF = (1.8 * (float)tempC) + 32;
 		
-		Serial.print("Temperature = ");
+		/*Serial.print("Temperature = ");
 		Serial.print(tempC, 1);
 		Serial.print("C ");
 		
@@ -41,7 +41,7 @@ void task_TempRun(void *pvParameters)
 		Serial.print("(");
 		Serial.print(tempADC);
 		Serial.print(")");
-		Serial.println();
+		Serial.println();*/
 		
 		vTaskDelay(500);
 	}
@@ -55,4 +55,17 @@ void task_TempInitialize(void *pvParameters)
 	xTaskCreate(task_TempRun,		"Temp",		256,		NULL,		TASK_PRIORITY_HIGH,		NULL);
 	
 	vTaskDelete(NULL);
+}
+
+//********************************************************
+//
+// float getTempp()
+//
+// Author: Justin Bee
+// Date: 3/27/2021
+// Returns the value of tempF
+//********************************************************
+float getTemp()
+{
+	return tempF;
 }

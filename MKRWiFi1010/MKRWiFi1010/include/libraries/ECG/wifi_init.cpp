@@ -13,6 +13,7 @@
 #include "WiFi.h"
 #include "led.h"
 #include "comms.h"
+#include "adc.h"
 
 //---------------------------------------------------------------
 //  Local variables
@@ -31,7 +32,7 @@ bool isConnected = false;
 void task_WiFiInitialize(void *pvParamters)
 {
 	led_mode(led_mode_starting);
-	vTaskDelay(10000); //10 second wait for startup
+	//vTaskDelay(10000); //10 second wait for startup
 	
 	for (;;)
 	{
@@ -54,7 +55,7 @@ void task_WiFiInitialize(void *pvParamters)
 			Serial.print(ssid);
 			Serial.print(" Password ");
 			Serial.println(pass);
-			vTaskDelay(10000); //10 second wait to allow LED behavior to run correctly
+			//vTaskDelay(10000); //10 second wait to allow LED behavior to run correctly
 			status = WiFi.begin(ssid, pass);		// Connect to WPA/WPA2 network. 
 			if( status != WL_CONNECTED )
 			{
@@ -68,7 +69,7 @@ void task_WiFiInitialize(void *pvParamters)
 				isConnected = true;
 				led_mode(led_mode_normal);
 				//TODO - start the Wifi Communication Task
-				xTaskCreate(task_WiFiComm,    "WiFi Comm",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
+				xTaskCreate(task_WiFiComm,    "WiFi Comm",        512,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
 				vTaskDelay(1000);
 			}
 		}
