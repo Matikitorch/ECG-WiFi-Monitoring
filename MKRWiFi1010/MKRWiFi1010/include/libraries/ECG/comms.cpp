@@ -40,7 +40,7 @@ String packetBuilder(void);
 // This task attempts connection to server if not connected. Once connected
 // start the WifiSend() task
 //********************************************************************************
-/*void task_WiFiComm(void *pvParamters)
+void task_WiFiComm(void *pvParamters)
 {
 	for(;;)
 	{
@@ -76,7 +76,7 @@ String packetBuilder(void);
 	}
 	vTaskDelete( NULL );
 }
-*/
+
 
 //********************************************************************************
 //
@@ -154,7 +154,7 @@ String packetBuilder(void)
 
 
 
-void task_WiFiComm(void *pvParamters)
+/*void task_WiFiComm(void *pvParamters)
 {
 
 	for (;;)
@@ -162,5 +162,5 @@ void task_WiFiComm(void *pvParamters)
 		wf.beginPacket(server, 443);
 		wf.write(packetBuilder());
 	}
-} 
+} */
 
