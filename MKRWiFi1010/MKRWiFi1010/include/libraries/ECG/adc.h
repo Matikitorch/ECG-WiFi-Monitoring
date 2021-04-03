@@ -14,4 +14,7 @@
  */
 void task_ADCInitialize( void *pvParameters );
 
+
+uint32_t getAin();
+
 #endif /* ADC_H_ */

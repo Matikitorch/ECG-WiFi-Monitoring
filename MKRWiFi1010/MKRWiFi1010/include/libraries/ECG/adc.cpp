@@ -119,8 +119,28 @@ void task_ADCInitialize(void *pvParameters)
 {	
 	//analogOutputInit();
 	
-	tcConfigure();
-	tcStartCounter();
+	//tcConfigure();
+	//tcStartCounter();
+	
+	for(;;)
+	{
+		static uint32_t toggl;
+	
+		ain = analogRead(A1); // 0 == 0V -> 1023 == 3.3V	
+		analogWrite(A0, ain); // 0 == 0V -> 1023 == 3.3V
+	
+		digitalWrite(A5, toggl);
+		toggl ^= 1;
+		
+		vTaskDelay(4);
+	}
+
 	
 	vTaskDelete(NULL);
+}
+
+
+uint32_t getAin()
+{
+	return ain;
 }

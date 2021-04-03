@@ -43,7 +43,7 @@
       </framework-data>
     </AsfFrameworkConfig>
     <avrtool>com.atmel.avrdbg.tool.samice</avrtool>
-    <avrtoolserialnumber>801026271</avrtoolserialnumber>
+    <avrtoolserialnumber>801014814</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x10010305</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_atmelice>
@@ -67,7 +67,7 @@
         <JlinkConfigFile>D:\Downloads\MKRWiFi1010_MS_09feb2021\MS\MKRWiFi1010\MKRWiFi1010\jlink.config</JlinkConfigFile>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
-      <ToolNumber>801026271</ToolNumber>
+      <ToolNumber>801014814</ToolNumber>
       <ToolName>J-Link</ToolName>
     </com_atmel_avrdbg_tool_samice>
   </PropertyGroup>
@@ -350,7 +350,7 @@
     <Compile Include="include\libraries\ECG\adc.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\libraries\ECG\comms.c">
+    <Compile Include="include\libraries\ECG\comms.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\libraries\ECG\comms.h">
