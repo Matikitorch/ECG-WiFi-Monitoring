@@ -34,6 +34,7 @@ extern "C" {
 #include "WiFiClient.h"
 
 uint16_t WiFiClient::_srcport = 1024;
+bool forceRestartWiFi = false;
 
 WiFiClient::WiFiClient() : _sock(NO_SOCKET_AVAIL), _retrySend(true) {
 }
@@ -102,6 +103,7 @@ int WiFiClient::connectSSL(IPAddress ip, uint16_t port)
       }
     } else {
       Serial.println("No Socket available");
+	  forceRestartWiFi = true;
       return 0;
     }
     return 1;

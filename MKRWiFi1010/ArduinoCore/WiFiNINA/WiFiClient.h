@@ -25,6 +25,8 @@
 #include "Client.h"
 #include "IPAddress.h"
 
+extern bool forceRestartWiFi;
+
 class WiFiClient : public Client {
 
 public:

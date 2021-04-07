@@ -22,11 +22,12 @@
 //
 //********************************************************************************
 const char server[] = "tqmlv0dfbh.execute-api.us-east-1.amazonaws.com";
+bool isConnectedServer = false;
 WiFiClient cl;  
 WiFiUDP wf;
 
 String JSONBuilder(void);
-String packetBuilder(void);
+char * packetBuilder(void);
 
 
 
@@ -42,13 +43,14 @@ String packetBuilder(void);
 //********************************************************************************
 void task_WiFiComm(void *pvParamters)
 {
+	
 	for(;;)
 	{
+		noInterrupts();
 		if(IsWifiConnected())
 		{
-			//Close the connection in case it is still open
-			//cl.stop();
-			if( !cl.connected() )
+			
+			while( isConnectedServer == false )
 			{
 				Serial.println("Attempting to connect to server....");
 				if (cl.connectSSL(server,443))
@@ -56,26 +58,24 @@ void task_WiFiComm(void *pvParamters)
 					Serial.println("connected to server");
 					xTaskCreate(task_WiFiSend,    "WiFi Send",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
 					xTaskCreate(task_ADCInitialize,		"ADC Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
+		
 				}
 				else
 				{
 					Serial.println("not connected to server");
 				}
 			}
-			else
-			{
-				//Do nothing connected	
-			}
+			
 		}
 		else
 		{
 			//Do nothing
 		}
-		
+		interrupts();
 		vTaskDelay(500);
 	}
 	vTaskDelete( NULL );
-}
+} 
 
 
 //********************************************************************************
@@ -93,7 +93,7 @@ void task_WiFiSend(void *pvParamters)
 	
 	for(;;)
 	{
-		
+		noInterrupts();
 		String postString = JSONBuilder();
 		// Make a HTTP POST request:
 		cl.println("POST /dev HTTP/1.1");
@@ -108,22 +108,28 @@ void task_WiFiSend(void *pvParamters)
 		cl.println(postString);
 		cl.println();
 		//cl.println();
+		//Serial.println(postString);
+		//postString = ""; //reset the string
 		
 			
-		while(cl.available()==0)//wait until data reception
-		{
+		//while(cl.available()==0)//wait until data reception
+		//{
 					
-		}
+		//}
 		
 		while(cl.available()) //write all incoming data characters on serial monitor
 		{
 			char codeResponse = cl.read();
 			Serial.write(codeResponse);
-			//cl.flush();
 		}
-		cl.flush();
-		//cl.stop(); 
-
+		//Serial.println(cl.connected());		
+		/*if(cl.connected() == CLOSED)
+		{
+			isConnectedServer = false;
+			forceRestartWiFi = true;
+			WiFi.disconnect();
+		}*/
+		interrupts();
 		vTaskDelay(4); // 4 =  250 HZ
 	}
 	vTaskDelete( NULL );
@@ -145,22 +151,47 @@ String JSONBuilder(void)
 	return postEntity;
 }
 
-String packetBuilder(void)
+
+
+char * packetBuilder(void)
 {
 	String postString = JSONBuilder();
-	String postEntity = String("POST /dev HTTP/1.1\nHost: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com\nConnection: keep-alive\nContent-Type: application/json\nContent-Length: "+ String(postString.length())+"\n\n"+ String(postString)+"\n");
+	String lengthPostString = String(postString.length());
+	char postEntity[] = "POST /dev HTTP/1.1\nHost: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com\nConnection: keep-alive\nContent-Type: application/json\nContent-Length: ";
+	strcat(postEntity, lengthPostString.c_str());
+	strcat(postEntity, "\n\n");
+	strcat(postEntity, postString.c_str());
+	strcat(postEntity, "\n");
+	//Serial.println(postEntity);
 	return postEntity;
+	
 }
 
 
 
 /*void task_WiFiComm(void *pvParamters)
 {
+	xTaskCreate(task_ADCInitialize,		"ADC Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
 
 	for (;;)
 	{
+		wf.begin(2430);
+		//char temp[]  = packetBuilder();
+		String postString = JSONBuilder();
+		String lengthPostString = String(postString.length());
+		char postEntity[] = "POST /dev HTTP/1.1\nHost: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com\nConnection: keep-alive\nContent-Type: application/json\nContent-Length: 50 \n\n {\"serial\":\"Default-001\",\"adc\":\"0\",\"temp\":\"124.20\"}\n";
+		//char postEntity[] = "POST /dev HTTP/1.1\nHost: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com\nConnection: keep-alive\nContent-Type: application/json\nContent-Length: ";
+		//strcat(postEntity, lengthPostString.c_str());
+		//strcat(postEntity, "\n\n");
+		//strcat(postEntity, postString.c_str());
+		//strcat(postEntity, "\n");
+		Serial.println("Attempting UDP packet transmission");
+	    //Serial.println(postEntity);
 		wf.beginPacket(server, 443);
-		wf.write(packetBuilder());
+		wf.write(postEntity, (sizeof(postEntity)-26u));
+		wf.endPacket();
+		Serial.println(wf.parsePacket());
+		vTaskDelay(4); // 4 =  250 HZ
 	}
-} */
+}  */
 

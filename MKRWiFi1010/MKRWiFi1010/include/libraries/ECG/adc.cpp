@@ -119,10 +119,10 @@ void task_ADCInitialize(void *pvParameters)
 {	
 	//analogOutputInit();
 	
-	//tcConfigure();
-	//tcStartCounter();
+	tcConfigure();
+	tcStartCounter();
 	
-	for(;;)
+	/*for(;;)
 	{
 		static uint32_t toggl;
 	
@@ -133,7 +133,7 @@ void task_ADCInitialize(void *pvParameters)
 		toggl ^= 1;
 		
 		vTaskDelay(4);
-	}
+	}*/
 
 	
 	vTaskDelete(NULL);

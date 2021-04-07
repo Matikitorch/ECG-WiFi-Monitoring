@@ -32,11 +32,12 @@ bool isConnected = false;
 void task_WiFiInitialize(void *pvParamters)
 {
 	led_mode(led_mode_starting);
-	//vTaskDelay(10000); //10 second wait for startup
+	vTaskDelay(1000); //1 second wait for startup
 	
 	for (;;)
 	{
-		if ( ( WiFi.status() ==  WL_CONNECTION_LOST ) )
+		noInterrupts();
+		if ( ( WiFi.status() ==  WL_CONNECTION_LOST ) || forceRestartWiFi )
 		{
 			isConnected = false;
 			led_mode(led_mode_faulted);
@@ -55,7 +56,7 @@ void task_WiFiInitialize(void *pvParamters)
 			Serial.print(ssid);
 			Serial.print(" Password ");
 			Serial.println(pass);
-			//vTaskDelay(10000); //10 second wait to allow LED behavior to run correctly
+			vTaskDelay(1000); //1 second wait to allow LED behavior to run correctly
 			status = WiFi.begin(ssid, pass);		// Connect to WPA/WPA2 network. 
 			if( status != WL_CONNECTED )
 			{
@@ -77,7 +78,8 @@ void task_WiFiInitialize(void *pvParamters)
 		{
 			//Do nothing
 		}
-		vTaskDelay(1000); //wait 1 seconds
+		interrupts();
+		vTaskDelay(500); //wait 500ms
 	}
 	vTaskDelete( NULL );
 }

@@ -27,7 +27,9 @@ void task_TempRun(void *pvParameters)
 	
 	for(;;)
 	{
+		noInterrupts();
 		uint32_t tempADC = analogRead(A2);
+		interrupts();
 		tempC = ((0.0032258 * (float)tempADC) - 0.5333) / 0.0093;
 		tempF = (1.8 * (float)tempC) + 32;
 		
