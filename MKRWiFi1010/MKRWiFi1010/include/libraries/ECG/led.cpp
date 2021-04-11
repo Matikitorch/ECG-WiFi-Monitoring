@@ -190,7 +190,7 @@ void task_ledRun(void *pvParameters)
     for(;;)
     {
     	// If we want a temporary LED state, hit here
-    	if(temporaryState.Time > 0)
+    	/*if(temporaryState.Time > 0)
     	{
     		state = &temporaryState;
 
@@ -230,17 +230,17 @@ void task_ledRun(void *pvParameters)
 
 				state = &currentState;
 			}
-    	}
+    	}*/
     	// Run normally
-    	else
-    	{
+    	//else
+    	//{
     		state = &currentState;
-    	}
+    	//}
 
     	// If we don't have an LED state, sleep some here
     	if((state->RedBlinks == 0) && (state->GrnBlinks == 0))
     	{
-    		vTaskDelay(10);
+    		vTaskDelay(500);
     	}
     	else
     	{
@@ -267,6 +267,7 @@ void task_ledRun(void *pvParameters)
     			{
     				setLEDColor(COLOR_LED_GRN);
     				vTaskDelay(state->GrnOnTime);
+					
     			}
 
     			if(state->GrnOffTime > 0)
@@ -276,6 +277,8 @@ void task_ledRun(void *pvParameters)
     			}
     		}
     	}
+		vTaskDelay(10000);
+		
     }
 
 	vTaskDelete(NULL);

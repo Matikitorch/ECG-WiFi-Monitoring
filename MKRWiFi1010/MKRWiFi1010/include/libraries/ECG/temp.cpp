@@ -33,18 +33,6 @@ void task_TempRun(void *pvParameters)
 		tempC = ((0.0032258 * (float)tempADC) - 0.5333) / 0.0093;
 		tempF = (1.8 * (float)tempC) + 32;
 		
-		/*Serial.print("Temperature = ");
-		Serial.print(tempC, 1);
-		Serial.print("C ");
-		
-		Serial.print(tempF, 1);
-		Serial.print("F ");
-		
-		Serial.print("(");
-		Serial.print(tempADC);
-		Serial.print(")");
-		Serial.println();*/
-		
 		vTaskDelay(500);
 	}
 }
