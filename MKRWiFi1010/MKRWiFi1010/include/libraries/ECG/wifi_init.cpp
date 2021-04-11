@@ -18,8 +18,8 @@
 //---------------------------------------------------------------
 //  Local variables
 //---------------------------------------------------------------
-char ssid[] = "b33zhive";  //enter your SSID here
-char pass[] = "Lyla_Bee_3";  //enter your password here
+char ssid[] = "NETGEAR42";  //enter your SSID here
+char pass[] = "bravecheese823";  //enter your password here
 int status = WL_IDLE_STATUS;
 bool isConnected = false;
 
