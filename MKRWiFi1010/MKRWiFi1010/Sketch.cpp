@@ -72,10 +72,9 @@ void setup() {
 // I2C
 	Serial.println(F("WIRE setup"));
 	Wire.begin();					// join i2c bus (address optional for master)
+	Wire.setClock(3400000);
 	
 	i2c_scan();		// Show list of I2C peripheral
-
-// Battery chargher chip
 	BCsetup();
 
 	

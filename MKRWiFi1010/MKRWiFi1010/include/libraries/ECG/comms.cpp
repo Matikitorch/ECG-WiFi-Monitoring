@@ -22,11 +22,13 @@
 //
 //********************************************************************************
 const char server[] = "tqmlv0dfbh.execute-api.us-east-1.amazonaws.com";
+bool isConnectedServer = false;
+bool tasksStarted = false;
 WiFiClient cl;  
 WiFiUDP wf;
 
 String JSONBuilder(void);
-String packetBuilder(void);
+char * packetBuilder(void);
 
 
 
@@ -42,40 +44,49 @@ String packetBuilder(void);
 //********************************************************************************
 void task_WiFiComm(void *pvParamters)
 {
+	
 	for(;;)
 	{
+		//Do not allow interupts while attempting SSL connection
+		noInterrupts();
 		if(IsWifiConnected())
 		{
-			//Close the connection in case it is still open
-			//cl.stop();
-			if( !cl.connected() )
+			
+			while( isConnectedServer == false )
 			{
 				Serial.println("Attempting to connect to server....");
 				if (cl.connectSSL(server,443))
 				{
 					Serial.println("connected to server");
-					xTaskCreate(task_WiFiSend,    "WiFi Send",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
-					xTaskCreate(task_ADCInitialize,		"ADC Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
+					isConnectedServer = true;
+					//check to see if the tasks were already created before attempting to create new tasks
+					if(tasksStarted == false)
+					{	
+						xTaskCreate(task_WiFiSend,    "WiFi Send",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
+						xTaskCreate(task_ADCInitialize,		"ADC Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
+						tasksStarted = true;
+					}
+					else
+					{
+						//Do nothing
+					}
 				}
 				else
 				{
 					Serial.println("not connected to server");
 				}
-			}
-			else
-			{
-				//Do nothing connected	
-			}
+			}			
 		}
 		else
 		{
 			//Do nothing
 		}
-		
+		//Re-enable the interrupts before delaying the task
+		interrupts();
 		vTaskDelay(500);
 	}
 	vTaskDelete( NULL );
-}
+} 
 
 
 //********************************************************************************
@@ -90,47 +101,46 @@ void task_WiFiComm(void *pvParamters)
 void task_WiFiSend(void *pvParamters)
 {
 	
-	
+	uint32_t count = 0;
 	for(;;)
 	{
-		
-		String postString = JSONBuilder();
-		// Make a HTTP POST request:
-		cl.println("POST /dev HTTP/1.1");
-		// Host
-		cl.print("Host: ");
-		cl.println(server);
-		cl.println("Connection: keep-alive");  //keep the connection open
-		cl.println("Content-Type: application/json");
-		cl.print("Content-Length: ");
-		cl.println(String(postString.length()));
-		cl.println(); //necessary to separate header from body
-		cl.println(postString);
-		cl.println();
-		//cl.println();
-		
+		noInterrupts();
+		if( cl.connected())
+		{
+			//String postString = JSONBuilder();
+			String postString = "{\"serial\":\"Default-001\",\"adc\":\""+String(getAin())+"\",\"temp\":\""+ String(getTemp())+ "\"}";
+			// Make a HTTP POST request:
+			cl.println("POST /dev HTTP/1.1");
+			// Host
+			cl.println("Host: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com");
+			//cl.println(server);
+			cl.println("Connection: keep-alive");  //keep the connection open
+			cl.println("Content-Type: application/json");
+			cl.print("Content-Length: ");
+			cl.println(String(postString.length()));
+			cl.println(); //necessary to separate header from body
+			cl.println(postString);
+			cl.println();
 			
-		while(cl.available()==0)//wait until data reception
-		{
-					
+			while(cl.available()) //write all incoming data characters on serial monitor
+			{
+				char codeResponse = cl.read();
+				Serial.write(codeResponse);
+			}
+			//Serial.println(count++);
 		}
-		
-		while(cl.available()) //write all incoming data characters on serial monitor
+		else
 		{
-			char codeResponse = cl.read();
-			Serial.write(codeResponse);
-			//cl.flush();
+			isConnectedServer = false;
 		}
-		cl.flush();
-		//cl.stop(); 
-
-		vTaskDelay(4); // 4 =  250 HZ
+		interrupts();
+		vTaskDelay(2); // 4 =  250 HZ
 	}
 	vTaskDelete( NULL );
 }
 
 
-//***************************************************
+//*****************************************************************
 //
 // String JSONBuilder()
 //
@@ -140,27 +150,9 @@ void task_WiFiSend(void *pvParamters)
 //******************************************************************
 String JSONBuilder(void)
 {
-	String postEntity = String("{\"serial\":\"" +String(serialNumber)+"\",\"adc\":\""+String(getAin())+"\",\"temp\":\""+ String(getTemp())+ "\"}");
-		
-	return postEntity;
-}
-
-String packetBuilder(void)
-{
-	String postString = JSONBuilder();
-	String postEntity = String("POST /dev HTTP/1.1\nHost: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com\nConnection: keep-alive\nContent-Type: application/json\nContent-Length: "+ String(postString.length())+"\n\n"+ String(postString)+"\n");
+	String postEntity = "{\"serial\":\"" +String(serialNumber)+"\",\"adc\":\""+String(getAin())+"\",\"temp\":\""+ String(getTemp())+ "\"}";
 	return postEntity;
 }
 
 
-
-/*void task_WiFiComm(void *pvParamters)
-{
-
-	for (;;)
-	{
-		wf.beginPacket(server, 443);
-		wf.write(packetBuilder());
-	}
-} */
 

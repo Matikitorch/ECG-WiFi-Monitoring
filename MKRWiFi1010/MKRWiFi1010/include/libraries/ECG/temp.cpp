@@ -26,10 +26,6 @@ void task_TempRun(void *pvParameters)
 {
 	for(;;)
 	{
-		//static int toggle;
-		//digitalWrite(A5, toggle);
-		//toggle ^= 0xFFFFFFFF;
-		
 		noInterrupts();
 		uint32_t tempADC = analogRead(A2);
 		interrupts();
@@ -39,6 +35,7 @@ void task_TempRun(void *pvParameters)
 		
 		tempF = (1.8 * (float)tempC) + 32;
 		
+    /*
 		Serial.print("Temperature = ");
 		
 		Serial.print(tempC, 1);
@@ -51,8 +48,9 @@ void task_TempRun(void *pvParameters)
 		Serial.print(tempADC);
 		Serial.print(")");
 		Serial.println();
+    */
 		
-		vTaskDelay(50);
+		vTaskDelay(20);
 	}
 }
 
