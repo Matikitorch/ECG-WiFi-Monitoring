@@ -12,6 +12,7 @@
 
 void task_WiFiInitialize( void *pvParameters );
 
+bool IsWifiConnected();
 
 
 #endif /* WIFI_INIT_H_ */

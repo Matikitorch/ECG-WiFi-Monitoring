@@ -190,7 +190,7 @@ void task_ledRun(void *pvParameters)
     for(;;)
     {
     	// If we want a temporary LED state, hit here
-    	if(temporaryState.Time > 0)
+    	/*if(temporaryState.Time > 0)
     	{
     		state = &temporaryState;
 
@@ -230,17 +230,17 @@ void task_ledRun(void *pvParameters)
 
 				state = &currentState;
 			}
-    	}
+    	}*/
     	// Run normally
-    	else
-    	{
+    	//else
+    	//{
     		state = &currentState;
-    	}
+    	//}
 
     	// If we don't have an LED state, sleep some here
     	if((state->RedBlinks == 0) && (state->GrnBlinks == 0))
     	{
-    		vTaskDelay(10);
+    		vTaskDelay(500);
     	}
     	else
     	{
@@ -267,6 +267,7 @@ void task_ledRun(void *pvParameters)
     			{
     				setLEDColor(COLOR_LED_GRN);
     				vTaskDelay(state->GrnOnTime);
+					
     			}
 
     			if(state->GrnOffTime > 0)
@@ -276,6 +277,8 @@ void task_ledRun(void *pvParameters)
     			}
     		}
     	}
+		vTaskDelay(10000);
+		
     }
 
 	vTaskDelete(NULL);
@@ -295,27 +298,6 @@ void task_LEDInitialize(void *pvParameters)
 	
 	// Start task
 	xTaskCreate(task_ledRun,			"LED Run",			256,	NULL,	TASK_PRIORITY_LOW,	NULL);
-	
-	for(;;)
-	{
-		// Set the LED mode to starting => RED on for 100 ms and off for 900 ms
-		//led_mode(led_mode_starting);	
-		
-		// Wait 5 seconds	
-		vTaskDelay(5000);
-		
-		// Set the LED mode to connecting => Toggling between RED and GRN
-		//led_mode(led_mode_connecting);
-		
-		// Wait 5 seconds
-		//vTaskDelay(5000);
-		
-		// Set the LED mode to faulted as a temporary state for 5 seconds. The mode will go back to led_mode_connecting after the alloted time
-		//led_modeTemp(led_mode_faulted, 5000);
-		
-		// Wait 5 seconds
-		//vTaskDelay(15000);
-	}
 
 	vTaskDelete(NULL);
 }
