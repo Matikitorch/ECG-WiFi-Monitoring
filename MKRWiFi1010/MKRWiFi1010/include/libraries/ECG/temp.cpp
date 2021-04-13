@@ -24,16 +24,33 @@ float tempF;
  */
 void task_TempRun(void *pvParameters)
 {
-	
 	for(;;)
 	{
 		noInterrupts();
 		uint32_t tempADC = analogRead(A2);
 		interrupts();
-		tempC = ((0.0032258 * (float)tempADC) - 0.5333) / 0.0093;
+		
+		tempC = 3300.0 * (tempADC / 1024.0); // Convert the FS of the temperature sensor into 0-3300mV
+		tempC = (tempC - 500.0) / 10.0; // Remove the offset of TMP36 and convert from mV to C
+		
 		tempF = (1.8 * (float)tempC) + 32;
 		
-		vTaskDelay(500);
+    /*
+		Serial.print("Temperature = ");
+		
+		Serial.print(tempC, 1);
+		Serial.print("C ");
+		
+		Serial.print(tempF, 1);
+		Serial.print("F ");
+		
+		Serial.print("(");
+		Serial.print(tempADC);
+		Serial.print(")");
+		Serial.println();
+    */
+		
+		vTaskDelay(20);
 	}
 }
 

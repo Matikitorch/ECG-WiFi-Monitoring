@@ -7,6 +7,7 @@
 #include <WiFiNINA.h>
 
 #include "FreeRTOS_SAMD21.h"
+#include "task.h"
 
 #include "hdr.h"
 
@@ -14,7 +15,7 @@
 #define IRQ_PRIORITY_MED	(2)
 #define IRQ_PRIORITY_HIGH	(1)
 
-#define IRQ_SAMPLE_RATE		(1000)
+#define IRQ_SAMPLE_RATE		(250)
 
 volatile uint32_t aout = 0;
 volatile uint32_t ain = 0;
@@ -23,14 +24,13 @@ volatile uint32_t ain = 0;
  * Gets called by the interrupt at IRQ_SAMPLE_RATE rate
  */
 void TC5_Handler(void)
-{
-	static uint32_t toggle;
+{	
+	//static int toggle;
+	//digitalWrite(A5, toggle);
+	//toggle ^= 0xFFFFFFFF;
 	
 	ain = analogRead(A1); // 0 == 0V -> 1023 == 3.3V	
 	analogWrite(A0, ain); // 0 == 0V -> 1023 == 3.3V
-	
-	digitalWrite(A5, toggle);
-	toggle ^= 1;
 	
 	TC5->COUNT16.INTFLAG.bit.MC0 = 1; //Writing a 1 to INTFLAG.bit.MC0 clears the interrupt so that it will run again
 }
@@ -116,13 +116,12 @@ void tcConfigure()
  * Initializes the ADC
  */
 void task_ADCInitialize(void *pvParameters)
-{	
-	//analogOutputInit();
-	
+{		
 	tcConfigure();
 	tcStartCounter();
 	
-	/*for(;;)
+	/*
+	for(;;)
 	{
 		static uint32_t toggl;
 	
@@ -133,8 +132,8 @@ void task_ADCInitialize(void *pvParameters)
 		toggl ^= 1;
 		
 		vTaskDelay(4);
-	}*/
-
+	}
+	*/
 	
 	vTaskDelete(NULL);
 }
