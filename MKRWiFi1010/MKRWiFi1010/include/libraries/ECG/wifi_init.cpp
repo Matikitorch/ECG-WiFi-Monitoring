@@ -33,14 +33,14 @@ bool isConnected = false;
 void task_WiFiInitialize(void *pvParamters)
 {
 	led_mode(led_mode_starting);
-	vTaskDelay(1000); //1 second wait for startup
+	vTaskDelay(1000); //1 second wait for startup for LED
 	for (;;)
 	{
 		if ( ( WiFi.status() ==  WL_CONNECTION_LOST ) )
 		{
 			isConnected = false;
 			led_mode(led_mode_faulted);
-			vTaskDelay(500);
+			vTaskDelay(500); //wait 500 ms
 		}
 		else
 		{
@@ -57,22 +57,19 @@ void task_WiFiInitialize(void *pvParamters)
 			status = WiFi.begin(ssid, pass);		// Connect to WPA/WPA2 network. 
 			if( status != WL_CONNECTED )
 			{
-				Serial.println("Not connected");
-				
-				led_mode(led_mode_connecting);
-				//sleep for 500 ms
-				vTaskDelay(500);
+				Serial.println("Not connected");	
+				led_mode(led_mode_connecting); //set led for connection state
+				vTaskDelay(500); //sleep for 500 ms
 			}
 			else
 			{
 				Serial.println("Connected to wifi");
-				isConnected = true;
+				isConnected = true; 
 				//Set the LED mode to normal solid green
 				led_mode(led_mode_normal);
 				//Create the WiFi communication task
-				xTaskCreate(task_WiFiComm,    "WiFi Comm",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
-				//sleep for 500 ms
-				vTaskDelay(500);
+				xTaskCreate(task_WiFiComm,    "WiFi Comm", 256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
+				vTaskDelay(500); //sleep for 500 ms
 			}
 		}
 		else

@@ -17,7 +17,7 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-
+/*
 #include <string.h>
 #include "utility/server_drv.h"
 
@@ -117,3 +117,4 @@ size_t WiFiServer::write(const uint8_t *buffer, size_t size)
 
     return written;
 }
+*/

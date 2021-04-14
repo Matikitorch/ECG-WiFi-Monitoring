@@ -61,7 +61,7 @@ void init( void );
 
 /* sketch */
 void setup( void ) ;
-void loop( void ) ;
+
 
 #include "WVariant.h"
 

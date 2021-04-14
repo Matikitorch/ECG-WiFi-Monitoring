@@ -52,7 +52,7 @@ int main( void )
 
   for (;;)
   {
-    loop();
+    //loop();
     if (serialEventRun) serialEventRun();
   }
 

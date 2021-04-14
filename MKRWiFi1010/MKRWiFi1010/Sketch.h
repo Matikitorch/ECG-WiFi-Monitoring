@@ -21,10 +21,7 @@
 
 
 // Function prototypes
-void setup();
-void loop();
-void showMenu(void);
-void i2c_scan();
+void setup(void);
 
 
 

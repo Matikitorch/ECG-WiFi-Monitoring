@@ -8,5 +8,5 @@ extern void loop(void);
 
 void  __attribute__((weak)) vApplicationIdleHook( void ) 
 {
-  loop(); //will use your projects loop function as the rtos idle loop
+  //loop(); //will use your projects loop function as the rtos idle loop
 }

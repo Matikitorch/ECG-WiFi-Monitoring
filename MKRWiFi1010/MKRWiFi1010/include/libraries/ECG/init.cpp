@@ -22,9 +22,9 @@
 void task_Initialize( void *pvParameters ) 
 {
 	// Start all tasks
-	xTaskCreate(task_LEDInitialize,		"LED Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
-	xTaskCreate(task_WiFiInitialize,    "WiFi Init",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
-	xTaskCreate(task_TempInitialize,	"Temp Init",		256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
+	xTaskCreate(task_LEDInitialize,	"LED Init",	256,NULL,TASK_PRIORITY_NORMAL,NULL);
+	xTaskCreate(task_WiFiInitialize, "WiFi Init", 256, NULL,TASK_PRIORITY_NORMAL, NULL);
+	xTaskCreate(task_TempInitialize,"Temp Init", 256,NULL,TASK_PRIORITY_NORMAL,NULL);
 		
 	vTaskDelete( NULL );
 }

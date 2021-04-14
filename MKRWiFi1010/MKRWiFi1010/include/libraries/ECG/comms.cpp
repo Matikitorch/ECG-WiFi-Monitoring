@@ -44,14 +44,12 @@ char * packetBuilder(void);
 //********************************************************************************
 void task_WiFiComm(void *pvParamters)
 {
-	
 	for(;;)
 	{
 		//Do not allow interupts while attempting SSL connection
 		noInterrupts();
 		if(IsWifiConnected())
-		{
-			
+		{	
 			while( isConnectedServer == false )
 			{
 				Serial.println("Attempting to connect to server....");
@@ -62,8 +60,8 @@ void task_WiFiComm(void *pvParamters)
 					//check to see if the tasks were already created before attempting to create new tasks
 					if(tasksStarted == false)
 					{	
-						xTaskCreate(task_WiFiSend,    "WiFi Send",        256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
-						xTaskCreate(task_ADCInitialize,		"ADC Init",			256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
+						xTaskCreate(task_WiFiSend,    "WiFi Send",  256,    NULL,   TASK_PRIORITY_NORMAL,   NULL);
+						xTaskCreate(task_ADCInitialize,		"ADC Init",  256,	NULL,	TASK_PRIORITY_NORMAL,	NULL);
 						tasksStarted = true;
 					}
 					else
@@ -100,41 +98,38 @@ void task_WiFiComm(void *pvParamters)
 //********************************************************************************
 void task_WiFiSend(void *pvParamters)
 {
-	
-	uint32_t count = 0;
 	for(;;)
 	{
 		noInterrupts();
 		if( cl.connected())
 		{
-			//String postString = JSONBuilder();
-			String postString = "{\"serial\":\"Default-001\",\"adc\":\""+String(getAin())+"\",\"temp\":\""+ String(getTemp())+ "\"}";
+			String postString = JSONBuilder();
 			// Make a HTTP POST request:
 			cl.println("POST /dev HTTP/1.1");
 			// Host
 			cl.println("Host: tqmlv0dfbh.execute-api.us-east-1.amazonaws.com");
 			//cl.println(server);
 			cl.println("Connection: keep-alive");  //keep the connection open
-			cl.println("Content-Type: application/json");
+			cl.println("Content-Type: application/json"); //type for the body
 			cl.print("Content-Length: ");
-			cl.println(String(postString.length()));
+			cl.println(String(postString.length())); //length of the body
 			cl.println(); //necessary to separate header from body
 			cl.println(postString);
-			cl.println();
+			cl.println(); //necessary for end of packet
 			
-			while(cl.available()) //write all incoming data characters on serial monitor
+			/*while(cl.available()) //write all incoming data characters on serial monitor
 			{
 				char codeResponse = cl.read();
 				Serial.write(codeResponse);
-			}
-			//Serial.println(count++);
+			}*/
+			while(cl.read() != -1);
 		}
 		else
 		{
 			isConnectedServer = false;
 		}
 		interrupts();
-		vTaskDelay(2); // 4 =  250 HZ
+		vTaskDelay(2); //delay for 2 ms
 	}
 	vTaskDelete( NULL );
 }
@@ -151,6 +146,7 @@ void task_WiFiSend(void *pvParamters)
 String JSONBuilder(void)
 {
 	String postEntity = "{\"serial\":\"" +String(serialNumber)+"\",\"adc\":\""+String(getAin())+"\",\"temp\":\""+ String(getTemp())+ "\"}";
+	//String postString = "{\"serial\":\"Default-001\",\"adc\":\""+String(getAin())+"\",\"temp\":\""+ String(getTemp())+ "\"}";
 	return postEntity;
 }
 
